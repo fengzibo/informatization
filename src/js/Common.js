@@ -7,14 +7,14 @@ var Common = {
     cheader: function (whichPage) {
         var headhtml = $.ajax({
             type: "GET",
-            url: "/wtindex-new/common-top.html",
+            url: "/html/Common-header.html",
             data: {date: new Date().getTime().toString()},
             async: false,
             dataType: "html"
         }).responseText;
         if (whichPage != '' && whichPage != false) {
             //给选中的一级导航栏添加选中样式
-            $('#navbar').find("." + whichPage).addClass('current');
+            $('.nav li a').find("." + whichPage).addClass('current');
         }
         return $(headhtml);
     },
@@ -22,7 +22,7 @@ var Common = {
     cfooter: function () {
         var foothtml = $.ajax({
             type: "GET",
-            url: "/wtindex-new/common-footer.html",
+            url: "/html/Common-footer.html",
             data: {date: new Date().getTime().toString()},
             async: false,
             dataType: "html"
