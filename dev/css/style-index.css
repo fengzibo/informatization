@@ -440,6 +440,14 @@ th {
   padding: 0;
 }
 
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1469431157_3878298.eot');
+  /* IE9*/
+  src: url('//at.alicdn.com/t/font_1469431157_3878298.eot?#iefix') format('embedded-opentype'),  url('//at.alicdn.com/t/font_1469431157_3878298.woff') format('woff'),  url('//at.alicdn.com/t/font_1469431157_3878298.ttf') format('truetype'),  url('//at.alicdn.com/t/font_1469431157_3878298.svg#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+
 body {
   position: absolute;
   top: 0;
@@ -473,4 +481,11 @@ body {
 .test a:hover {
   background: red;
   color: #ffffff;
+}
+
+.test a i.iconfont {
+  font-family: "iconfont";
+  font-size: 16px;
+  font-style: normal;
+  color: red;
 }
