@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>教学课堂</title>
+    <link rel="stylesheet" type="text/css" href="../css/video-js.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/select.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="container">
+    <div class="titlenav titlenav2">
+        <a class="current">我的首页</a>
+        <a>基础理论</a>
+        <a>工艺感知</a>
+        <a>理实一体</a>
+        <a>实物模拟</a>
+        <a>顶岗实习</a>
+    </div>
+    <ul class="ification clearfix">
+        <li>
+            <a class="current">始业教育</a>
+        </li>
+        <li>
+            <a>校园寻踪</a>
+        </li>
+        <li>
+            <a>师徒结对</a>
+        </li>
+        <li>
+            <a>其他学习资料</a>
+        </li>
+        <li>
+            <a>编写报告</a>
+        </li>
+    </ul>
+    <div class="ification-content">
+
+    </div>
+</div>
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/video.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/Common.js"></script>
+<script>
+    $(function () {
+        $('.header').html(Common.cheader('','/html/Common-header2.html'));
+        $('.footer').html(Common.cfooter());
+        $('.ification-content').html(Common.commonblock('/html/initial-educationi.html'));
+        Common.footerbottom();
+        Common.ifiationajax();
+
+    })
+</script>
+</body>
+</html>

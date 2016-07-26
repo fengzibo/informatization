@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hello World!</title>
+    <title>教学平台</title>
     <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
 </head>
 <body>
@@ -14,7 +14,7 @@
 </div>
 <div class="mian-content">
     <div class="container">
-        <div class="titlenav">
+        <div class="titlenav tab-title">
             <a class="current">我的首页</a>
             <a>个人信息</a>
         </div>
@@ -104,11 +104,20 @@
                         </div>
 
                     </div>
-                    <ul class="moduleitem">
+                    <ul class="moduleitem modulesro">
                         <li>
                             <a>001&nbsp;周杰伦</a>
                             <span>2016-01-06</span>
                         </li>
+                        <li>
+                            <a>001&nbsp;周杰伦</a>
+                            <span>2016-01-06</span>
+                        </li>
+                        <li>
+                            <a>001&nbsp;周杰伦</a>
+                            <span>2016-01-06</span>
+                        </li>
+
                         <li>
                             <a>001&nbsp;周杰伦</a>
                             <span>2016-01-06</span>
@@ -290,6 +299,83 @@
             </div>
 
         </div>
+        <div class="tab-content" style="display: none; margin-top: 20px;">
+            <form>
+                <ul class="form-mess">
+                    <li>
+                        <label><span>*</span>姓&nbsp;&nbsp;名:</label>
+                        <input type="text" class="intext">
+                        <span class="erro">sadasadasd</span>
+                    </li>
+                    <li>
+                        <label><span>*</span>学&nbsp;&nbsp;号:</label>
+                        <input type="text" class="intext">
+                        <span class="erro">sadasadasd</span>
+                    </li>
+                    <li>
+                        <label><span>*</span>专&nbsp;&nbsp;业:</label>
+                        <input type="text" class="intext">
+                        <span class="erro">sadasadasd</span>
+                    </li>
+                    <li>
+                        <label><span>*</span>班&nbsp;&nbsp;级:</label>
+                        <input type="text" class="intext">
+                        <span class="erro">sadasadasd</span>
+                    </li>
+                    <li>
+                        <label style="width: 150px; line-height: 60px;">目前密码安全等级:</label>
+                        <div class="leave clearfix">
+                            <div class="leave-fl">
+                                <p>低</p>
+                                <i class="first"></i>
+                            </div>
+                            <div class="leave-fl">
+                                <p>中</p>
+                                <i class="second"></i>
+                            </div>
+                            <div class="leave-fl">
+                                <p>高</p>
+                                <i class="third"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label>修改密码:</label>
+                        <input type="password" class="pasgrade">
+                        <span class="erro">建议密码由8位以上数字、字母和特殊字符组成
+</span>
+                    </li>
+                    <li>
+                        <label>确认密码:</label>
+                        <input type="password">
+                        <span class="erro">如果要设置新密码，请重新输入
+</span>
+                    </li>
+                    <li>
+                        <label>手&nbsp;机&nbsp;号:</label>
+                        <input type="text" class="intext">
+                        <span class="erro">忘记密码时，您的绑定手机可以帮您找回密码</span>
+                    </li>
+                    <li>
+                        <label>邮&nbsp;&nbsp;箱:</label>
+                        <input type="text" class="intext">
+                        <span class="erro">忘记密码时，您的绑定手机可以帮您找回密码</span>
+                    </li>
+                    <div class="uploding">
+                        <img>
+                        <a class="a-upload">
+                            点击上传头像
+                            <input type="file">
+                        </a>
+                        <p>仅支持jpg/png格式，大小300KB以内
+                            尺寸100-200像素正方形图片最佳。
+                        </p>
+                    </div>
+                </ul>
+
+
+            </form>
+        </div>
     </div>
 </div>
 <div class="footer">
@@ -298,9 +384,11 @@
 <script src="../js/Common.js"></script>
 <script>
     $(function () {
-        $('.header').html(Common.cheader());
+        $('.header').html(Common.cheader('','/html/Common-header.html'));
         $('.footer').html(Common.cfooter());
         Common.footerbottom();
+        Common.tabcut();
+        Common.pasgrade();
     })
 </script>
 </body>
