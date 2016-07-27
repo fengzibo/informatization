@@ -1,13 +1,20 @@
 @font-face {
   font-family: 'iconfont';
-  src: url('//at.alicdn.com/t/font_1469439956_915894.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/font_1469439956_915894.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/font_1469439956_915894.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/font_1469439956_915894.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/font_1469439956_915894.svg#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('//at.alicdn.com/t/font_1469599407_1638975.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1469599407_1638975.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1469599407_1638975.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1469599407_1638975.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1469599407_1638975.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
-
-
+.icon-gengduo:before { content: "\e602"; }
+.icon-icon:before { content: "\e601"; }
+.icon-icon1:before { content: "\e600"; }
+.icon-icon2:before { content: "\e603"; }
+.icon-icon3:before { content: "\e604"; }
+.icon-icon4:before { content: "\e605"; }
+.icon-icon5:before { content: "\e606"; }
+.icon-icon6:before { content: "\e607"; }
+.icon-icon7:before { content: "\e608"; }
 *{
   box-sizing: border-box;
 }
@@ -22,7 +29,7 @@
 }
 .iconfont{
   font-family: "iconfont";
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   vertical-align: bottom;
   -webkit-text-stroke-width: 0.2px;
@@ -105,7 +112,32 @@ a.combtn{
 }
 .btncolor{
   background-color: #ff503f;
+  border: 1px solid #c53e31;
   &:hover{
     background-color: #d24133;
   }
+}
+.pagination a {
+  text-decoration: none;
+  border: 1px solid #e8e8e8;
+  color: #797979;
+}
+
+.pagination a, .pagination span {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.pagination .current {
+  background: #ff503f;
+  color: #fff;
+  border: 1px solid #c53e31;
+}
+
+.pagination .current.prev, .pagination .current.next{
+  color:#999;
+  border-color:#f3f3f3;
+  background:#fff;
 }

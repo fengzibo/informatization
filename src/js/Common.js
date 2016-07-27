@@ -86,12 +86,26 @@ var Common = {
         }
     },
     ifiationajax: function () {
-        var x =[ '/html/initial-educationi.html','/html/campus-pursuit.html','/html/teacher-pupil.html'];
+        var x =[ '/html/initial-educationi.html','/html/campus-pursuit.html','/html/teacher-pupil.html','/html/school-means.html','/html/write-report.html'];
         $('.ification li').click(function () {
             var thisi = $(this).index();
             $(this).find('a').addClass('current').parent().siblings().find('a').removeClass('current');
             $('.ification-content').html(Common.commonblock(x[thisi]));
             $(".select").select2();//select美化
+            Common.footerbottom();
+        })
+    },
+    collectState:function(){
+        $('.collect').click(function(){
+            var thisi = $(this).find('i')
+            if(thisi.hasClass('icon-icon6')){
+                thisi.removeClass('icon-icon6').addClass('icon-icon7');
+                $(this).css('color','#ff503f');
+            }else {
+                thisi.removeClass('icon-icon7').addClass('icon-icon6');
+                $(this).css('color','#3c3c3c');
+            }
         })
     }
+
 }
