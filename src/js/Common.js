@@ -3,6 +3,7 @@
  */
 
 var Common = {
+    //公共ajax调用html
     commonblock:function(href){
         var comhtml = $.ajax({
             type:"GET",
@@ -28,17 +29,7 @@ var Common = {
         }
         return $(headhtml);
     },
-    //公共尾部
-    cfooter: function () {
-        var foothtml = $.ajax({
-            type: "GET",
-            url: "/html/Common-footer.html",
-            data: {date: new Date().getTime().toString()},
-            async: false,
-            dataType: "html"
-        }).responseText;
-        return $(foothtml);
-    },
+    //一直固定在底部的页脚
     footerbottom: function () {
         var footerHeight = 0;
         var footerTop = 0;
@@ -61,6 +52,7 @@ var Common = {
 
         $(window).scroll(positionFooter).resize(positionFooter);
     },
+    //table切换
     tabcut: function () {
         $('.tab-title').find('a').on('click', function () {
             var thisi = $(this).index();
@@ -68,6 +60,7 @@ var Common = {
             $('.tab-content').eq(thisi).stop().fadeIn().siblings('.tab-content').fadeOut();
         })
     },
+    //密码强度显示
     pasgrade: function () {
         $('.pasgrade').keyup(function () {
             if ($('.pasgrade').val().length < 5) {
@@ -85,6 +78,7 @@ var Common = {
             $(obj).find('i').css('background', color);
         }
     },
+    //始业教育调用页面方法
     ifiationajax: function () {
         var x =[ '/html/initial-educationi.html','/html/campus-pursuit.html','/html/teacher-pupil.html','/html/school-means.html','/html/write-report.html'];
         $('.ification li').click(function () {
@@ -95,6 +89,7 @@ var Common = {
             Common.footerbottom();
         })
     },
+    //收藏状态
     collectState:function(){
         $('.collect').click(function(){
             var thisi = $(this).find('i')
@@ -105,6 +100,26 @@ var Common = {
                 thisi.removeClass('icon-icon7').addClass('icon-icon6');
                 $(this).css('color','#3c3c3c');
             }
+        })
+    },
+    //我的首页调用页面方法
+    ifiationajax2: function () {
+        var x =[ '/html/initial-educationi.html','/html/course-introduction.html','/html/process-perception.html','/html/raise.html','/html/physical-simulation.html','/html/field-work.html'];
+        $('.titlenav2 a').click(function () {
+            var thisi = $(this).index();
+            $(this).addClass('current').siblings().removeClass('current');
+            $('.ification-content').html(Common.commonblock(x[thisi]));
+            Common.footerbottom();
+        })
+    },
+    //教学资源调用页面方法
+    ifiationajax3: function () {
+        var x =[ '/html/teaching-resources.html','/html/personal-resources.html'];
+        $('.titlenav2 a').click(function () {
+            var thisi = $(this).index();
+            $(this).addClass('current').siblings().removeClass('current');
+            $('.ification-content').html(Common.commonblock(x[thisi]));
+            Common.footerbottom();
         })
     }
 

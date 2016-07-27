@@ -26,6 +26,7 @@
 }
 .tab-content{
   padding-bottom: 20px;
+  display: none;
 }
 .module{
   border: 1px solid #e9e9e9;
@@ -220,8 +221,10 @@
   border-color: #e8e8e8;
 }
 .ification{
-  margin: 38px 0 0 0 ;
+  margin: 0 ;
   padding: 0;
+  position: absolute;
+  top: 0;
   li{
     list-style: none;
     border: 1px solid #e9e9e9;
@@ -464,11 +467,8 @@
     .img-center{
       width: 130px;
       height: 130px;
-      display: table-cell;
-      vertical-align: middle;
       img{
-        width: 100%;
-        border: 1px solid #e8e8e8;
+        width: 130px;
       }
     }
 
@@ -540,4 +540,17 @@
     margin: 20px 0 ;
     border: 1px solid #e8e8e8;
   }
+}
+.tab-content-box{
+  position: relative;
+  height: 54px;
+  margin: 38px 0 0 ;
+}
+.course-img{
+ width: 100%;
+  margin-bottom:40px ;
+}
+.course-text{
+  text-indent: 28px;
+  line-height: 24px;
 }

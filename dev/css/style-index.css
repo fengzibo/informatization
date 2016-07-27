@@ -1,5 +1,7 @@
 /* Import Less files */
 
+@import "lib-select.css";
+
 .clearfix {
   zoom: 1;
 }
@@ -666,6 +668,20 @@ a.combtn {
   background: #fff;
 }
 
+.img-box {
+  display: table;
+}
+
+.img-box .img-center {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.img-box .img-center img {
+  border: 1px solid #e8e8e8;
+}
+
 .topfunc {
   text-align: right;
   font-size: 14px;
@@ -792,6 +808,7 @@ a.combtn {
 
 .tab-content {
   padding-bottom: 20px;
+  display: none;
 }
 
 .module {
@@ -1096,8 +1113,10 @@ a.combtn {
 }
 
 .ification {
-  margin: 38px 0 0 0;
+  margin: 0;
   padding: 0;
+  position: absolute;
+  top: 0;
 }
 
 .ification li {
@@ -1441,13 +1460,10 @@ a.combtn {
 .sea-content-left .img-box .img-center {
   width: 130px;
   height: 130px;
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .sea-content-left .img-box .img-center img {
-  width: 100%;
-  border: 1px solid #e8e8e8;
+  width: 130px;
 }
 
 .sea-content-left .text-intro {
@@ -1529,4 +1545,20 @@ a.combtn {
   padding: 10px 40px;
   margin: 20px 0;
   border: 1px solid #e8e8e8;
+}
+
+.tab-content-box {
+  position: relative;
+  height: 54px;
+  margin: 38px 0 0;
+}
+
+.course-img {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.course-text {
+  text-indent: 28px;
+  line-height: 24px;
 }

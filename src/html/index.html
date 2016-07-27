@@ -18,7 +18,7 @@
             <a class="current">我的首页</a>
             <a>个人信息</a>
         </div>
-        <div class="tab-content clearfix">
+        <div class="tab-content clearfix" style="display: block;">
             <div class="fl tabcontetleft">
                 <div class="module" style="width: 800px;">
                     <div class="moduletitle-box clearfix" >
@@ -299,7 +299,7 @@
             </div>
 
         </div>
-        <div class="tab-content" style="display: none; margin-top: 20px;">
+        <div class="tab-content" style=" margin-top: 20px;">
             <form>
                 <ul class="form-mess">
                     <li>
@@ -385,7 +385,7 @@
 <script>
     $(function () {
         $('.header').html(Common.cheader('','/html/Common-header.html'));
-        $('.footer').html(Common.cfooter());
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
         Common.footerbottom();
         Common.tabcut();
         Common.pasgrade();
