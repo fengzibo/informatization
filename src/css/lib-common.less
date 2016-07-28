@@ -112,7 +112,7 @@ a.combtn{
 }
 .btncolor{
   background-color: #ff503f;
-  border: 1px solid #c53e31;
+  border: 1px solid #ee4635;
   &:hover{
     background-color: #d24133;
   }
@@ -152,4 +152,26 @@ a.combtn{
     }
   }
 
+}
+.layer-box{
+  display: none;
+  .layer-bg{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    background-color: #000000;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  }
+  .layer-content{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background-color: #ffffff;
+  }
 }

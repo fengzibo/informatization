@@ -63,9 +63,9 @@ var Common = {
     //密码强度显示
     pasgrade: function () {
         $('.pasgrade').keyup(function () {
-            if ($('.pasgrade').val().length < 5) {
+            if ($('.pasgrade').val().length < 6) {
                 showgrade('.leave-fl:first-child', '#d7423f');
-            } else if ($('.pasgrade').val().length < 10) {
+            } else if ($('.pasgrade').val().length < 9) {
                 showgrade('.leave-fl:nth-child(2)', '#edb823');
             } else {
                 showgrade('.leave-fl:nth-child(3)','#28ed23');
@@ -120,6 +120,15 @@ var Common = {
             $(this).addClass('current').siblings().removeClass('current');
             $('.ification-content').html(Common.commonblock(x[thisi]));
             Common.footerbottom();
+        })
+    },
+    //弹出层
+    layer: function (ele,obj) {
+        $(ele).on('click',function(){
+            $(obj).show(500);
+            $('.closelayer').click(function () {
+                $(this).parents(obj).hide();
+            })
         })
     }
 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>教学课堂</title>
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="container">
+    <div class="titlenav titlenav2 tab-title">
+        <a class="current">考试大厅</a>
+    </div>
+    <div class="ification-content" style="margin-top: 34px; text-align: center">
+        <ul class="entrance clearfix">
+            <li >
+                <div class="bg-color" style="background-color: #ffa5a5;">
+                    <p style="color: #797979">考试已经结束</p>
+                    <div class="subject">
+                        <h4>基础工程考试</h4>
+                        <h5>基础工程课程</h5>
+                    </div>
+                    <p>考试时间：2016-04-28 13：00-14：30</p>
+                </div>
+                <a class="combtn" href="check-testpaper.html">查看试卷</a>
+            </li>
+            <li >
+                <div class="bg-color" style="background-color: #ffe8a5">
+                    <p style="color: #797979">考试已经结束</p>
+                    <div class="subject">
+                        <h4>基础工程考试</h4>
+                        <h5>基础工程课程</h5>
+                    </div>
+                    <p>考试时间：2016-04-28 13：00-14：30</p>
+                </div>
+
+                <a class="combtn">复&nbsp;&nbsp;习</a>
+            </li>
+            <li>
+                <div class="bg-color" style="background-color: #a6baff">
+                    <p style="color: #797979">距离考试还有1天1小时</p>
+                    <div class="subject">
+                        <h4>基础工程考试</h4>
+                        <h5>基础工程课程</h5>
+                    </div>
+                    <p>考试时间：2016-04-28 13：00-14：30</p>
+                </div>
+                <a class="combtn btncolor">开始考试</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/video.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/jquery.pagination.js"></script>
+<script src="../js/Common.js"></script>
+<script>
+    $(function () {
+        $('.header').html(Common.cheader('','/html/Common-header2.html'));
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
+        Common.footerbottom();
+
+    })
+</script>
+</body>
+</html>

@@ -158,14 +158,17 @@
       .form-control;
       width: 400px;
     }
-    span.erro{
+    span.error{
       display: block;
       width: 400px;
       position: absolute;
       left: 130px;
       line-height: 26px;
       font-size: 12px;
-      color: #a0a0a0;
+      color: red;
+    }
+    span.suc{
+      color: green;
     }
     .leave{
       width: 200px;
@@ -553,4 +556,238 @@
 .course-text{
   text-indent: 28px;
   line-height: 24px;
+}
+.entrance{
+  margin: 0 ;
+  padding: 0;
+  display: inline-block;
+  li{
+    float: left;
+    margin-left: 38px;
+    width: 350px;
+    list-style: none;
+    &:first-child{
+      margin-left: 0;
+    }
+    .bg-color{
+      padding: 10px;
+    }
+    .subject{
+      display: table-cell;
+      vertical-align: middle;
+      width: 350px;
+      height: 130px;
+      h4{
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0 0 10px;
+      }
+      h5{
+        .font-style;
+        font-weight: normal;
+        margin: 0;
+      }
+    }
+    a.combtn{
+      display: inline-block;
+      margin-top: 20px;
+    }
+  }
+}
+.check-title{
+  position: relative;
+  .font-style;
+  text-align: center;
+  font-weight: normal;
+  border-bottom: 1px solid #e8e8e8;
+  line-height: 50px;
+  margin: 0;
+  a{
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    .rounded(12px);
+    border: 1px solid #cccccc;
+    color: #ffffff;
+    background-color: #bdbbba;
+    line-height: 20px;
+    text-align: center;
+    right: 12px;
+    top: 15px;
+    &:hover{
+      text-decoration: none;
+      background-color: #ff503f;
+      border: 1px solid #ee4635;
+    }
+  }
+}
+.testpaperleft{
+  width: 350px;
+  float: left;
+  border-right: 1px solid #e8e8e8;
+}
+h2.topic{
+  line-height: 48px;
+  border-bottom: 1px solid #e8e8e8;
+  margin: 0;
+  font-weight: normal;
+  padding-left: 34px;
+  .font-style;
+}
+.topic-item{
+  margin: 0;
+  padding: 0 0 0 34px;
+  border-bottom: 1px solid #e8e8e8;
+  height: 402px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  li{
+    list-style: none;
+    margin: 20px 0 ;
+    .clearfix;
+    h3{
+      .font-style;
+      font-weight: normal;
+    }
+    span{
+      margin-right: 14px;
+      margin-bottom: 10px;
+      border: 1px solid #3c3c3c;
+      padding: 4px 8px;
+      display: inline-block;
+      cursor: pointer;
+      float: left;
+      &:hover{
+        background-color: #ff503f;
+        border: 1px solid #ff503f;
+        color: #ffffff;
+      }
+    }
+    span.current{
+      background-color: #ff503f;
+      border: 1px solid #ff503f;
+      color: #ffffff;
+    }
+  }
+}
+.test-score{
+  border-bottom: 1px solid #e8e8e8;
+  line-height: 66px;
+  h1{
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    em{
+      font-style: normal;
+      font-size: 20px;
+      color: #ff503f;
+      margin: 0 5px;
+    }
+  }
+}
+.test-remark{
+  padding: 18px 30px;
+  height: 170px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-bottom: 1px solid #e8e8e8;
+  h5{
+    .font-style;
+    font-weight: normal;
+    margin: 0;
+  }
+  p{
+    text-indent: 28px;
+    line-height: 28px;
+  }
+}
+.exit-box{
+  a{
+    display: block;
+    margin: 18px auto;
+  }
+}
+.testpaperright{
+  overflow: hidden;
+}
+.test-type{
+  .font-style;
+  line-height: 48px;
+  border-bottom: 1px solid #e8e8e8;
+  margin: 0 ;
+  padding-left: 20px;
+  font-weight: normal;
+}
+.choice-question{
+  margin: 0;
+  padding: 0;
+  height: 241px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  li{
+    list-style: none;
+    margin-left: 20px;
+    line-height: 30px;
+    label{
+      margin-left: 24px;
+      i{
+        font-style: normal;
+        margin: 5px;
+      }
+    }
+  }
+}
+.answers-box{
+  margin: 20px;
+  background-color: #e8e8e8;
+  padding:0 24px;
+  height: 120px;
+  display: table;
+  width: 808px;
+}
+.answers{
+  display: table-cell;
+  vertical-align: middle;
+  h3{
+    font-size: 16px;
+    margin: 0;
+    span{
+      color: #ff503f;
+      font-weight: normal;
+      margin-left: 10px;
+    }
+  }
+}
+.analysis-title{
+  .test-type;
+  border-top:1px solid #e8e8e8;
+}
+.analysis{
+  padding: 20px;
+  text-indent: 28px;
+  height: 255px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  line-height: 28px;
+}
+.exit-size{
+  width: 450px;
+  height: 300px;
+  margin-left: -225px;
+  margin-top: -150px;
+  border: 3px solid #e8e8e8;
+  display: table;
+}
+.exit-content{
+  display: table-cell;
+  vertical-align: middle;
+  p{
+    color: #ff503f;
+    text-align: center;
+  }
+  a{
+    display: block;
+    margin: 60px auto 0;
+  }
 }
