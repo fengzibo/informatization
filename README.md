@@ -31,6 +31,6 @@ html文件名
         
 注意事项
 ----
-本项目采用ajax技术 请使用localhost:访问网站
-可能项目路径不对 请在js/Common.js中修改ifiationajax,ifiationajax1,ifiationajax2方法;
-如有疑问,请尽快m我,加油吧,悲催的码农,猝死的加班狗
+本项目采用ajax技术 请使用localhost:访问网站<br>
+可能项目路径不对 请在js/Common.js中修改 **ifiationajax**,**ifiationajax2**,**ifiationajax3**方法<br>
+###如有疑问,请尽快m我,加油吧,悲催的码农,猝死的加班狗
