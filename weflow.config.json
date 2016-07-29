@@ -3,7 +3,7 @@
         "host": "",
         "port": "",
         "user": "",
-        "pass": "",
+        "pass": false,
         "remotePath": "",
         "includeHtml": true,
         "ssh": false

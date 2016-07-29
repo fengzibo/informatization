@@ -22,3 +22,15 @@ html文件名
 *   resource-center.html------------------------------资源中心
     *   teaching-resources.html-----------------------教学资源
     *   personal-resources.html-----------------------个人资源
+*   network-test.html---------------------------------网络考试
+    *   check-testpaper.html--------------------------查看试卷
+    *   network-test.html-----------------------------开始考试
+        (ps:题目类型多样)
+        
+     
+        
+注意事项
+----
+本项目采用ajax技术 请使用localhost:访问网站
+可能项目路径不对 请在js/Common.js中修改ifiationajax,ifiationajax1,ifiationajax2方法;
+如有疑问,请尽快m我,加油吧,悲催的码农,猝死的加班狗
