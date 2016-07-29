@@ -470,10 +470,14 @@ th {
 
 @font-face {
   font-family: 'iconfont';
-  src: url('//at.alicdn.com/t/font_1469599407_1638975.eot');
+  src: url('//at.alicdn.com/t/font_1469761947_6228173.eot');
   /* IE9*/
-  src: url('//at.alicdn.com/t/font_1469599407_1638975.eot?#iefix') format('embedded-opentype'),  url('//at.alicdn.com/t/font_1469599407_1638975.woff') format('woff'),  url('//at.alicdn.com/t/font_1469599407_1638975.ttf') format('truetype'),  url('//at.alicdn.com/t/font_1469599407_1638975.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1469761947_6228173.eot?#iefix') format('embedded-opentype'),  url('//at.alicdn.com/t/font_1469761947_6228173.woff') format('woff'),  url('//at.alicdn.com/t/font_1469761947_6228173.ttf') format('truetype'),  url('//at.alicdn.com/t/font_1469761947_6228173.svg#iconfont') format('svg');
   /* iOS 4.1- */
+}
+
+.icon-guanbi:before {
+  content: "\e609";
 }
 
 .icon-gengduo:before {
@@ -527,7 +531,7 @@ th {
 }
 
 .iconfont {
-  font-family: "iconfont";
+  font-family: "iconfont" !important;
   font-size: 14px;
   font-style: normal;
   vertical-align: bottom;
@@ -655,6 +659,10 @@ a.combtn {
   margin-bottom: 5px;
 }
 
+.pagination a.next {
+  margin-right: 0;
+}
+
 .pagination .current {
   background: #ff503f;
   color: #fff;
@@ -705,6 +713,10 @@ a.combtn {
   left: 50%;
   top: 50%;
   background-color: #ffffff;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 .topfunc {
@@ -1463,6 +1475,11 @@ a.combtn {
   color: #ff503f;
 }
 
+.sort-seach .seach-ify a.current {
+  color: #ff503f;
+  text-decoration: underline;
+}
+
 .seach-content {
   margin: 10px 0 0 0;
   padding: 0;
@@ -1651,28 +1668,15 @@ a.combtn {
 
 .check-title a {
   position: absolute;
-  display: block;
-  width: 20px;
-  height: 20px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  border-radius: 12px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding-box;
-  background-clip: padding-box;
-  border: 1px solid #cccccc;
-  color: #ffffff;
-  background-color: #bdbbba;
-  line-height: 20px;
   text-align: center;
   right: 12px;
-  top: 15px;
+  top: 0px;
+  color: #3c3c3c;
 }
 
 .check-title a:hover {
   text-decoration: none;
-  background-color: #ff503f;
-  border: 1px solid #ee4635;
+  color: #ff503f;
 }
 
 .testpaperleft {
@@ -1748,6 +1752,7 @@ h2.topic {
 .test-score {
   border-bottom: 1px solid #e8e8e8;
   line-height: 66px;
+  height: 66px;
 }
 
 .test-score h1 {
@@ -1800,9 +1805,21 @@ h2.topic {
   margin: 0;
   padding-left: 20px;
   font-weight: normal;
+  position: relative;
 }
 
-.choice-question {
+.test-type span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #ff503f;
+  font-weight: bold;
+}
+
+.choice-question,
+.radio-question,
+.completion,
+.ans-que {
   margin: 0;
   padding: 0;
   height: 241px;
@@ -1810,25 +1827,51 @@ h2.topic {
   overflow-y: auto;
 }
 
-.choice-question li {
+.choice-question li,
+.radio-question li,
+.completion li,
+.ans-que li {
   list-style: none;
   margin-left: 20px;
   line-height: 30px;
 }
 
-.choice-question li label {
+.choice-question li p,
+.radio-question li p,
+.completion li p,
+.ans-que li p {
+  margin-right: 20px;
+  text-align: justify;
+}
+
+.choice-question li label,
+.radio-question li label,
+.completion li label,
+.ans-que li label {
   margin-left: 24px;
 }
 
-.choice-question li label i {
+.choice-question li label i,
+.radio-question li label i,
+.completion li label i,
+.ans-que li label i {
   font-style: normal;
   margin: 5px;
+}
+
+.completion li {
+  line-height: 40px;
+}
+
+.completion input[type="text"] {
+  width: 400px;
+  display: inline-block;
 }
 
 .answers-box {
   margin: 20px;
   background-color: #e8e8e8;
-  padding: 0 24px;
+  padding: 0 0 0 24px;
   height: 120px;
   display: table;
   width: 808px;
@@ -1842,12 +1885,15 @@ h2.topic {
 .answers h3 {
   font-size: 16px;
   margin: 0;
+  width: 80px;
+  display: inline-block;
+  vertical-align: top;
 }
 
-.answers h3 span {
+.answers .asw-con {
+  display: inline-block;
   color: #ff503f;
   font-weight: normal;
-  margin-left: 10px;
 }
 
 .analysis-title {
@@ -1858,13 +1904,22 @@ h2.topic {
   margin: 0;
   padding-left: 20px;
   font-weight: normal;
+  position: relative;
   border-top: 1px solid #e8e8e8;
+}
+
+.analysis-title span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #ff503f;
+  font-weight: bold;
 }
 
 .analysis {
   padding: 20px;
   text-indent: 28px;
-  height: 255px;
+  height: 188px;
   overflow-x: hidden;
   overflow-y: auto;
   line-height: 28px;
@@ -1882,6 +1937,7 @@ h2.topic {
 .exit-content {
   display: table-cell;
   vertical-align: middle;
+  text-align: center;
 }
 
 .exit-content p {
@@ -1890,6 +1946,39 @@ h2.topic {
 }
 
 .exit-content a {
-  display: block;
-  margin: 60px auto 0;
+  display: inline-block;
+  margin: 60px 0 0;
+}
+
+.pagebox {
+  padding: 18px 0 0;
+  text-align: center;
+  border-top: 1px solid #e8e8e8;
+}
+
+.pagebox a {
+  display: inline-block;
+}
+
+.pagebox a:first-child {
+  margin-right: 180px;
+}
+
+.completion-answers input[type="text"] {
+  color: #ff503f;
+  font-weight: normal;
+}
+
+.ans-que textarea {
+  height: 100px;
+}
+
+.completion-answers input[type="text"] {
+  width: 400px;
+}
+
+.ans-que-answers textarea {
+  height: 100px;
+  width: 680px;
+  color: #ff503f;
 }

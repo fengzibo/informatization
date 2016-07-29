@@ -448,6 +448,10 @@
         color: #ff503f;
       }
     }
+    a.current{
+      color: #ff503f;
+      text-decoration: underline;
+    }
   }
 }
 .seach-content{
@@ -604,21 +608,13 @@
   margin: 0;
   a{
     position: absolute;
-    display: block;
-    width: 20px;
-    height: 20px;
-    .rounded(12px);
-    border: 1px solid #cccccc;
-    color: #ffffff;
-    background-color: #bdbbba;
-    line-height: 20px;
     text-align: center;
     right: 12px;
-    top: 15px;
+    top: 0px;
+    color: #3c3c3c;
     &:hover{
       text-decoration: none;
-      background-color: #ff503f;
-      border: 1px solid #ee4635;
+      color: #ff503f;
     }
   }
 }
@@ -674,6 +670,7 @@ h2.topic{
 .test-score{
   border-bottom: 1px solid #e8e8e8;
   line-height: 66px;
+  height: 66px;
   h1{
     font-size: 16px;
     text-align: center;
@@ -718,8 +715,16 @@ h2.topic{
   margin: 0 ;
   padding-left: 20px;
   font-weight: normal;
+  position: relative;
+  span{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: #ff503f;
+    font-weight: bold;
+  }
 }
-.choice-question{
+.choice-question,.radio-question,.completion,.ans-que{
   margin: 0;
   padding: 0;
   height: 241px;
@@ -729,6 +734,10 @@ h2.topic{
     list-style: none;
     margin-left: 20px;
     line-height: 30px;
+    p{
+      margin-right: 20px;
+      text-align: justify;
+    }
     label{
       margin-left: 24px;
       i{
@@ -738,10 +747,19 @@ h2.topic{
     }
   }
 }
+.completion{
+  li{
+    line-height: 40px;
+  }
+  input[type="text"]{
+    width: 400px;
+    display: inline-block;
+  }
+}
 .answers-box{
   margin: 20px;
   background-color: #e8e8e8;
-  padding:0 24px;
+  padding:0 0 0 24px;
   height: 120px;
   display: table;
   width: 808px;
@@ -752,11 +770,14 @@ h2.topic{
   h3{
     font-size: 16px;
     margin: 0;
-    span{
-      color: #ff503f;
-      font-weight: normal;
-      margin-left: 10px;
-    }
+    width: 80px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .asw-con{
+    display: inline-block;
+    color: #ff503f;
+    font-weight: normal;
   }
 }
 .analysis-title{
@@ -766,7 +787,7 @@ h2.topic{
 .analysis{
   padding: 20px;
   text-indent: 28px;
-  height: 255px;
+  height: 188px;
   overflow-x: hidden;
   overflow-y: auto;
   line-height: 28px;
@@ -782,12 +803,41 @@ h2.topic{
 .exit-content{
   display: table-cell;
   vertical-align: middle;
+  text-align: center;
   p{
     color: #ff503f;
     text-align: center;
   }
   a{
-    display: block;
-    margin: 60px auto 0;
+    display: inline-block;
+    margin: 60px 0 0;
   }
+}
+.pagebox{
+  padding: 18px 0 0;
+  text-align: center;
+  border-top: 1px solid #e8e8e8;
+  a{
+    display: inline-block;
+  }
+  a:first-child{
+    margin-right: 180px;
+  }
+}
+.completion-answers input[type="text"]{
+  color: #ff503f;
+  font-weight: normal;
+}
+.ans-que{
+  textarea{
+    height: 100px;
+  }
+}
+.completion-answers input[type="text"]{
+  width: 400px;
+}
+.ans-que-answers textarea{
+  height: 100px;
+  width: 680px;
+  color: #ff503f;
 }
