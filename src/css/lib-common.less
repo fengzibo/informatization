@@ -1,15 +1,17 @@
 @font-face {
   font-family: 'iconfont';
-  src: url('//at.alicdn.com/t/font_1470103521_2977338.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/font_1470103521_2977338.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/font_1470103521_2977338.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/font_1470103521_2977338.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/font_1470103521_2977338.svg#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('//at.alicdn.com/t/font_1470127108_0567353.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1470127108_0567353.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1470127108_0567353.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1470127108_0567353.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1470127108_0567353.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 
 
 
+.icon-left:before{ content:"\e610"}
+.icon-right:before{ content:"\e60f"}
 .icon-guanbi:before { content: "\e609"; }
 .icon-gengduo:before { content: "\e602"; }
 .icon-icon:before { content: "\e601"; }
@@ -189,4 +191,70 @@ a.combtn{
 }
 a:link{
   text-decoration: none;
+}
+.video-box{
+  position: relative;
+  .course-menu-box{
+    position: absolute;
+    top: 180px;
+    right: -200px;
+  }
+}
+.course-menu{
+  width: 50px;
+  height: 150px;
+  text-align: center;
+  .fl;
+   span{
+     writing-mode: tb-rl;
+     text-align: center;
+     display: block;
+     letter-spacing:8px;
+     line-height: 50px;
+     height: 100%;
+     cursor: pointer;
+     background-color: #d6d6d6;
+     padding-top: 10px;
+     &:hover{
+       background-color: #ff503f;
+       color: #ffffff;
+     }
+   }
+}
+.course-item{
+  width: 180px;
+  border: 1px solid #e8e8e8;
+  background-color: #ffffff;
+  .fl;
+  h4{
+    line-height: 40px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+    border-bottom:1px solid #e8e8e8 ;
+  }
+  ul{
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 10px 0 10px 30px;
+    li{
+      list-style: none;
+      a{
+        line-height: 24px;
+        display: block;
+        &:hover{
+          text-decoration: none;
+          color: #ff503f;
+        }
+      }
+      a.current{
+        color: #ff503f;
+      }
+      .item-child{
+        padding-left: 20px;
+      }
+    }
+  }
 }

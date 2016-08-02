@@ -24,7 +24,7 @@
     color: #ff503f;
   }
 }
-.tab-content{
+.tab-content,.tab-content2{
   padding-bottom: 20px;
   display: none;
 }
@@ -235,10 +235,13 @@
     float: left;
     width: 123px;
     a{
-      line-height: 48px;
-      display: block;
+      width: 121px;
+      height: 54px;
+      display: table-cell;
       text-align: center;
       border-bottom: 5px solid transparent;
+      vertical-align: middle;
+      padding: 0 10px;
       .font-style;
       &:hover{
         text-decoration: none;
@@ -256,6 +259,7 @@
 .ification-content{
   border: 1px solid #e9e9e9;
   padding: 20px;
+  overflow: hidden;
 }
 .summarize{
   border-bottom: 1px solid #e8e8e8;
@@ -332,42 +336,42 @@
       }
     }
   }
-  ul.video-item{
-    margin: 0;
-    padding-left: 45px;
-    li{
-      position: relative;
-      list-style: none;
-      .fl;
-      margin-right: 20px;
-      width: 160px;
-      img{
-        width: 100%;
-        height: 90px;
-        background-color: #d6d6d6;
+}
+ul.video-item{
+  margin: 0;
+  padding-left: 45px;
+  li{
+    position: relative;
+    list-style: none;
+    .fl;
+    margin-right: 20px;
+    width: 160px;
+    img{
+      width: 100%;
+      height: 90px;
+      background-color: #d6d6d6;
+    }
+    a{
+      display: block;
+      width: 36px;
+      height: 36px;
+      position: absolute;
+      top: 27px;
+      left: 50%;
+      margin-left: -18px;
+      background: url("../img/video-btn.png") no-repeat center;
+      &:hover{
+        opacity: .7;
+        -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+        filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
       }
-      a{
-        display: block;
-        width: 36px;
-        height: 36px;
-        position: absolute;
-        top: 27px;
-        left: 50%;
-        margin-left: -18px;
-        background: url("../img/video-btn.png") no-repeat center;
-        &:hover{
-          opacity: .7;
-          -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-          filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-        }
-      }
-      p{
-        .font-style;
-        line-height: 50px;
-        text-align: center;
-        background: #e8e8e8;
-        margin: 0;
-      }
+    }
+    p{
+      .font-style;
+      line-height: 50px;
+      text-align: center;
+      background: #e8e8e8;
+      margin: 0;
     }
   }
 }
@@ -555,6 +559,11 @@
   position: relative;
   height: 54px;
   margin: 38px 0 0 ;
+}
+.tab-content-box2{
+  position: relative;
+  margin: 38px 0 0;
+  height: 420px;
 }
 .course-img{
  width: 100%;
@@ -892,4 +901,67 @@ h2.topic{
   width: 100%;
   line-height: 40px;
   border-top: 1px solid #e8e8e8;
+}
+.raise-bottom-tab{
+  margin-top: 60px;
+  border-bottom: 1px solid #e8e8e8;
+  a{
+    display: block;
+    .fl;
+    background-color: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    line-height: 38px;
+    width: 120px;
+    text-align: center;
+    &:hover{
+      background-color: #ffffff;
+      color: #ff503f;
+    }
+  }
+  a.current{
+    background-color: #ffffff;
+    color: #ff503f;
+  }
+}
+.ification2{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  .record-item{
+    margin-top: 50px;
+  }
+}
+.prac-file{
+  height: 370px;
+  overflow-y: auto;
+  overflow-x:hidden;
+}
+.in-class{
+  .fl;
+  width: 49%;
+}
+.extracurricular{
+  .fr;
+  width: 49%;
+}
+.practice{
+  border: 1px solid #e8e8e8;
+  h4{
+    line-height: 38px;
+    border-bottom: 1px solid #e8e8e8;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+  }
+  .record-item{
+    margin-top: 40px;
+    li{
+      margin: 0 32px;
+    }
+  }
+}
+.video-box{
+  position: relative;
 }

@@ -81,11 +81,10 @@ var Common = {
     //始业教育调用页面方法
     ifiationajax: function () {
         var x =[ '/html/initial-educationi.html','/html/campus-pursuit.html','/html/teacher-pupil.html','/html/school-means.html','/html/write-report.html'];
-        $('.ification li').click(function () {
+        $('.modal1 li').click(function () {
             var thisi = $(this).index();
             $(this).find('a').addClass('current').parent().siblings().find('a').removeClass('current');
             $('.ification-content').html(Common.commonblock(x[thisi]));
-            $(".select").select2();//select美化
             Common.footerbottom();
         })
     },

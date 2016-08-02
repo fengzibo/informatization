@@ -580,9 +580,9 @@ body.vjs-full-window {
     opacity: 1;
     visibility: visible; }
 
-@media \0screen {
-    .vjs-user-inactive.vjs-playing .vjs-control-bar :before {
-        content: ""; } }
+/*@media \0screen {*/
+    /*.vjs-user-inactive.vjs-playing .vjs-control-bar :before {*/
+        /*content: ""; } }*/
 
 .vjs-has-started.vjs-no-flex .vjs-control-bar {
     display: table; }
