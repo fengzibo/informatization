@@ -452,6 +452,9 @@
       color: #ff503f;
       text-decoration: underline;
     }
+    a.select2-choice{
+      margin-left: 0;
+    }
   }
 }
 .seach-content{
@@ -518,10 +521,10 @@
     }
     &:hover{
       color: #ff503f;
-      i.icon-icon6:before{
-        content: '\e608';
-      }
     }
+  }
+  span.hovercolor{
+    color: #ff503f;
   }
 }
 .write-report{
@@ -840,4 +843,53 @@ h2.topic{
   height: 100px;
   width: 680px;
   color: #ff503f;
+}
+.table-box{
+  border: 1px solid #e8e8e8;
+}
+.query-title{
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  border-bottom: 1px solid #e8e8e8;
+  i{
+    color: #ff503f;
+    margin-right: 5px;
+  }
+}
+.query-box{
+  width: 100%;
+  margin: 0 auto;
+  line-height: 40px;
+  border-top: none;
+
+  td{
+    padding: 0 30px;
+  }
+  td.last{
+    text-align: right;
+  }
+}
+.last-table,.overall-rating{
+  text-align: center;
+   td{
+     border-bottom: 1px solid #e8e8e8;
+     border-right: 1px solid #e8e8e8;
+     padding: 0;
+   }
+  tr.trlast{
+    td{
+      border-bottom: none;
+    }
+  }
+   td.last{
+     text-align: center;
+     border-right: none;
+     padding: 0 20px;
+   }
+}
+.overall-rating{
+  width: 100%;
+  line-height: 40px;
+  border-top: 1px solid #e8e8e8;
 }

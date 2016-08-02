@@ -470,9 +470,9 @@ th {
 
 @font-face {
   font-family: 'iconfont';
-  src: url('//at.alicdn.com/t/font_1469761947_6228173.eot');
+  src: url('//at.alicdn.com/t/font_1470103521_2977338.eot');
   /* IE9*/
-  src: url('//at.alicdn.com/t/font_1469761947_6228173.eot?#iefix') format('embedded-opentype'),  url('//at.alicdn.com/t/font_1469761947_6228173.woff') format('woff'),  url('//at.alicdn.com/t/font_1469761947_6228173.ttf') format('truetype'),  url('//at.alicdn.com/t/font_1469761947_6228173.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1470103521_2977338.eot?#iefix') format('embedded-opentype'),  url('//at.alicdn.com/t/font_1470103521_2977338.woff') format('woff'),  url('//at.alicdn.com/t/font_1470103521_2977338.ttf') format('truetype'),  url('//at.alicdn.com/t/font_1470103521_2977338.svg#iconfont') format('svg');
   /* iOS 4.1- */
 }
 
@@ -514,6 +514,26 @@ th {
 
 .icon-icon7:before {
   content: "\e608";
+}
+
+.icon-iconfuzhi:before {
+  content: "\e60a";
+}
+
+.icon-iconfuzhi1:before {
+  content: "\e60b";
+}
+
+.icon-iconfuzhi2:before {
+  content: "\e60c";
+}
+
+.icon-iconfuzhi3:before {
+  content: "\e60d";
+}
+
+.icon-iconfuzhi4:before {
+  content: "\e60e";
 }
 
 * {
@@ -1480,6 +1500,10 @@ a:link {
   text-decoration: underline;
 }
 
+.sort-seach .seach-ify a.select2-choice {
+  margin-left: 0;
+}
+
 .seach-content {
   margin: 10px 0 0 0;
   padding: 0;
@@ -1562,8 +1586,8 @@ a:link {
   color: #ff503f;
 }
 
-.sea-content-right span:hover i.icon-icon6:before {
-  content: '\e608';
+.sea-content-right span.hovercolor {
+  color: #ff503f;
 }
 
 .write-report h3 {
@@ -1981,4 +2005,65 @@ h2.topic {
   height: 100px;
   width: 680px;
   color: #ff503f;
+}
+
+.table-box {
+  border: 1px solid #e8e8e8;
+}
+
+.query-title {
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.query-title i {
+  color: #ff503f;
+  margin-right: 5px;
+}
+
+.query-box {
+  width: 100%;
+  margin: 0 auto;
+  line-height: 40px;
+  border-top: none;
+}
+
+.query-box td {
+  padding: 0 30px;
+}
+
+.query-box td.last {
+  text-align: right;
+}
+
+.last-table,
+.overall-rating {
+  text-align: center;
+}
+
+.last-table td,
+.overall-rating td {
+  border-bottom: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  padding: 0;
+}
+
+.last-table tr.trlast td,
+.overall-rating tr.trlast td {
+  border-bottom: none;
+}
+
+.last-table td.last,
+.overall-rating td.last {
+  text-align: center;
+  border-right: none;
+  padding: 0 20px;
+}
+
+.overall-rating {
+  width: 100%;
+  line-height: 40px;
+  border-top: 1px solid #e8e8e8;
 }

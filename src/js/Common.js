@@ -95,10 +95,10 @@ var Common = {
             var thisi = $(this).find('i')
             if(thisi.hasClass('icon-icon6')){
                 thisi.removeClass('icon-icon6').addClass('icon-icon7');
-                $(this).css('color','#ff503f');
+                $(this).addClass('hovercolor');
             }else {
                 thisi.removeClass('icon-icon7').addClass('icon-icon6');
-                $(this).css('color','#3c3c3c');
+                $(this).removeClass('hovercolor');
             }
         })
     },
@@ -130,6 +130,17 @@ var Common = {
                 $(this).parents(obj).hide();
             })
         })
-    }
+    },
+    //成果管理调用页面方法
+    ifiationajax4: function () {
+        var x =[ '/html/on-display.html','/html/query-results.html'];
+        $('.titlenav2 a').click(function () {
+            var thisi = $(this).index();
+            $(this).addClass('current').siblings().removeClass('current');
+            $('.ification-content').html(Common.commonblock(x[thisi]));
+            Common.footerbottom();
+            $(".select").select2();
+        })
+    },
 
 }

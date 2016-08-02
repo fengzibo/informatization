@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>成果管理</title>
+    <link rel="stylesheet" type="text/css" href="../css/lib-select.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="container">
+    <div class="titlenav titlenav2 tab-title">
+        <a class="current">优秀作品展示</a>
+        <a>考评结果查询</a>
+    </div>
+    <div class="ification-content" style="margin-top: 34px;">
+
+    </div>
+</div>
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/jquery.pagination.js"></script>
+<script src="../js/Common.js"></script>
+<script>
+    $(function () {
+        $('.header').html(Common.cheader('','/html/Common-header2.html'));
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
+        $('.ification-content').html(Common.commonblock('/html/on-display.html'));
+        Common.footerbottom();
+        $(".select").select2();
+        Common.ifiationajax4();
+    })
+</script>
+</body>
+</html>
