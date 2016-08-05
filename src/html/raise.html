@@ -8,34 +8,7 @@
             <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
         </p>
     </video>
-    <div class="course-menu-box">
-        <div class="course-menu">
-            <span>课程菜单<i class="iconfont icon-left"></i></span>
-        </div>
-        <div class="course-item">
-            <h4>监理概论与法规</h4>
-            <ul>
-                <li>
-                    <a>单元一</a>
-                    <div class="item-child">
-                        <a>子单元一</a>
-                        <a>子单元二</a>
-                        <a>子单元三</a>
-                        <a>子单元四</a>
-                    </div>
-                </li>
-                <li>
-                    <a>单元二</a>
-                    <div class="item-child">
-                        <a>子单元一</a>
-                        <a>子单元二</a>
-                        <a>子单元三</a>
-                        <a>子单元四</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
+
 </div>
 <div class="tab-title2 raise-bottom-tab clearfix">
     <a class="current">仿&nbsp;真</a>
@@ -254,34 +227,3 @@
         </ul>
     </div>
 </div>
-
-<script>
-    $(function(){
-        $('.tab-title2').find('a').on('click', function () {
-            var thisi = $(this).index();
-            $(this).addClass('current').siblings().removeClass('current');
-            $('.tab-content2').eq(thisi).stop().fadeIn().siblings('.tab-content2').fadeOut();
-        })
-    })
-    $('.course-item ul li>a').on('click', function (event) {
-        if($(this).next('.item-child').is(":hidden")){
-            $('.item-child').stop().slideUp();
-            $('.course-item ul li>a').removeClass('current');
-            $(this).next('.item-child').stop().slideDown();
-            $(this).addClass('current');
-        }else {
-            $('.item-child').stop().slideUp();
-            $('.course-item ul li>a').removeClass('current');
-        }
-        event.stopPropagation();
-    })
-    $('.course-menu').on('click',function(event){
-        if($(this).parent().css('right') == '-200px'){
-            $(this).parent().animate({right:'-20px'},200);
-
-        }else{
-            $(this).parent().animate({right:'-200px'},200);
-        }
-        event.stopPropagation();
-    })
-</script>

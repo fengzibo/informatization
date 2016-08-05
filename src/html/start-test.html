@@ -161,8 +161,8 @@
             </ul>
 
             <div class="pagebox">
-                <a class="combtn">上一题</a>
-                <a class="combtn">下一题</a>
+                <a class="combtn" id="prev-topic">上一题</a>
+                <a class="combtn" id="next-topic">下一题</a>
             </div>
         </div>
     </div>
@@ -203,6 +203,12 @@
         //试卷已完成
         Common.layer('.exit-box a','#suc-check');
         Common.layer('.check-close','#exit-check');
+        Common.showTime('900',function(){
+            msg ="倒计时:"+h+":"+m+":"+s;
+            $('.test-type span').text(msg);
+        });
+
+        Common.page_topic();
     })
 </script>
 </body>

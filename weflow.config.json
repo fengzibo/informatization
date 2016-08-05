@@ -8,7 +8,7 @@
         "includeHtml": true,
         "ssh": false
     },
-    "livereload": true,
+    "livereload": false,
     "lazyDir": [
         "../slice"
     ],

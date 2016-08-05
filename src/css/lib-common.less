@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'iconfont';
-  src: url('//at.alicdn.com/t/font_1470127108_0567353.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/font_1470127108_0567353.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/font_1470127108_0567353.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/font_1470127108_0567353.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/font_1470127108_0567353.svg#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('//at.alicdn.com/t/font_1470202920_0966241.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1470202920_0966241.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1470202920_0966241.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1470202920_0966241.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1470202920_0966241.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 
-
-
+.icon-zz:before{ content:"\e612"}
+.icon-zy:before{ content:"\e611"}
 .icon-left:before{ content:"\e610"}
 .icon-right:before{ content:"\e60f"}
 .icon-guanbi:before { content: "\e609"; }
@@ -177,6 +177,7 @@ a.combtn{
     top: 0;
     width: 100%;
     height: 100%;
+    z-index:20;
     opacity: .6;
     background-color: #000000;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
@@ -187,20 +188,19 @@ a.combtn{
     left: 50%;
     top: 50%;
     background-color: #ffffff;
+    z-index: 20;
   }
 }
 a:link{
   text-decoration: none;
 }
-.video-box{
-  position: relative;
-  .course-menu-box{
-    position: absolute;
-    top: 180px;
-    right: -200px;
-  }
+.course-menu-box{
+  position: absolute;
+  top: 180px;
+  right: -55px;
+  z-index:20;
 }
-.course-menu{
+.course-menu,.crew-menu{
   width: 50px;
   height: 150px;
   text-align: center;
@@ -222,9 +222,10 @@ a:link{
    }
 }
 .course-item{
-  width: 180px;
+  width: 230px;
   border: 1px solid #e8e8e8;
   background-color: #ffffff;
+  display: none;
   .fl;
   h4{
     line-height: 40px;
