@@ -109,7 +109,7 @@ var Common = {
             }
         })
     },
-    //我的首页调用页面方法
+    //专业认知调用页面方法
     ifiationajax2: function () {
         var x =[ '/html/initial-educationi.html','/html/course-introduction.html','/html/process-perception.html','/html/raise.html','/html/physical-simulation.html','/html/field-work.html'];
         $('.titlenav2 a').click(function () {
@@ -224,7 +224,6 @@ var Common = {
             that.addClass('current');
             now =  parseInt(_Link.index($('.topic-item li span.current')));
             process(now,prev,next);
-            console.log(_Link.index($('.topic-item li span.current')));
         })
 
     },
@@ -233,7 +232,7 @@ var Common = {
         $('.crew-menu').on('click', function (e) {
             if($('.crew-content').is(':hidden')){
                 $(this).find('span').css({backgroundColor:"#ff503f",color:"#ffffff"})
-                $(this).find('span').stop().animate({height:'700px'},300);
+                $(this).find('span').stop().animate({height:'702px'},300);
                 $('.crew-content').stop().show(300);
                 $('.task-back').on('click',function(e){
                     $('.task-main').hide();
@@ -273,8 +272,19 @@ var Common = {
                         send_mes();
                     })
                     texra.keydown(function (event) {
-                        if(event.keyCode == 13){
+                        var theEvent = window.event || event;
+                        var code = theEvent.keyCode || theEvent.which;
+                        if(code == 13){
                             send_mes();
+                            return false;
+                        }
+                    });
+                    texra.keyup(function (event) {
+                        var theEvent = window.event || event;
+                        var code = theEvent.keyCode || theEvent.which;
+                        if(code == 13){
+                            texra.val('');
+                            return false;
                         }
                     });
                     $('.task-main-right ul.team-members li').on('click', function (e) {
@@ -296,6 +306,318 @@ var Common = {
             };
             e.stopPropagation();
         });
-    }
+    },
+    //侧边栏课程菜单
+    sider_menu: function () {
+        $('.course-item ul li>a').on('click', function (event) {
+            if($(this).next('.item-child').is(":hidden")){
+                $('.item-child').stop().slideUp();
+                $('.course-item ul li>a').removeClass('current');
+                $(this).next('.item-child').stop().slideDown();
+                $(this).addClass('current');
+            }else {
+                $('.item-child').stop().slideUp();
+                $('.course-item ul li>a').removeClass('current');
+            }
+            event.stopPropagation();
+        })
+        $(window).scroll(function(e){
+            var doctop = $(document).scrollTop();
+            if(doctop>200 && doctop<$('body').height()){
+                $('.course-menu-box').stop().animate({top:doctop},100);
+            }else {
+                $('.course-menu-box').stop().animate({top:'180px'},100);
+            }
+            if(doctop>100 && doctop<$('body').height()){
+                $('.conversation-box').stop().animate({top:doctop-150},100);
+            }else {
+                $('.conversation-box').stop().animate({top:0},100);
+            }
+            e.stopPropagation();
+        })
+        $('.course-menu').on('click',function(event){
 
+            if($(this).next('.course-item').is(':hidden')){
+                $(this).next('.course-item').stop().show(300);
+                $(this).find('i').removeClass('icon-left').addClass('icon-right');
+            }else {
+                $(this).next('.course-item').stop().hide(300);
+                $(this).find('i').removeClass('icon-right').addClass('icon-left');
+            }
+            event.stopPropagation();
+        })
+    },
+    //领取任务
+    get_task: function () {
+        $('.table-for-task tr td button').on('click',function(){
+            var thisindex = $(this).parent().index();
+            $(this).addClass('btncolor getcur').text('已领取').css({border:'0'});
+            $(this).prev('.get-number').find('span').css({color:'#ffffff'});
+            $('.table-for-task tr td').each(function () {
+                if($(this).index() == thisindex){
+                    $(this).css({
+                        backgroundColor: '#ff503f',
+                        color: '#ffffff',
+                        borderColor: '#ff503f'
+                    })
+                }
+            })
+        })
+    },
+    //教师端专业认知调用页面方法
+    ifiationajax5: function () {
+        var x =[ '/html/student-control.html','/html/course-introduction-teacher.html','/html/process-perception-teacher.html','/html/raise-teacher.html','/html/physical-simulation-teacher.html','/html/field-work-teacher.html'];
+        $('.titlenav2 a').click(function () {
+            var thisi = $(this).index();
+            $(this).addClass('current').siblings().removeClass('current');
+            $('.ification-content').html(Common.commonblock(x[thisi]));
+            Common.footerbottom();
+            Common.control();
+        })
+    },
+    //教师端专业认知js
+    control:function(){
+        $('.tea-ify ul li').on('click',function(){
+            var thisi = $(this).index();
+            $(this).addClass('current').siblings().removeClass('current');
+            $('.tea-table').eq(thisi).stop().show(400).siblings('.tea-table').hide(400);
+            function timemsg(){
+                var t = setTimeout(function () {
+                    Common.footerbottom();
+                },400);
+            }
+            timemsg();
+        })
+        $(".select").select2();
+        $('.edhca-show').on('click',function(){
+            $('.educa-hide').show();
+            Common.footerbottom();
+        })
+    },
+    //理实一体>学生管控
+    ifiationajax6: function () {
+        var x =[ '/html/raise-teacher.html','/html/prepare-lessons.html'];
+        $('.modal4 li').click(function () {
+            var thisi = $(this).index();
+            $(this).find('a').addClass('current').parent().siblings().find('a').removeClass('current');
+            $('.ification-content').html(Common.commonblock(x[thisi]));
+            Common.footerbottom();
+            $(".select").select2();
+        })
+    },
+    //理实一体>学生管控
+    ifiationajax7: function () {
+        var x =[ '/html/physical-simulation-teacher.html','/html/phy-pre-lessons.html'];
+        $('.modal5 li').click(function () {
+            var thisi = $(this).index();
+            $(this).find('a').addClass('current').parent().siblings().find('a').removeClass('current');
+            $('.ification-content').html(Common.commonblock(x[thisi]));
+            Common.footerbottom();
+            $(".select").select2();
+        })
+    },
+    //教学过程步骤
+    step:function (){
+        var next = $('#step-next');
+        var prev = $('#step-prev');
+        var finish = $('.step-finish')
+        var _Link = $('.step-btn-box a');
+        var step_tab = $('.step-content')
+        step_tab.eq(0).addClass('current');
+        var now =  parseInt(step_tab.index($('.step-content.current')));
+        _Link.eq(0).addClass('current');
+        function process(_now,_Prev,_Next){
+            _Link.eq(_now).addClass('current');
+            step_tab.eq(_now).stop().slideDown().siblings(step_tab).stop().slideUp();
+            step_tab.eq(_now).addClass('current').siblings(step_tab).removeClass('current');
+            var total = parseInt(step_tab.length - 1);
+            if(_now == 0){
+                _Prev.hide();
+                _Next.show();
+            }
+            else if(_now == total-1){
+                _Prev.show();
+                _Next.hide();
+                finish.show();
+            }
+            else if(_now == total){
+                _Prev.show();
+                _Next.hide();
+                finish.hide();
+            }
+            else {
+                _Prev.show();
+                _Next.show();
+                finish.hide();
+            }
+        }
+        process(0,prev,next);
+        next.click(function(){
+            process(now+1,prev,next);
+            now =  parseInt(step_tab.index($('.step-content.current')));
+        });
+        prev.click(function(){
+            process(now-1,prev,next);
+            if(now <= 3){
+                _Link.eq(now).removeClass('current');
+            }
+            now =  parseInt(step_tab.index($('.step-content.current')));
+        })
+        _Link.click(function(){
+            var that = $(this);
+            now =  parseInt(that.index());
+            _Link.removeClass('current');
+            for(var i=0;i<now;i++){
+                _Link.eq(i).addClass('current');
+            };
+            process(now,prev,next);
+        })
+        finish.click(function () {
+            process(now+1,prev,next);
+            now =  parseInt(step_tab.index($('.step-content.current')));
+        })
+
+    },
+    //全选
+    checkall: function () {
+        $('.checkall').find('input').click(function () {
+            $("input[name='zy']").prop('checked',this.checked);
+        });
+        $("input[name='zy']").click(function () {
+            var izy = $("input[name='zy']");
+            $('.checkall').find('input').prop('checked', izy.length == izy.filter(':checked').length ? true : false);
+        });
+    },
+    //教师端小组
+    teamfuc_teacher: function () {
+        $('.crew-menu').on('click', function (e) {
+            if($('.crew-content').is(':hidden')){
+                $(this).find('span').css({backgroundColor:"#ff503f",color:"#ffffff"})
+                $(this).find('span').stop().animate({height:'702px'},300);
+                $('.crew-content').stop().show(300);
+                $('.task-back').on('click',function(e){
+                    $('.task-main').hide();
+                    $('.team-discuss').hide();
+                    $('.team-discuss2').hide();
+                    $('.team-discuss3').hide();
+                    $('.task-item').show();
+                    e.stopPropagation();
+                });
+                function ulw(obj){
+                    var ulwidth = 0;
+                    $(obj).each(function () {
+                        ulwidth = ulwidth +parseInt($(this).outerWidth(true));
+                    });
+                    $(obj).parent('ul').width(ulwidth);
+                }
+                ulw('.file-item .x-scroll ul.annex li');
+                ulw('.team-discuss .x-scroll ul.annex li');
+                ulw('.team-discuss2 .x-scroll ul.annex li');
+                ulw('.discuss3-mod1 .x-scroll ul.annex li');
+                ulw('.discuss3-mod2 .x-scroll ul.annex li');
+                $('.examine-discuss').on('click',function(e){
+                    $('.team-discuss3').hide();
+                    $('.task-main').show();
+                    Common.tabcut2();
+                    var texra = $('.input-content textarea.dis-mes-val');
+                    function send_mes(){
+                        if(texra.val() != ''){
+                            var d = new Date();
+                            var h = d.getHours();
+                            var m = d.getMinutes();
+                            if(h<10){
+                                h = '0'+h;
+                            };
+                            if(m<10){
+                                m = '0'+m;
+                            };
+                            var html = "<div class='textformes'><div class='mem-name'>sadada:</div><p>"+texra.val()+"<span>"+h+":"+m+"</span></p></div>";
+                            $('.dis-mes-box').append(html);
+                            texra.val('');
+                        }else {
+                            alert('不能发送空内容');
+                            texra.val(' ');
+                        };
+                    };
+
+
+                    $('.sendbox a').on('click', function () {
+                        send_mes();
+                    })
+                    texra.keydown(function (event) {
+                        var theEvent = window.event || event;
+                        var code = theEvent.keyCode || theEvent.which;
+                        if(code == 13){
+                            send_mes();
+                            return false;
+                        }
+                    });
+                    texra.keyup(function () {
+                        var theEvent = window.event || event;
+                        var code = theEvent.keyCode || theEvent.which;
+                        if(code == 13){
+                            texra.val('');
+                            return false;
+                        }
+                    });
+                    $('.task-main-right ul.team-members li').on('click', function (e) {
+                        $('#group-task').show();
+                        $('#group-task').find('h2').html("组员["+$(this).text()+"]任务"+"<a class='iconfont icon-guanbi closelayer'>退出</a>")
+                        $('.closelayer').click(function (e) {
+                            $(this).parents('#group-task').hide();
+                            $('.task-size .write-task').val('');
+                            e.stopPropagation();
+                        })
+                        e.stopPropagation();
+                    })
+                    e.stopPropagation();
+                });
+                $('.team-stduy').click(function () {
+                    $('.task-item').hide();
+                    $('.team-discuss').show();
+                });
+                $('.team-simulate').click(function () {
+                    $('.task-item').hide();
+                    $('.team-discuss2').show();
+                });
+                $('.already-get').click(function () {
+                    $('.task-item').hide();
+                    $('.team-discuss3').show();
+                });
+                $('.team-discuss3 .discuss3-modle-box .member span').on('click', function () {
+                    $(this).addClass('current').siblings('span').removeClass('current');
+                })
+            }else {
+                $(this).find('span').css({backgroundColor:"#e8e8e8",color:"#3c3c3c"})
+                $(this).find('span').stop().animate({height:'150px'},300);
+                $('.crew-content').stop().hide(300);
+            };
+            e.stopPropagation();
+        });
+    },
+    //删除
+    removed: function () {
+        $('li').on('click','.icon-remove', function () {
+            var thatp = $(this).parent();
+            $('#confirm-box').show(500);
+            $('.confirm-remove').click(function () {
+                $(this).parents('.layer-box').hide();
+                thatp.fadeTo('fast',0.01, function () {
+                    $(this).slideUp('fast', function () {
+                        $(this).remove();
+                    })
+                })
+            });
+            $('.closelayer').click(function () {
+                $(this).parents('.layer-box').hide();
+            })
+        })
+    },
+    //添加
+    add_ele: function () {
+        $('.add-learn-btn').on('click', function () {
+            var html = "<li><span>sdsfsf</span><i class='iconfont icon-remove'></i></li>";
+            $(this).prev('.add-task-item').append(html);
+        })
+    }
 }

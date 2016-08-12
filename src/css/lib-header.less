@@ -6,7 +6,7 @@
   a{
     .font-style;
     i{
-      font-size: 26px;
+      font-size: 14px;
       color: #ff503f;
     }
     &:hover{
@@ -22,20 +22,60 @@
     margin-right: 90px;
   }
   .nav{
-    overflow: hidden;
+    .fl;
     margin: 0;
     li{
       .fl;
       line-height: 40px;
       list-style: none;
+      position: relative;
       a{
         color: #ff503f;
         font-size: 16px;
-        padding: 0 15px;
+        padding: 0 20px;
         display: inline-block;
+        text-align: center;
+
       }
     }
+    li.current{
+      background-color: #ff503f;
+    }
+    li.current>a{
+      color: #FFFFFF;
+    }
   }
+}
+.second-nav{
+  position: absolute;
+  background-color: #ffffff;
+  top:41px;
+  left: -1px;
+  border-top: none;
+  width: 106px;
+  text-align: center;
+  .drop-shadow(7px,4px,10px,.4);
+  display: none;
+  span{
+    position: relative;
+    display: block;
+    &:hover{
+      background-color: #ff503f;
+    }
+    &:hover>a{
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+  }
+}
+.thirdly-nav{
+  position: absolute;
+  top: -1px;
+  left: 106px;
+  background-color: #ffffff;
+  width: 600px;
+  .drop-shadow(7px,4px,10px,.4);
+  display: none;
 }
 .navbox2{
   background-color: #ff503f;

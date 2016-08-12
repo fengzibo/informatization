@@ -23,17 +23,16 @@
                 <div class="module" style="width: 800px;">
                     <div class="moduletitle-box clearfix">
                         <div class="moduletitleleft">
-                            <i class="iconfont">&#xe601</i>
+                            <i class="iconfont">&#xe617</i>
                             通知公告
                         </div>
                         <div class="moduletitleright">
-                            <i class="iconfont">&#xe602</i>
-                            更多
+                            <a href="more-details.html"> <i class="iconfont">&#xe602</i>更多</a>
                         </div>
                     </div>
                     <ul class="moduleitem">
                         <li>
-                            <a>监理之窗平台正式开通，监理之窗平台正式开通请广大师生及时登录修改个人信息和密码！</a>
+                            <a href="inform-details.html">监理之窗平台正式开通，监理之窗平台正式开通请广大师生及时登录修改个人信息和密码！</a>
                             <span>2016-01-06</span>
                         </li>
                         <li>
@@ -61,17 +60,16 @@
                 <div class="module" style="width: 800px;">
                     <div class="moduletitle-box clearfix">
                         <div class="moduletitleleft">
-                            <i class="iconfont">&#xe603</i>
+                            <i class="iconfont">&#xe600</i>
                             通知公告
                         </div>
                         <div class="moduletitleright">
-                            <i class="iconfont">&#xe602</i>
-                            更多
+                            <a href="more-details.html"> <i class="iconfont">&#xe602</i>更多</a>
                         </div>
                     </div>
                     <ul class="moduleitem">
                         <li>
-                            <a>监理之窗平台正式开通，监理之窗平台正式开通请广大师生及时登录修改个人信息和密码！</a>
+                            <a href="inform-details.html">监理之窗平台正式开通，监理之窗平台正式开通请广大师生及时登录修改个人信息和密码！</a>
                             <span>2016-01-06</span>
                         </li>
                         <li>
@@ -99,7 +97,7 @@
                 <div class="module fl" style="width: 390px;">
                     <div class="moduletitle-box clearfix">
                         <div class="moduletitleleft">
-                            <i class="iconfont">&#xe604</i>
+                            <i class="iconfont">&#xe603</i>
                             积分墙
                         </div>
 
@@ -143,12 +141,11 @@
                 <div class="module fr" style="width: 390px;">
                     <div class="moduletitle-box clearfix">
                         <div class="moduletitleleft">
-                            <i class="iconfont">&#xe605</i>
+                            <i class="iconfont">&#xe604</i>
                             常用功能
                         </div>
                         <div class="moduletitleright">
-                            <i class="iconfont">&#xe602</i>
-                            更多
+                            <a> <i class="iconfont">&#xe602</i>更多</a>
                         </div>
                     </div>
                     <div class="moduleitem2">
@@ -382,6 +379,20 @@
         Common.footerbottom();
         Common.tabcut();
         Common.pasgrade();
+        $('.navbox .nav li').on('mouseover', function () {
+            $(this).addClass('current');
+            $(this).find('.second-nav').stop().fadeIn();
+        });
+        $('.navbox .nav li').on('mouseout',function(){
+            $('.navbox .nav li').removeClass('current');
+            $('.navbox .nav li').find('.second-nav').stop().fadeOut();
+        });
+        $('.second-nav span').on('mouseover', function () {
+            $(this).find('.thirdly-nav').stop().show(300);
+        });
+        $('.second-nav span').on('mouseout', function () {
+            $('.second-nav span').find('.thirdly-nav').stop().hide(300);
+        });
     })
 </script>
 </body>

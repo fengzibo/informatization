@@ -13,7 +13,7 @@
 </div>
 <div class="container">
     <div class="titlenav titlenav2 tab-title">
-        <a class="current">我的首页</a>
+        <a class="current">专业认知</a>
         <a>基础理论</a>
         <a>工艺感知</a>
         <a>理实一体</a>
@@ -67,7 +67,7 @@
         </ul>
         <ul class="ification clearfix tab-content">
             <li>
-                <a class="current">课程简介</a>
+                <a class="current">监理实物</a>
             </li>
         </ul>
         <ul class="ification clearfix tab-content">
@@ -337,50 +337,7 @@
         Common.ifiationajax2();
         Common.ifiationajax();
         Common.teamfuc();
-        $(function(){
-            $('.tab-title2').find('a').on('click', function () {
-                var thisi = $(this).index();
-                $(this).addClass('current').siblings().removeClass('current');
-                $('.tab-content2').eq(thisi).stop().fadeIn().siblings('.tab-content2').fadeOut();
-            })
-        })
-        $('.course-item ul li>a').on('click', function (event) {
-            if($(this).next('.item-child').is(":hidden")){
-                $('.item-child').stop().slideUp();
-                $('.course-item ul li>a').removeClass('current');
-                $(this).next('.item-child').stop().slideDown();
-                $(this).addClass('current');
-            }else {
-                $('.item-child').stop().slideUp();
-                $('.course-item ul li>a').removeClass('current');
-            }
-            event.stopPropagation();
-        })
-        $(window).scroll(function(e){
-            var doctop = $(document).scrollTop();
-            if(doctop>200 && doctop<$('body').height()){
-                $('.course-menu-box').stop().animate({top:doctop},100);
-            }else {
-                $('.course-menu-box').stop().animate({top:'180px'},100);
-            }
-            if(doctop>100 && doctop<$('body').height()){
-                $('.conversation-box').stop().animate({top:doctop-150},100);
-            }else {
-                $('.conversation-box').stop().animate({top:0},100);
-            }
-            e.stopPropagation();
-        })
-        $('.course-menu').on('click',function(event){
-
-            if($(this).next('.course-item').is(':hidden')){
-                $(this).next('.course-item').stop().show(300);
-                $(this).find('i').removeClass('icon-left').addClass('icon-right');
-            }else {
-                $(this).next('.course-item').stop().hide(300);
-                $(this).find('i').removeClass('icon-right').addClass('icon-left');
-            }
-            event.stopPropagation();
-        })
+        Common.sider_menu();
     })
 
 </script>

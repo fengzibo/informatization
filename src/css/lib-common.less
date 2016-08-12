@@ -1,24 +1,26 @@
 @font-face {
   font-family: 'iconfont';
-  src: url('//at.alicdn.com/t/font_1470202920_0966241.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/font_1470202920_0966241.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/font_1470202920_0966241.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/font_1470202920_0966241.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/font_1470202920_0966241.svg#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('//at.alicdn.com/t/font_1470963418_6410456.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1470963418_6410456.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1470963418_6410456.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1470963418_6410456.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1470963418_6410456.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
-
-
+.icon-remove:after{
+  content:"\e619";
+  cursor: pointer;
+}
+.icon-xyxz:before{content:"\e615"}
+.icon-stjd:before{content:"\e616"}
+.icon-bgsp:before{content:"\e617"}
 .icon-zz:before{ content:"\e612"}
+.icon-zh:before{ content:"\e614"}
+.icon-pwd:before{ content:"\e613"}
 .icon-zy:before{ content:"\e611"}
 .icon-left:before{ content:"\e610"}
 .icon-right:before{ content:"\e60f"}
 .icon-guanbi:before { content: "\e609"; }
 .icon-gengduo:before { content: "\e602"; }
-.icon-icon:before { content: "\e601"; }
-.icon-icon1:before { content: "\e600"; }
-.icon-icon2:before { content: "\e603"; }
-.icon-icon3:before { content: "\e604"; }
-.icon-icon4:before { content: "\e605"; }
 .icon-icon5:before { content: "\e606"; }
 .icon-icon6:before { content: "\e607"; }
 .icon-icon7:before { content: "\e608"; }
@@ -155,6 +157,9 @@ a.combtn{
   border-color:#f3f3f3;
   background:#fff;
 }
+.pagination .current.next{
+  margin-right: 0;
+}
 .img-box{
   display: table;
   .img-center{
@@ -257,5 +262,12 @@ a:link{
         padding-left: 20px;
       }
     }
+  }
+}
+.getcur{
+  cursor: default;
+  &:hover{
+    background-color: transparent;
+    border-color: transparent;
   }
 }

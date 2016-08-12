@@ -306,7 +306,7 @@ input[type="submit"] {
 
 button[disabled],
 html input[disabled] {
-  cursor: default;
+  cursor: no-drop;
 }
 
 /**
@@ -340,6 +340,8 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
+  margin-top: -4px;
+  cursor: pointer;
 }
 
 /**

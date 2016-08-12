@@ -8,7 +8,6 @@
             <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
         </p>
     </video>
-
 </div>
 <div class="tab-title2 raise-bottom-tab clearfix">
     <a class="current">仿&nbsp;真</a>
@@ -227,3 +226,12 @@
         </ul>
     </div>
 </div>
+<script>
+    $(function(){
+        $('.tab-title2').find('a').on('click', function () {
+            var thisi = $(this).index();
+            $(this).addClass('current').siblings().removeClass('current');
+            $('.tab-content2').eq(thisi).stop().fadeIn().siblings('.tab-content2').fadeOut();
+        })
+    })
+</script>

@@ -2,23 +2,19 @@
 ======
 html文件名
 -----------------
+<h1 align = "center">(学生)</h1>
 *   index.html----------------------------------------主页
 *   teaching-course-----------------------------------教学课程
-    *   initial-educationi.html-----------------------我的首页&始业教育
+    *   initial-educationi.html-----------------------专业认知>始业教育
         *   campus-pursuit.html-----------------------校园寻踪
         *   teacher-pupil.html------------------------师徒结对
         *   school-means.html-------------------------学习资料
         *   write-report.html-------------------------编写报告
-    *   course-introduction.html----------------------理论基础&课程简介
-        *   待开发
-    *   process-perception.html-----------------------工艺感知&课程简介
-        *   待开发
-    *   raise.html------------------------------------理实一体&课程简介
-        *   待开发 
-    *   physical-simulation.html----------------------实物模拟&课程简介
-        *   待开发 
-    *   field-work.html-------------------------------顶岗实习&课程简介
-        *   待开发 
+    *   course-introduction.html----------------------理论基础>课程简介
+    *   process-perception.html-----------------------工艺感知>课程简介
+    *   raise.html------------------------------------理实一体>课程简介
+    *   physical-simulation.html----------------------实物模拟>课程简介
+    *   field-work.html-------------------------------顶岗实习>课程简介
 *   resource-center.html------------------------------资源中心
     *   teaching-resources.html-----------------------教学资源
     *   personal-resources.html-----------------------个人资源
@@ -26,12 +22,24 @@ html文件名
     *   check-testpaper.html--------------------------查看试卷
     *   network-test.html-----------------------------开始考试
         (ps:题目类型多样)
-*   results-management.html---------------------------------成果管理
-    *   on-display.html--------------------------优秀作品展示
-    *   query-results.html-----------------------------考评结果查询
+*   results-management.html---------------------------成果管理
+    *   on-display.html-------------------------------优秀作品展示
+    *   query-results.html----------------------------考评结果查询
+*   landing.html--------------------------------------登陆界面
+*   inform-details------------------------------------通知详情
+*   more-details--------------------------------------更多详情
+<h1 align = "center">(教师)</h1>   
+*   teaching-course-teacher-----------------------------------教学课程
+    *   student-control.html----------------------------------专业认知>学生管控
+    *   course-introduction-teacher.html----------------------理论基础>课程简介
+    *   process-perception-teacher.html-----------------------工艺感知>课程简介
+    *   raise-teacher.html------------------------------------理实一体>学生管控
+        *   prepare-lessons.html------------------------------理实一体>课程备课
+    *   physical-simulation-teacher.html----------------------实物模拟>课程简介
+        *   phy-pre-lessons.html------------------------------实物模拟>课程备课
+    *   field-work.html-teacher-------------------------------顶岗实习>课程简介
         
-     
-        
+    
 注意事项
 ----
 本项目采用ajax技术 请使用localhost:访问网站<br>
