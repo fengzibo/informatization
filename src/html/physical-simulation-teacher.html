@@ -187,14 +187,18 @@
 </div>
 
 <script>
-    $(".select").on("change", function (e) {
-        $('.school-footprint').show();
-        Common.footerbottom();
-    });
-    $('#group-discussion').on('click', function () {
-        $('.crew-menu').find('span').css({backgroundColor:"#ff503f",color:"#ffffff"})
-        $('.crew-menu').find('span').stop().animate({height:'702px'},300);
-        $('.crew-content').stop().show(300);
-    });
-    Common.page_topic();
+
+    $(function () {
+        $(".select").on("change", function (e) {
+            $('.school-footprint').show();
+            Common.footerbottom();
+        });
+        $('#group-discussion').on('click', function () {
+            $('.crew-menu').find('span').css({backgroundColor:"#ff503f",color:"#ffffff"})
+            $('.crew-menu').find('span').stop().animate({height:'702px'},300);
+            $('.crew-content').stop().show(300);
+        });
+        Common.control();
+        Common.page_topic();
+    })
 </script>

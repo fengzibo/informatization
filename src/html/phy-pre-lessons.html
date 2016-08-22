@@ -349,25 +349,29 @@
     </div>
 </div>
 <script>
-    $('.add-postil a').on('click',function(){
-        var thisi = $(this).index();
-        $(this).addClass('current').siblings('.add-postil a').removeClass('current');
-        $('.poster-box').eq(thisi).show().siblings('.poster-box').hide();
+    $(function () {
+        $('.add-postil a').on('click',function(){
+            var thisi = $(this).index();
+            $(this).addClass('current').siblings('.add-postil a').removeClass('current');
+            $('.poster-box').eq(thisi).show().siblings('.poster-box').hide();
+        })
+        $('.assignment .member span').on('click', function () {
+            $(this).addClass('current').siblings('span').removeClass('current');
+        })
+        Common.step();
+        $("#Pagination").pagination('10', {
+            items_per_page: 3,//每页显示行数
+            num_edge_entries: 3,//省略号前后显示页数
+            num_display_entries: 5,//省略号前默认显示页数
+            current_page: 0,
+            link_to: "javascript:void(0)",//页数链接
+            prev_text: "上一页",
+            next_text: "下一页"
+        });
+        Common.checkall();
+        Common.removed();
+        Common.add_ele();
+        $(".select").select2();
     })
-    $('.assignment .member span').on('click', function () {
-        $(this).addClass('current').siblings('span').removeClass('current');
-    })
-    Common.step();
-    $("#Pagination").pagination('10', {
-        items_per_page: 3,//每页显示行数
-        num_edge_entries: 3,//省略号前后显示页数
-        num_display_entries: 5,//省略号前默认显示页数
-        current_page: 0,
-        link_to: "javascript:void(0)",//页数链接
-        prev_text: "上一页",
-        next_text: "下一页"
-    });
-    Common.checkall();
-    Common.removed();
-    Common.add_ele();
+
 </script>

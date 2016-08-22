@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>网络考试</title>
+    <link type="text/css" rel="stylesheet" href="../css/jedate.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="container">
+    <div class="titlenav titlenav2 tab-title">
+        <a class="current">考试大厅</a>
+        <a>题库</a>
+    </div>
+    <div class="ification-content" style="margin-top: 34px; position: relative;">
+    </div>
+</div>
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/video.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/jquery.pagination.js"></script>
+<script type="text/javascript" src="../js/jedate/jedate.min.js"></script>
+<script src="../js/Common.js"></script>
+<script>
+    $(function () {
+        $('.header').html(Common.cheader('','/html/Common-header2.html'));
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
+        $('.ification-content').html(Common.commonblock('/html/examination.html'));
+        Common.footerbottom();
+        Common.ifiationajax8();
+    })
+</script>
+</body>
+</html>

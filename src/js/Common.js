@@ -413,7 +413,6 @@ var Common = {
             $(this).find('a').addClass('current').parent().siblings().find('a').removeClass('current');
             $('.ification-content').html(Common.commonblock(x[thisi]));
             Common.footerbottom();
-            $(".select").select2();
         })
     },
     //教学过程步骤
@@ -619,5 +618,14 @@ var Common = {
             var html = "<li><span>sdsfsf</span><i class='iconfont icon-remove'></i></li>";
             $(this).prev('.add-task-item').append(html);
         })
-    }
+    },
+    ifiationajax8: function () {
+        var x =[ '/html/examination.html','/html/question-bank.html'];
+        $('.titlenav2 a').click(function () {
+            var thisi = $(this).index();
+            $(this).addClass('current').siblings().removeClass('current');
+            $('.ification-content').html(Common.commonblock(x[thisi]));
+            Common.footerbottom();
+        })
+    },
 }

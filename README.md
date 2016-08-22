@@ -35,13 +35,15 @@ html文件名
     *   process-perception-teacher.html-----------------------工艺感知>课程简介
     *   raise-teacher.html------------------------------------理实一体>学生管控
         *   prepare-lessons.html------------------------------理实一体>课程备课
-    *   physical-simulation-teacher.html----------------------实物模拟>课程简介
+    *   physical-simulation-teacher.html----------------------实物模拟>学生管控
         *   phy-pre-lessons.html------------------------------实物模拟>课程备课
     *   field-work.html-teacher-------------------------------顶岗实习>课程简介
-        
+*   network-test-teacher.html---------------------------------网络考试  
+    *   examination.html--------------------------------------考试大厅  
+    *   question-bank.html--------------------------------------题库  
     
 注意事项
 ----
 本项目采用ajax技术 请使用localhost:访问网站<br>
-可能项目路径不对 请在js/Common.js中修改 **ifiationajax**,**ifiationajax2**,**ifiationajax3**方法<br>
+可能项目路径不对 请在js/Common.js中修改 **ifiationajax**,**ifiationajax2**,**ifiationajax3......**方法<br>
 ###如有疑问,请尽快m我,加油吧,悲催的码农,猝死的加班狗
