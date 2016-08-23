@@ -325,29 +325,305 @@
     <div class="layer-content addtm-size">
         <h3>新增题目</h3>
         <div class="mold-box">
-            <label><input type="checkbox" name="topic"/>选择题</label>
-            <label><input type="checkbox" name="topic"/>填空题</label>
-            <label><input type="checkbox" name="topic"/>判断题</label>
-            <label><input type="checkbox" name="topic"/>解答题</label>
+            <label><input type="radio" name="topic"/>选择题</label>
+            <label><input type="radio" name="topic"/>填空题</label>
+            <label><input type="radio" name="topic"/>判断题</label>
+            <label><input type="radio" name="topic"/>解答题</label>
         </div>
         <ul class="addtopic-box">
+            <li class="clearfix" style="display: block;">
+                <div class="adtp-left">
+                    <table>
+                        <tr>
+                            <td>题目</td>
+                            <td colspan="2">某土方工程的挖方量为10003M。已知该土的Ks=1.25， Ks＇=1.05，
+                                实际需运走的土方量是（ ）。
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">选项</td>
+                            <td>A</td>
+                            <td>8003m</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>9032m</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>9032m</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td>9032m</td>
+                        </tr>
+                    </table>
+                    <table style="margin-top: 40px;">
+                        <tr>
+                            <td><input type="radio" name="addimg"/>为每个选项插入图片</td>
+                            <td>A</td>
+                            <td>B</td>
+                            <td>C</td>
+                            <td>D</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="addimg"/>为本题插入图片</td>
+                            <td>
+                                <a class="a-upload">
+                                    +点击上传
+                                    <input type="file"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="a-upload">
+                                    +点击上传
+                                    <input type="file"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="a-upload">
+                                    +点击上传
+                                    <input type="file"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="a-upload">
+                                    +点击上传
+                                    <input type="file"/>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="adtp-right">
+                    <div class="adtp-ana-box clearfix">
+                        <div class="adtp-ana">解析</div>
+                        <div class="adtp-ana-main clearfix">
+                            <div class="adtp-oneormore">
+                                <label><input type="radio" name="adtp" value="多选"/>多选</label>
+                                <label><input type="radio" name="adtp" value="单选"/>单选</label>
+                            </div>
+                            <div class="adtp-anw">
+                                <label><input type="checkbox" name="anw"/>A</label>
+                                <label><input type="checkbox" name="anw"/>B</label>
+                                <label><input type="checkbox" name="anw"/>C</label>
+                                <label><input type="checkbox" name="anw"/>D</label>
+                            </div>
+                            <div class="adtp-deta" style="height: 200px;">
+                                奥斯卡的了v,a到处，啊；领导爱侣们上课的房间可那失恋考场你
+                                按错卡刷卡了才能爱是快乐的年轻为了打开脑残啊
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-width" style="width: 300px; display: block; margin: 10px auto;">
+                        <select class="select">
+                            <option value="选择类型" selected="selected">选择课程</option>
+                            <option value="课堂习题">xx</option>
+                            <option value="随堂测验">yy</option>
+                            <option value="期中考试">zz</option>
+                        </select>
+                    </div>
+                    <div class="select-width" style="width: 300px; display: block; margin: 10px auto;">
+                        <select class="select">
+                            <option value="选择类型" selected="selected">选择课程</option>
+                            <option value="课堂习题">xx</option>
+                            <option value="随堂测验">yy</option>
+                            <option value="期中考试">zz</option>
+                        </select>
+                    </div>
+                    <div class="select-width" style="width: 300px; display: block; margin: 10px auto;">
+                        <select class="select">
+                            <option value="选择类型" selected="selected">选择课程</option>
+                            <option value="课堂习题">xx</option>
+                            <option value="随堂测验">yy</option>
+                            <option value="期中考试">zz</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
             <li class="clearfix">
                 <div class="adtp-left">
                     <table>
                         <tr>
                             <td>题目</td>
-                            <td>某土方工程的挖方量为10003M。已知该土的Ks=1.25，  Ks＇=1.05，
-                                实际需运走的土方量是（  ）。</td>
+                            <td>某土方工程的挖方量为10003M。已知该土的Ks=1.25， Ks＇=1.05，
+                                实际需运走的土方量是_________。
+                            </td>
                         </tr>
+                    </table>
+                    <table style="margin: 40px auto; width: 355px;">
                         <tr>
-                            <td>选项</td>
-                            <td>A</td>
-                            <td>8003m</td>
+                           <td></td>
+                            <td style="width: 220px;height: 130px;">
+                                <a class="a-upload">
+                                    +点击上传
+                                    <input type="file"/>
+                                </a>
+                            </td>
                         </tr>
                     </table>
                 </div>
+                <div class="adtp-right">
+                    <div class="adtp-ana-box clearfix">
+                        <div class="adtp-ana">解析</div>
+                        <div class="adtp-ana-main clearfix">
+                            <div class="adtp-deta" style="height: 320px;">
+                                奥斯卡的了v,a到处，啊；领导爱侣们上课的房间可那失恋考场你
+                                按错卡刷卡了才能爱是快乐的年轻为了打开脑残啊
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-width" style="width: 300px; display: block; margin: 10px auto;">
+                        <select class="select">
+                            <option value="选择类型" selected="selected">选择课程</option>
+                            <option value="课堂习题">xx</option>
+                            <option value="随堂测验">yy</option>
+                            <option value="期中考试">zz</option>
+                        </select>
+                    </div>
+                    <div class="select-width" style="width: 300px; display: block; margin: 10px auto;">
+                        <select class="select">
+                            <option value="选择类型" selected="selected">选择课程</option>
+                            <option value="课堂习题">xx</option>
+                            <option value="随堂测验">yy</option>
+                            <option value="期中考试">zz</option>
+                        </select>
+                    </div>
+                    <div class="select-width" style="width: 300px; display: block; margin: 10px auto;">
+                        <select class="select">
+                            <option value="选择类型" selected="selected">选择课程</option>
+                            <option value="课堂习题">xx</option>
+                            <option value="随堂测验">yy</option>
+                            <option value="期中考试">zz</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="adtp-left">
+                    <table>
+                        <tr>
+                            <td>题目</td>
+                            <td>某土方工程的挖方量为10003M。已知该土的Ks=1.25， Ks＇=1.05，
+                                实际需运走的土方量是_________。
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="margin: 40px auto; width: 355px;">
+                        <tr>
+                            <td></td>
+                            <td style="width: 220px;height: 130px;">
+                                <a class="a-upload">
+                                    +点击上传
+                                    <input type="file"/>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="adtp-right">
+                    <div class="adtp-ana-box clearfix">
+                        <div class="adtp-ana">解析</div>
+                        <div class="adtp-ana-main clearfix">
+                            <div class="adtp-anw">
+                                <label><input type="radio" name="anw"/>正确</label>
+                                <label><input type="radio" name="anw"/>错误</label>
+                            </div>
+                            <div class="adtp-deta" style="height: 250px;">
+                                奥斯卡的了v,a到处，啊；领导爱侣们上课的房间可那失恋考场你
+                                按错卡刷卡了才能爱是快乐的年轻为了打开脑残啊
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-width" style="width: 300px; display: block; margin: 10px auto;">
+                        <select class="select">
+                            <option value="选择类型" selected="selected">选择课程</option>
+                            <option value="课堂习题">xx</option>
+                            <option value="随堂测验">yy</option>
+                            <option value="期中考试">zz</option>
+                        </select>
+                    </div>
+                    <div class="select-width" style="width: 300px; display: block; margin: 10px auto;">
+                        <select class="select">
+                            <option value="选择类型" selected="selected">选择课程</option>
+                            <option value="课堂习题">xx</option>
+                            <option value="随堂测验">yy</option>
+                            <option value="期中考试">zz</option>
+                        </select>
+                    </div>
+                    <div class="select-width" style="width: 300px; display: block; margin: 10px auto;">
+                        <select class="select">
+                            <option value="选择类型" selected="selected">选择课程</option>
+                            <option value="课堂习题">xx</option>
+                            <option value="随堂测验">yy</option>
+                            <option value="期中考试">zz</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="adtp-left">
+                    <table>
+                        <tr>
+                            <td>题目</td>
+                            <td>某土方工程的挖方量为10003M。已知该土的Ks=1.25， Ks＇=1.05，
+                                实际需运走的土方量是_________。
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="margin: 40px auto; width: 355px;">
+                        <tr>
+                            <td></td>
+                            <td style="width: 220px;height: 130px;">
+                                <a class="a-upload">
+                                    +点击上传
+                                    <input type="file"/>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="adtp-right">
+                    <div class="adtp-ana-box clearfix">
+                        <div class="adtp-ana">解析</div>
+                        <div class="adtp-ana-main clearfix">
+                            <div class="adtp-deta" style="height: 320px;">
+                                奥斯卡的了v,a到处，啊；领导爱侣们上课的房间可那失恋考场你
+                                按错卡刷卡了才能爱是快乐的年轻为了打开脑残啊
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-width" style="width: 300px; display: block; margin: 10px auto;">
+                        <select class="select">
+                            <option value="选择类型" selected="selected">选择课程</option>
+                            <option value="课堂习题">xx</option>
+                            <option value="随堂测验">yy</option>
+                            <option value="期中考试">zz</option>
+                        </select>
+                    </div>
+                    <div class="select-width" style="width: 300px; display: block; margin: 10px auto;">
+                        <select class="select">
+                            <option value="选择类型" selected="selected">选择课程</option>
+                            <option value="课堂习题">xx</option>
+                            <option value="随堂测验">yy</option>
+                            <option value="期中考试">zz</option>
+                        </select>
+                    </div>
+                    <div class="select-width" style="width: 300px; display: block; margin: 10px auto;">
+                        <select class="select">
+                            <option value="选择类型" selected="selected">选择课程</option>
+                            <option value="课堂习题">xx</option>
+                            <option value="随堂测验">yy</option>
+                            <option value="期中考试">zz</option>
+                        </select>
+                    </div>
+                </div>
             </li>
         </ul>
+        <div class="double-btn-box">
+            <a class="combtn closelayer">保&nbsp;存</a>
+            <a class="combtn btncolor closelayer">退&nbsp;出</a>
+        </div>
     </div>
 </div>
 <script>
@@ -384,7 +660,19 @@
                 minDate: "2014-09-19 00:00:00"
             })
         });
-        Common.layer('.start-zj', '#zj-main')
-
+        Common.layer('.start-zj', '#zj-main');
+        Common.layer('.add-question', '#add-tm');
+        $('.adtp-oneormore label').on('click', function () {
+            var cheval = $('.adtp-oneormore input:checked').val();
+            if (cheval == '单选') {
+                $('.adtp-anw input').attr('type', 'radio');
+            } else {
+                $('.adtp-anw input').attr('type', 'checkbox');
+            }
+        })
+        $('.mold-box label').on('click', function () {
+            var thisi = $(this).index();
+            $('.addtopic-box li').eq(thisi).show().siblings('li').hide();
+        })
     })
 </script>

@@ -41,6 +41,13 @@ html文件名
 *   network-test-teacher.html---------------------------------网络考试  
     *   examination.html--------------------------------------考试大厅  
     *   question-bank.html--------------------------------------题库  
+    *   results-management-teacher.html--------------------------------------成果管理  
+        *   no-display-teacher.html--------------------------------------优秀作品展示  
+        *   test-scores-query.html--------------------------------------学生考评管理
+    *   resource-center-teacher.html--------------------------资源中心
+        *   teaching-tool.html--------------------------------资源中心>教学工具
+        *   teaching-resources-teacher.html--------------------------资源中心>教学资源
+        *   personal-resources-teacher.html--------------------------资源中心>个人资源
     
 注意事项
 ----

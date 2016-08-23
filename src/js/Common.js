@@ -129,6 +129,15 @@ var Common = {
             Common.footerbottom();
         })
     },
+    ifiationajax11: function () {
+        var x =[ '/html/teaching-resources-teacher.html','/html/teaching-tool.html','/html/personal-resources-teacher.html'];
+        $('.titlenav2 a').click(function () {
+            var thisi = $(this).index();
+            $(this).addClass('current').siblings().removeClass('current');
+            $('.ification-content').html(Common.commonblock(x[thisi]));
+            Common.footerbottom();
+        })
+    },
     //弹出层
     layer: function (ele,obj) {
         $(ele).on('click',function(){
@@ -141,6 +150,16 @@ var Common = {
     //成果管理调用页面方法
     ifiationajax4: function () {
         var x =[ '/html/on-display.html','/html/query-results.html'];
+        $('.titlenav2 a').click(function () {
+            var thisi = $(this).index();
+            $(this).addClass('current').siblings().removeClass('current');
+            $('.ification-content').html(Common.commonblock(x[thisi]));
+            Common.footerbottom();
+            $(".select").select2();
+        })
+    },
+    ifiationajax10: function () {
+        var x =[ '/html/on-display-teacher.html','/html/test-scores-query.html'];
         $('.titlenav2 a').click(function () {
             var thisi = $(this).index();
             $(this).addClass('current').siblings().removeClass('current');

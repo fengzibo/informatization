@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>教学课堂</title>
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="container">
+    <div class="titlenav titlenav2 tab-title">
+        <a class="current">教学资源</a>
+        <a>教学工具</a>
+        <a>个人资源</a>
+    </div>
+    <div class="ification-content" style="margin-top: 34px;">
+
+    </div>
+</div>
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/video.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/jquery.pagination.js"></script>
+<script src="../js/Common.js"></script>
+<script>
+    $(function () {
+        $('.header').html(Common.cheader('','/html/Common-header2.html'));
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
+        $('.ification-content').html(Common.commonblock('/html/teaching-resources.html'));
+        Common.footerbottom();
+        Common.ifiationajax11();
+
+    })
+</script>
+</body>
+</html>

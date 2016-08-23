@@ -927,9 +927,9 @@ a:link {
   position: absolute;
   background-color: #ffffff;
   top: 41px;
-  left: -1px;
+  left: 0;
   border-top: none;
-  width: 106px;
+  width: 104px;
   text-align: center;
   -webkit-box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.4);
@@ -953,14 +953,14 @@ a:link {
 
 .thirdly-nav {
   position: absolute;
-  top: -1px;
-  left: 106px;
+  top: 0;
+  left: 104px;
   background-color: #ffffff;
-  width: 600px;
   -webkit-box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.4);
   box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.4);
   display: none;
+  width: 140px;
 }
 
 .navbox2 {
@@ -1118,7 +1118,7 @@ a:link {
 
 .moduleitem2 a {
   display: inline-block;
-  width: 48%;
+  margin: 10px 20px;
   text-align: center;
   font-weight: bold;
   line-height: 40px;
@@ -2480,7 +2480,7 @@ h2.topic {
   float: left;
   width: 50%;
   text-align: center;
-  margin-top: 16px;
+  margin: 16px 0 0;
 }
 
 .task-main-left ul.annex li p {
@@ -3506,7 +3506,7 @@ h3.finish-content {
 }
 
 .discuss3-modle-box {
-  height: 382px;
+  height: 363px;
   overflow-x: hidden;
   overflow-y: auto;
   border: 1px solid #e8e8e8;
@@ -3939,4 +3939,184 @@ ul.subjectof li label {
   text-align: center;
   font-size: 18px;
   color: #ff503f;
+}
+
+.addtm-size {
+  width: 1150px;
+  height: 80%;
+  margin-left: -575px;
+  top: 10% !important;
+  border: 1px solid #e8e8e8;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.addtm-size h3 {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 48px;
+  border-bottom: 1px solid #e8e8e8;
+  text-align: center;
+  margin: 0;
+}
+
+.addtm-size .mold-box {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.addtm-size .mold-box label {
+  margin: 20px;
+}
+
+.addtm-size ul.addtopic-box > li {
+  padding: 20px;
+}
+
+.addtm-size ul.addtopic-box {
+  margin: 0 20px;
+  padding: 0;
+  border: 1px solid #e8e8e8;
+}
+
+.addtm-size ul.addtopic-box li {
+  list-style: none;
+  display: none;
+}
+
+.addtm-size ul.addtopic-box li .adtp-left {
+  float: left;
+  width: 520px;
+}
+
+.addtm-size ul.addtopic-box li .adtp-left table {
+  border-top: 1px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
+  width: 100%;
+}
+
+.addtm-size ul.addtopic-box li .adtp-left table:first-child {
+  max-height: 400px;
+  min-height: 200px;
+}
+
+.addtm-size ul.addtopic-box li .adtp-left table td {
+  border-bottom: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  text-align: center;
+  padding: 10px;
+}
+
+.addtm-size ul.addtopic-box li .adtp-right {
+  float: right;
+  width: 520px;
+}
+
+.addtm-size ul.addtopic-box li .adtp-right .adtp-ana-box {
+  border: 1px solid #e8e8e8;
+}
+
+.addtm-size ul.addtopic-box li .adtp-right .adtp-ana-box input {
+  margin-right: 10px;
+}
+
+.addtm-size ul.addtopic-box li .adtp-right .adtp-ana {
+  line-height: 360px;
+  float: left;
+  border-right: 1px solid #e8e8e8;
+}
+
+.addtm-size ul.addtopic-box li .adtp-right .adtp-ana-main {
+  overflow: hidden;
+  padding: 20px;
+}
+
+.addtm-size ul.addtopic-box li .adtp-right .adtp-ana-main .adtp-oneormore {
+  float: left;
+  width: 100px;
+}
+
+.addtm-size ul.addtopic-box li .adtp-right .adtp-ana-main .adtp-oneormore label {
+  display: block;
+  margin: 25px 0;
+}
+
+.addtm-size ul.addtopic-box li .adtp-right .adtp-ana-main .adtp-anw {
+  float: left;
+}
+
+.addtm-size ul.addtopic-box li .adtp-right .adtp-ana-main .adtp-anw label {
+  display: block;
+  margin: 10px 0;
+}
+
+.addtm-size ul.addtopic-box li .adtp-right .adtp-ana-main .adtp-deta {
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.class-show-area {
+  margin: 20px 0 0;
+  border-top: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  display: none;
+  width: 100%;
+}
+
+.class-show-area td {
+  padding: 10px;
+  border-left: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  text-align: center;
+}
+
+.appraisal-management {
+  display: none;
+  margin-top: 20px;
+}
+
+.appraisal-management .teacher-query-box {
+  height: 100%;
+  text-align: center;
+}
+
+.appraisal-management .teacher-query-box span {
+  font-size: 36px;
+}
+
+.appraisal-management .teacher-query-box span em {
+  font-style: normal;
+  color: #ff503f;
+}
+
+.newadd-size {
+  width: 556px;
+  height: 506px;
+  border: 1px solid #d6d6d6;
+  margin-left: -278px;
+  margin-top: -253px;
+}
+
+.newadd-size h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  text-align: center;
+  position: relative;
+  line-height: 38px;
+  border-bottom: 1px solid #d6d6d6;
+  font-size: 16px;
+}
+
+.newadd-size h2 a {
+  position: absolute;
+  right: 16px;
+  top: 0;
+}
+
+.newadd-size label {
+  float: left;
+  line-height: 30px;
+  width: 70px;
 }
