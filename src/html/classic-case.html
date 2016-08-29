@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>教学管控</title>
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="container">
+   <ul class="att-crumbs clearfix">
+       <li><a href="index.html">首页</a></li>
+       <li><a href="index.html">常用功能</a></li>
+       <li class="current">教学管控</li>
+   </ul>
+    <h4 class="case-tilte">查&nbsp;看</h4>
+    <table class="teac-contab">
+        <tr>
+            <th></th>
+            <th>名称</th>
+            <th>大小</th>
+            <th>上传日期</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>xxx大桥</td>
+            <td> 5MB</td>
+            <td>
+                2016/7/29
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>xxx大桥</td>
+            <td> 5MB</td>
+            <td>
+                2016/7/29
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>xxx大桥</td>
+            <td> 5MB</td>
+            <td>
+                2016/7/29
+            </td>
+        </tr>
+    </table>
+    <div id="Pagination" class="pagination" style="text-align: right;margin-top: 20px;"></div>
+</div>
+
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/video.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/jquery.pagination.js"></script>
+<script src="../js/Common.js"></script>
+<script>
+    $(function () {
+        $('.header').html(Common.cheader('','/html/Common-header2.html'));
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
+        Common.footerbottom();
+        $('.select').select2();
+        $("#Pagination").pagination('10', {
+            items_per_page: 3,//每页显示行数
+            num_edge_entries: 3,//省略号前后显示页数
+            num_display_entries: 5,//省略号前默认显示页数
+            current_page: 0,
+            link_to: "javascript:void(0)",//页数链接
+            prev_text: "上一页",
+            next_text: "下一页"
+        });
+
+    })
+</script>
+</body>
+</html>

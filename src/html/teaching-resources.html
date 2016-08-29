@@ -14,8 +14,13 @@
     <div class="seach-ify">
         <span>教学课程：</span>
         <a class="current">全部</a>
-        <a>施工组织设计与进度控制</a>
-        <a>建设工程投资控制与合同管理</a>
+        <div class="select-width" style="width: 200px;display: inline-block; margin: 0 100px 0 30px;">
+            <select class="select" id="teaplan-select">
+                <option value="请选择"  selected="selected">选择授课计划</option>
+                <option value="1" >2015-2016学年 第一学期工程资料</option>
+                <option value="2" >2015-2016学年 第一学期监理资料</option>
+            </select>
+        </div>
     </div>
     <div class="seach-ify">
         <span>资源类别：</span>
@@ -223,6 +228,7 @@
 <div id="Pagination" class="pagination" style="text-align: right"></div>
 <script>
     Common.collectState();
+    $('.select').select2();
     //分页插件
     $("#Pagination").pagination('10', {
         items_per_page: 3,//每页显示行数

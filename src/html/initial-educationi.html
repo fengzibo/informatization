@@ -13,15 +13,6 @@
 </div>
 <div class="educa-item">
     <h2>建筑知识</h2>
-    <video id="my-video" class="video-js" controls preload="auto" width="877" height="551" data-setup="{'aspectRatio':'1024:638', 'playbackRates': [1, 1.5, 2] }" style="margin: 0 auto">
-        <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
-        <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'>
-        <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a web browser that
-            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-        </p>
-    </video>
-    <h2>参考课件</h2>
     <ul class="video-item clearfix">
         <li>
             <img>
@@ -54,15 +45,6 @@
 </div>
 <div class="educa-item">
     <h2>建筑知识</h2>
-    <video id="my-video" class="video-js" controls preload="auto" width="877" height="551" data-setup="{'aspectRatio':'1024:638', 'playbackRates': [1, 1.5, 2] }" style="margin: 0 auto">
-        <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
-        <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'>
-        <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a web browser that
-            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-        </p>
-    </video>
-    <h2>参考课件</h2>
     <ul class="video-item clearfix">
         <li>
             <img>
@@ -95,15 +77,6 @@
 </div>
 <div class="educa-item" style="border-bottom: none;">
     <h2>建筑知识</h2>
-    <video id="my-video" class="video-js" controls preload="auto" width="877" height="551" data-setup="{'aspectRatio':'877:551', 'playbackRates': [1, 1.5, 2] }" style="margin: 0 auto">
-        <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
-        <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'>
-        <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a web browser that
-            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-        </p>
-    </video>
-    <h2>参考课件</h2>
     <ul class="video-item clearfix">
         <li>
             <img>
@@ -134,3 +107,25 @@
 
     </ul>
 </div>
+<div class="layer-box" id="layer-video">
+    <div class="layer-bg"></div>
+    <div class="layer-content layer-video-size">
+        <h2>视频<a class="iconfont icon-guanbi closelayer">退出</a></h2>
+        <video id="my-video" class="video-js" controls preload="auto" width="877" height="551" data-setup="{'aspectRatio':'877:551', 'playbackRates': [1, 1.5, 2] }" style="margin: 0 auto">
+            <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
+            <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'>
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+        </video>
+    </div>
+</div>
+<script>
+    $('.video-item').on('click','li', function () {
+        $('#layer-video').show();
+        $('.closelayer').click(function () {
+            $(this).parents('.layer-box').hide();
+        })
+    })
+</script>

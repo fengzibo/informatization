@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>课程标准</title>
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="container">
+   <ul class="att-crumbs clearfix">
+       <li><a href="index.html">首页</a></li>
+       <li><a href="index.html">常用功能</a></li>
+       <li class="current">课程标准</li>
+   </ul>
+    <div class="att-seabox clearfix">
+        <div class="select-width" style="width: 300px;float: left; margin: 0 100px 0 20px;">
+            <select class="select" id="att-select">
+                <option value="请选择"  selected="selected">选择课程标准</option>
+                <option value="1" >建设工程投资与合同管理</option>
+                <option value="2" >建设工程</option>
+            </select>
+        </div>
+    </div>
+    <div class="searel-area">
+        <div class="sea-hint">
+            请先选择一个课程标准!
+        </div>
+        <div class="clearfix task-introduce" style="display: none">
+            <div class="course-item" style="display: block;margin-right: 10px;">
+                <h4>监理概论与法规</h4>
+                <ul>
+                    <li>
+                        <a>单元一</a>
+                        <div class="item-child">
+                            <a>子单元一</a>
+                            <a>子单元二</a>
+                            <a>子单元三</a>
+                            <a>子单元四</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a>单元二</a>
+                        <div class="item-child">
+                            <a>子单元一</a>
+                            <a>子单元二</a>
+                            <a>子单元三</a>
+                            <a>子单元四</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="stanfr">
+                <h4 class="case-tilte stand-title">课程标准</h4>
+                <div class="tabscroll-box">
+                    <table class="comtable">
+                        <tr>
+                            <td style="width: 100px;">课程编号</td>
+                            <td>130078</td>
+                            <td>课程类别</td>
+                            <td>专业能力核心课</td>
+                        </tr>
+                        <tr>
+                            <td>使用专业</td>
+                            <td colspan="3">工程监理(普高理科)</td>
+                        </tr>
+                        <tr>
+                            <td>学分</td>
+                            <td>4.00</td>
+                            <td>学时</td>
+                            <td>64</td>
+                        </tr>
+                        <tr>
+                            <td>课程定位</td>
+                            <td colspan="3">
+                                <script id="container" name="content" type="text/plain" style="width:100%; text-align:left;">
+    </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>课程作用</td>
+                            <td colspan="3">
+                                <script id="container2" name="content" type="text/plain" style="width:100%; text-align:left;">
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>与其他课程关系</td>
+                            <td colspan="3">
+                                <script id="container3" name="content" type="text/plain" style="width:100%; text-align:left;">
+                                </script>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/video.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/jquery.pagination.js"></script>
+<script src="../js/Common.js"></script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="../js/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="../js/ueditor.all.min.js"></script>
+<script>
+    $(function () {
+        var ue = UE.getEditor('container');//实例化编辑器
+        var ue2 = UE.getEditor('container2');//实例化编辑器
+        var ue3 = UE.getEditor('container3');//实例化编辑器
+
+        $('.header').html(Common.cheader('','/html/Common-header2.html'));
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
+        Common.footerbottom();
+        $('.select').select2();
+        $("#att-select").on("change", function (e) {
+            var checkText=$("#att-select").find("option:selected").text();  //获取Select选择的Text
+            $('.course-item>h4').text(checkText);
+            $('.sea-hint').hide();
+            $('.task-introduce').show(200);
+            Common.footerbottom();
+        });
+        Common.sider_menu();
+    })
+</script>
+</body>
+</html>

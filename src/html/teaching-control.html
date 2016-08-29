@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>教学管控</title>
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="container">
+   <ul class="att-crumbs clearfix">
+       <li><a href="index.html">首页</a></li>
+       <li><a href="index.html">常用功能</a></li>
+       <li class="current">教学管控</li>
+   </ul>
+    <div class="att-seabox clearfix">
+        <input type="text" class="form-control fl" style="width: 170px; margin:0 100px 0 30px;"/>
+        <input type="button" class="combtn att-seabtn" value="搜索"/>
+        <a class="combtn btncolor fr down-tmp" style="display: block; margin: 0 30px 0 50px; ">下载模板</a>
+        <a class="a-upload combtn fr">
+            +上传
+            <input type="file"/>
+        </a>
+
+    </div>
+    <table class="teac-contab">
+        <tr>
+            <th>名称</th>
+            <th>保存时间</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>20160725质量安全课堂小结表</td>
+            <td> 2016年7月25日 18:30</td>
+            <td>
+                <a>操作</a>
+                <a class="delbtn">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>20160725质量安全课堂小结表</td>
+            <td> 2016年7月25日 18:30</td>
+            <td>
+                <a>操作</a>
+                <a class="delbtn">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>20160725质量安全课堂小结表</td>
+            <td> 2016年7月25日 18:30</td>
+            <td>
+                <a>操作</a>
+                <a class="delbtn">删除</a>
+            </td>
+        </tr>
+    </table>
+    <div id="Pagination" class="pagination" style="text-align: right;margin-top: 20px;"></div>
+</div>
+<div class="layer-box" id="confirm-box">
+    <div class="layer-bg"></div>
+    <div class="layer-content confirm-size">
+
+        <div class="confirm-content">
+            <p>确认删除</p>
+            <a class="combtn btncolor confirm-remove" style="margin-right: 80px;">确&nbsp;定</a>
+            <a class="combtn closelayer">取&nbsp;消</a>
+        </div>
+    </div>
+</div>
+<div class="layer-box" id="down-tmp-list">
+    <div class="layer-bg"></div>
+    <div class="layer-content tmp-list-size">
+        <h2>模板<a class="iconfont icon-guanbi closelayer">退出</a></h2>
+        <div class="tmp-tablescroll">
+            <table class="comtable">
+                <tr>
+                    <td><label class="checkallbtn"><input type="checkbox"/>全选</label></td>
+                    <td>名称</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="mb"/></td>
+                    <td><a class="model-name">考试分析表</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="mb"/></td>
+                    <td>考试分析表</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="mb"/></td>
+                    <td>考试分析表</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="mb"/></td>
+                    <td>考试分析表</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="mb"/></td>
+                    <td>考试分析表</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="mb"/></td>
+                    <td>考试分析表</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="mb"/></td>
+                    <td>考试分析表</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="mb"/></td>
+                    <td>考试分析表</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="mb"/></td>
+                    <td>考试分析表</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="mb"/></td>
+                    <td>考试分析表</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="mb"/></td>
+                    <td>考试分析表</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="mb"/></td>
+                    <td>考试分析表</td>
+                </tr>
+            </table>
+        </div>
+
+        <span>*系统分析表将由系统自动生成</span>
+        <a class="combtn fr">下&nbsp;载</a>
+    </div>
+</div>
+<div class="layer-box" id="modname">
+    <div class="layer-bg"></div>
+    <div class="layer-content modname-size">
+        <a class="iconfont icon-guanbi closelayer">退出</a>
+        <div class="select-width" style="width: 300px; margin: 50px auto 0;">
+            <select class="select" id="att-select">
+                <option value="请选择"  selected="selected">选择任务</option>
+                <option value="1" >2014-2015 春季 教学任务</option>
+                <option value="2" >2014-2015 春季 教学任务</option>
+            </select>
+        </div>
+        <p>*只有批阅完成的试卷才能导出分析表</p>
+        <a class="combtn" style="margin: 0 auto;display: block;">打开分析表</a>
+    </div>
+</div>
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/video.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/jquery.pagination.js"></script>
+<script src="../js/Common.js"></script>
+<script>
+    $(function () {
+        $('.header').html(Common.cheader('','/html/Common-header2.html'));
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
+        Common.footerbottom();
+        $('.select').select2();
+        $("#Pagination").pagination('10', {
+            items_per_page: 3,//每页显示行数
+            num_edge_entries: 3,//省略号前后显示页数
+            num_display_entries: 5,//省略号前默认显示页数
+            current_page: 0,
+            link_to: "javascript:void(0)",//页数链接
+            prev_text: "上一页",
+            next_text: "下一页"
+        });
+        $('.delbtn').on('click', function () {
+            var thisi = $(this);
+            var thisp = thisi.parents('tr');
+            $('#confirm-box').show(500);
+            $('.closelayer').on('click',function(){
+                $(this).parents('.layer-box').hide();
+            });
+            $('.confirm-remove').click(function () {
+                $(this).parents('.layer-box').hide();
+                thisp.fadeTo('fast',0.01, function () {
+                    $(this).slideUp('fast', function () {
+                        $(this).remove();
+                    })
+                })
+            });
+        });
+        Common.layer('.down-tmp','#down-tmp-list');
+        $('.checkallbtn').find('input').click(function () {
+            $("input[name='mb']").prop('checked',this.checked);
+        });
+        $("input[name='mb']").click(function () {
+            var izy = $("input[name='mb']");
+            $('.checkallbtn').find('input').prop('checked', izy.length == izy.filter(':checked').length ? true : false);
+        });
+        Common.layer('.model-name','#modname');
+        $('.model-name').click(function () {
+            $('#down-tmp-list').hide();
+        })
+    })
+</script>
+</body>
+</html>

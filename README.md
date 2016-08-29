@@ -29,7 +29,13 @@ html文件名
 *   inform-details------------------------------------通知详情
 *   more-details--------------------------------------更多详情
 <h1 align = "center">(教师)</h1>   
+*   attendance-management.html--------------------------------考勤管理
+*   index-teachingtask.html-----------------------------------教学任务
+*   teaching-control.html-------------------------------------教学管控
 *   teaching-course-teacher-----------------------------------教学课程
+*   classic-case.html-----------------------------------------经典案例
+*   curriculum-standard.html----------------------------------课程标准
+*   teaching-plan.html----------------------------------------授课计划
     *   student-control.html----------------------------------专业认知>学生管控
     *   course-introduction-teacher.html----------------------理论基础>课程简介
     *   process-perception-teacher.html-----------------------工艺感知>课程简介

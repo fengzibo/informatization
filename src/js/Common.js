@@ -647,4 +647,19 @@ var Common = {
             Common.footerbottom();
         })
     },
+    //select动态加载
+    dynamic_select: function (url,sId) {
+        $.get(url, function (result) {
+            var obj = data = JSON.parse(result);
+            //result="{resultObject:{[{vlaue:1,text:男},vlaue:2,text:女}]}}"
+            var str =  "<option value='请选择' selected='selected'>请选择</option>";
+            var list = obj.resultObject;
+            for (var i = 0; i < list.length;i++) {
+                var opt = list[i];
+                str += "<option value='" + opt.value + "'>" + opt.text + "<option>";
+            }
+            $("#" + sId).html(str);
+
+        });
+    }
 }

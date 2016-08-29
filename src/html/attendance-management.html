@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>考勤管理</title>
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="container">
+   <ul class="att-crumbs clearfix">
+       <li><a href="index.html">首页</a></li>
+       <li><a href="index.html">常用功能</a></li>
+       <li class="current">考勤管理</li>
+   </ul>
+    <div class="att-seabox clearfix">
+        <input type="text" class="form-control fl" style="width: 170px; margin-left: 30px;"/>
+        <div class="select-width" style="width: 200px;float: left; margin: 0 100px 0 50px;">
+            <select class="select">
+                <option value="请选择"  selected="selected">选择班级</option>
+                <option value="1" >1班</option>
+                <option value="2" >2班</option>
+            </select>
+        </div>
+        <input type="button" class="combtn att-seabtn" value="搜索"/>
+    </div>
+    <div class="searel-area">
+        <div class="sea-hint">
+            可通过条件搜索，查看学生和班级的出勤情况！
+        </div>
+        <table class="comtable getstudent" style="display: none;">
+            <tr>
+                <td>序号</td>
+                <td>姓名</td>
+                <td>学号</td>
+                <td>出勤情况</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>张学生</td>
+                <td>13244</td>
+                <td><a>点击查看</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>张学生</td>
+                <td>13244</td>
+                <td><a>点击查看</a></td>
+            </tr>
+        </table>
+        <div class="getstudent-dal clearfix" style="display: none;">
+            <div class="fl gs-dal-fl clearfix">
+                <label>姓名:张学生</label>
+                <label>出勤率:96%</label>
+                <label class="fl">考勤异常:</label>
+                <div style="overflow: hidden">
+                    <span>迟到:<em>2次</em></span>
+                    <span>早退:<em>0次</em></span>
+                    <span>缺勤:<em>2次</em></span>
+                </div>
+            </div>
+            <div class="gs-dal-fr">
+                <table class="comtable">
+                    <tr>
+                        <td>序号</td>
+                        <td>时间</td>
+                        <td>课程</td>
+                        <td>考勤</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2016/7/29</td>
+                        <td>质量安全</td>
+                        <td>迟到</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2016/7/29</td>
+                        <td>质量安全</td>
+                        <td>迟到</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2016/7/29</td>
+                        <td>质量安全</td>
+                        <td>迟到</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2016/7/29</td>
+                        <td>质量安全</td>
+                        <td>迟到</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2016/7/29</td>
+                        <td>质量安全</td>
+                        <td>迟到</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2016/7/29</td>
+                        <td>质量安全</td>
+                        <td>迟到</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2016/7/29</td>
+                        <td>质量安全</td>
+                        <td>迟到</td>
+                    </tr>
+                </table>
+                <div id="Pagination" class="pagination" style="text-align: right;margin-top: 20px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/video.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/jquery.pagination.js"></script>
+<script src="../js/Common.js"></script>
+<script>
+    $(function () {
+        $('.header').html(Common.cheader('','/html/Common-header2.html'));
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
+        Common.footerbottom();
+        $('.select').select2();
+        $("#Pagination").pagination('10', {
+            items_per_page: 3,//每页显示行数
+            num_edge_entries: 3,//省略号前后显示页数
+            num_display_entries: 5,//省略号前默认显示页数
+            current_page: 0,
+            link_to: "javascript:void(0)",//页数链接
+            prev_text: "上一页",
+            next_text: "下一页"
+        });
+        $('.att-seabtn').click(function () {
+            $('.sea-hint').hide();
+            $('.getstudent').stop().show(200);
+            $('.getstudent-dal').hide();
+            $('.getstudent').on('click','a', function () {
+                $(this).parents('.getstudent').hide();
+                $('.getstudent-dal').show(200);
+            })
+        })
+
+    })
+</script>
+</body>
+</html>
