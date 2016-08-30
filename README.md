@@ -54,7 +54,9 @@ html文件名
         *   teaching-tool.html--------------------------------资源中心>教学工具
         *   teaching-resources-teacher.html--------------------------资源中心>教学资源
         *   personal-resources-teacher.html--------------------------资源中心>个人资源
-    
+<h1 align = "center">(管理员)</h1>  
+*   teaching-admin-.html----------------------------------------授课计划
+     
 注意事项
 ----
 本项目采用ajax技术 请使用localhost:访问网站<br>

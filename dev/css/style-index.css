@@ -4416,3 +4416,110 @@ h4.stand-title {
   color: #ff503f;
   text-decoration: none;
 }
+
+.logo-title {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 45px;
+  margin-left: 10px;
+}
+
+.admin-fl {
+  float: left;
+  margin-right: 30px;
+  width: 200px;
+}
+
+.adminside {
+  padding: 0;
+  margin: 0;
+}
+
+.adminside li {
+  list-style: none;
+  height: 45px;
+  border: 1px solid #e9e9e9;
+  border-top: none;
+  text-align: center;
+}
+
+.adminside li span {
+  display: block;
+  line-height: 45px;
+  font-weight: bold;
+  border-top: 3px solid #ff503f;
+}
+
+.adminside li a {
+  display: inline-block;
+  width: 100%;
+  line-height: 45px;
+}
+
+.adminside li a:hover {
+  color: #ff503f;
+}
+
+.adminside li.difside {
+  height: 100%;
+  zoom: 1;
+  padding: 10px 0;
+}
+
+.adminside li.difside:before {
+  content: '';
+  display: block;
+}
+
+.adminside li.difside:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.adminside li.difside span {
+  display: block;
+  line-height: 30px;
+  border: none;
+  font-weight: normal;
+}
+
+.adminside li.difside a {
+  width: 50%;
+  line-height: 24px;
+  color: #9f9f9f;
+  font-size: 12px;
+  float: left;
+}
+
+.admin-fr {
+  overflow: hidden;
+}
+
+.admin-fr h3 {
+  font-weight: bold;
+  padding: 15px 0 30px 25px;
+  margin: 0;
+}
+
+.com-fucbtn {
+  padding: 0;
+  margin: 0;
+}
+
+.com-fucbtn li {
+  list-style: none;
+  width: 125px;
+  line-height: 35px;
+  border: 1px solid #e8e8e8;
+  text-align: center;
+  cursor: pointer;
+  border-left: none;
+  border-bottom: 3px solid transparent;
+  float: left;
+}
+
+.com-fucbtn li:first-child {
+  border-left: 1px solid #e8e8e8;
+}

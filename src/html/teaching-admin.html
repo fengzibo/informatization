@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>教学管控</title>
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="container clearfix">
+    <div class="admin-fl"></div>
+    <div class="admin-fr">
+        <h3>学院行事历</h3>
+        <ul class="com-fucbtn clearfix">
+            <li>新增</li>
+            <li>修改</li>
+            <li>删除</li>
+        </ul>
+        <table class="adm-main comtable">
+            <tr>
+                <td><input type="checkbox"/>全选</td>
+                <td>名称</td>
+                <td>学期</td>
+                <td>添加时间</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>浙江省建院监理专业2016-2017学年 第一学期</td>
+                <td> 2016-2017 学年 第一学期</td>
+                <td>2016年7月29日</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>浙江省建院监理专业2016-2017学年 第一学期</td>
+                <td> 2016-2017 学年 第一学期</td>
+                <td>2016年7月29日</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>浙江省建院监理专业2016-2017学年 第一学期</td>
+                <td> 2016-2017 学年 第一学期</td>
+                <td>2016年7月29日</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/video.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/jquery.pagination.js"></script>
+<script src="../js/Common.js"></script>
+<script>
+    $(function () {
+        $('.header').html(Common.cheader('','/html/Common-header3.html'));
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
+        $('.admin-fl').html(Common.commonblock('/html/Common-adminside.html'));
+        Common.footerbottom();
+    })
+</script>
+</body>
+</html>
