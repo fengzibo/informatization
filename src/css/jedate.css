@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-.jedatebox{width:298px;height:auto; border:1px #00A1CB solid;background-color:#fff;font-family:'microsoft yahei',Verdana,"\u5fae\u8f6f\u96c5\u9ed1","\5b8b\4f53",Arial;font-size:14px; cursor:default;margin: 0;padding: 0;}
+.jedatebox{width:298px;height:auto; border:1px #00A1CB solid;background-color:#fff;font-family:'microsoft yahei',Verdana,"\u5fae\u8f6f\u96c5\u9ed1","\5b8b\4f53",Arial;font-size:14px; cursor:default;margin: 0;padding: 0;z-index:20161001!important;}
 .jedatebox div,.jedatebox ol,.jedatebox ul,.jedatebox li,.jedatebox p,.jedatebox span{margin: 0;padding: 0;list-style-type:none;}
 .jedatebox em,.jedatebox i{margin: 0;padding: 0;font-style:normal;}
 .jedatebox.dateshow{display:block;}

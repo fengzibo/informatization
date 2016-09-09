@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>教学管控</title>
+    <link rel="stylesheet" type="text/css" href="../js/layer/skin/layer.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="container clearfix">
+    <div class="admin-fl"></div>
+    <div class="admin-fr">
+        <h3>学院行事历</h3>
+        <div class="refer-box">
+            <h4>查询条件</h4>
+            <ul>
+                <li>
+                    <div class="framework-box fl" style="width: 40%">
+                        <label>关键字:</label>
+                        <div style="overflow: hidden">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="framework-box fr">
+                        <label>作者:</label>
+                        <div class="select-width" style="width: 300px; float: left;">
+                            <select class="select">
+                                <option value="请选择" selected="selected">请输入关键词</option>
+                                <option value="北京市">傅敏</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="framework-box fl" style="width: 40%">
+                        <label>上传时间:</label>
+                        <div style="overflow: hidden">
+                            <input class="indate form-control" type="text" placeholder="请选择"  readonly style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <input type="button" value="模板管理" class="combtn fl" id="tem-man"/>
+                    <input type="button" value="搜索" class="combtn fr"/>
+                </li>
+            </ul>
+        </div>
+        <ul class="com-fucbtn clearfix">
+            <li class="act-rec">查看</li>
+            <li class="act-rem">删除</li>
+            <li class="pubdate">发布日期
+                <div class="boult-box">
+                    <div class="pub-down"></div>
+                    <div class="pub-up"></div>
+                </div>
+            </li>
+        </ul>
+        <table class="adm-main comtable">
+            <tr>
+                <td>
+                    <label class="checkall"><input type="checkbox"/>全选</label>
+                </td>
+                <td>名称</td>
+                <td>作者</td>
+                <td>大小</td>
+                <td>上传日期</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="zy"/></td>
+                <td>浙江省建院监理专业2016-2017学年 第一学期</td>
+                <td>傅敏</td>
+                <td> 103kb</td>
+                <td>2016年7月29日</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="zy"/></td>
+                <td>浙江省建院监理专业2016-2017学年 第一学期</td>
+                <td>傅敏</td>
+                <td> 103kb</td>
+                <td>2016年7月29日</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="zy"/></td>
+                <td>浙江省建院监理专业2016-2017学年 第一学期</td>
+                <td>傅敏</td>
+                <td>103kb</td>
+                <td>2016年7月29日</td>
+            </tr>
+        </table>
+        <div class="temp-main hidden">
+            <a class="temp-del">删除</a>
+            <table class="comtable">
+                <tr>
+                    <td style="width: 70px;">
+                        <label class="checkall2"><input type="checkbox"/>全选</label>
+                    </td>
+                    <td>名称</td>
+                </tr>
+            </table>
+            <div style="height: 400px;overflow-y: auto;overflow-x: hidden;">
+                <table class="comtable">
+                    <tr>
+                        <td style="width: 70px;">
+                            <input type="checkbox" name="gkmb"/>
+                        </td>
+                        <td>考试分析表</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 70px;">
+                            <input type="checkbox" name="gkmb"/>
+                        </td>
+                        <td>考试分析表</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 70px;">
+                            <input type="checkbox" name="gkmb"/>
+                        </td>
+                        <td>考试分析表</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="clearfix">
+                <span style="color: #ff503f">*试卷分析表将由系统自动生成</span>
+                <a class="a-upload combtn fr">
+                    上传
+                    <input type="file">
+                </a>
+            </div>
+            <div class="double-btn-box">
+                <a class="combtn">保&nbsp;存</a>
+                <a class="combtn btncolor">返回</a>
+            </div>
+        </div>
+        <div class="examine hidden">
+            <div class="framework-box">
+                <label style="width: 65px; text-align: right">关键字:</label>
+                <div style="overflow: hidden">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="framework-box">
+                <label style="width: 65px; text-align: right">作者:</label>
+                <div style="overflow: hidden">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="framework-box">
+                <label style="width: 65px; text-align: right">上传时间:</label>
+                <div style="overflow: hidden">
+                    <input class="indate form-control" type="text" placeholder="请选择"  readonly style="width: 100%;">
+                </div>
+            </div>
+            <div class="framework-box">
+                <label style="width: 65px; text-align: right">附件:</label>
+                <div style="overflow: hidden" class="clearfix">
+                    <div class="attachment-box">
+                        <img src="../img/recov.jpg">
+                        <p>  2014-2015春季
+                            教学任务（李老师）</p>
+                    </div>
+                    <a class="combtn fr" style="display: block;margin-top: 10px;">下载</a>
+                </div>
+            </div>
+            <a class="combtn exa-back" style="display: block; margin: 10px auto;">返回</a>
+        </div>
+    </div>
+</div>
+<div class="layer-box" id="confirm-box"  style="z-index:20161001;position: relative;">
+    <div class="layer-bg"  ></div>
+    <div class="layer-content confirm-size">
+        <div class="confirm-content">
+            <p>确认删除</p>
+            <a class="combtn btncolor confirm-remove" style="margin-right: 80px;">确&nbsp;定</a>
+            <a class="combtn closelayer">取&nbsp;消</a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/jedate/jedate.min.js"></script>
+<script src="../js/jquery.pagination.js"></script>
+<script src="../js/layer/layer.js"></script>
+<script src="../js/Common.js"></script>
+<script>
+    $(function () {
+        $('.header').html(Common.cheader('', '/html/Common-header3.html'));
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
+        $('.admin-fl').html(Common.commonblock('/html/Common-adminside.html'));
+        Common.footerbottom();
+        Common.checkall();
+        $('#tem-man').click(function () {
+            layer.open({
+                type: 1,
+                title: ['教学管控模板',' text-align: center;'],
+                closeBtn: 1,
+                area: '550px',
+                content: $('.temp-main')
+            });
+        });
+        $('.checkall2').find('input').click(function () {
+            $("input[name='gkmb']").prop('checked',this.checked);
+        });
+        $("input[name='gkmb']").click(function () {
+            var izy = $("input[name='gkmb']");
+            $('.checkall2').find('input').prop('checked', izy.length == izy.filter(':checked').length ? true : false);
+        });
+        $('.temp-del').click(function () {
+            var thatp = $("input[name='gkmb']:checked").parents('tr');
+            $('#confirm-box').show(500);
+            $('.confirm-remove').click(function () {
+                $(this).parents('.layer-box').hide();
+                thatp.fadeTo('fast',0.01, function () {
+                    $(this).slideUp('fast', function () {
+                        $(this).remove();
+                    })
+                })
+            });
+            $('.closelayer').click(function () {
+                $(this).parents('.layer-box').hide();
+            })
+        })
+
+        $('.act-rec').click(function () {
+            if ($("input[type='checkbox']:checked").length == 0) {
+                layer.msg('请勾选要修改的选项');
+            } else if ($("input[type='checkbox']:checked").length > 1) {
+                layer.msg('只能勾选一项');
+            } else {
+                layer.open({
+                    type: 1,
+                    title: ['查看',' text-align: center;'],
+                    closeBtn: 1,
+                    area: '550px',
+                    content: $('.examine')
+                })
+            }
+
+        });
+        $('.act-rem').click(function () {
+            var thatp = $("input[name='zy']:checked").parents('tr');
+            $('#confirm-box').show(500);
+            $('.confirm-remove').click(function () {
+                $(this).parents('.layer-box').hide();
+                thatp.fadeTo('fast',0.01, function () {
+                    $(this).slideUp('fast', function () {
+                        $(this).remove();
+                    })
+                })
+            });
+            $('.closelayer').click(function () {
+                $(this).parents('.layer-box').hide();
+            })
+        })
+        $("select").select2();
+        jeDate({
+            dateCell:".indate",
+            format:"YYYY-MM-DD",
+            isTime:false,
+            minDate:"2015-09-19 00:00:00"
+        });
+        $('.exa-back').click(function(){
+            layer.closeAll();
+        })
+    })
+</script>
+</body>
+</html>

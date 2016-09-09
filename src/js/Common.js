@@ -93,7 +93,7 @@ var Common = {
             $(this).find('a').addClass('current').parent().siblings().find('a').removeClass('current');
             $('.ification-content').html(Common.commonblock(x[thisi]));
             Common.footerbottom();
-            $(".select").select2();
+            $("select").select2();
         })
     },
     //收藏状态
@@ -155,7 +155,7 @@ var Common = {
             $(this).addClass('current').siblings().removeClass('current');
             $('.ification-content').html(Common.commonblock(x[thisi]));
             Common.footerbottom();
-            $(".select").select2();
+            $("select").select2();
         })
     },
     ifiationajax10: function () {
@@ -165,7 +165,7 @@ var Common = {
             $(this).addClass('current').siblings().removeClass('current');
             $('.ification-content').html(Common.commonblock(x[thisi]));
             Common.footerbottom();
-            $(".select").select2();
+            $("select").select2();
         })
     },
     //倒计时
@@ -391,7 +391,7 @@ var Common = {
             $(this).addClass('current').siblings().removeClass('current');
             $('.ification-content').html(Common.commonblock(x[thisi]));
             Common.footerbottom();
-            Common.control();
+            $("select").select2();
         })
     },
     //教师端专业认知js
@@ -406,8 +406,8 @@ var Common = {
                 },400);
             }
             timemsg();
-        })
-        $(".select").select2();
+        });
+        $("select").select2();
         $('.edhca-show').on('click',function(){
             $('.educa-hide').show();
             Common.footerbottom();
@@ -421,7 +421,7 @@ var Common = {
             $(this).find('a').addClass('current').parent().siblings().find('a').removeClass('current');
             $('.ification-content').html(Common.commonblock(x[thisi]));
             Common.footerbottom();
-            $(".select").select2();
+            $("select").select2();
         })
     },
     //理实一体>学生管控

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>教学管控</title>
+    <link rel="stylesheet" type="text/css" href="../js/layer/skin/layer.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="container clearfix">
+    <div class="admin-fl"></div>
+    <div class="admin-fr">
+        <h3>学院行事历</h3>
+        <ul class="com-fucbtn clearfix">
+            <li class="act-add">新增</li>
+            <li class="act-rec">修改</li>
+            <li class="act-rem">删除</li>
+        </ul>
+        <table class="adm-main comtable">
+            <tr>
+                <td>
+                    <label class="checkall"><input type="checkbox"/>全选</label>
+                </td>
+                <td>名称</td>
+                <td>学期</td>
+                <td>添加时间</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="zy"/></td>
+                <td>浙江省建院监理专业2016-2017学年 第一学期</td>
+                <td> 2016-2017 学年 第一学期</td>
+                <td>2016年7月29日</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="zy"/></td>
+                <td>浙江省建院监理专业2016-2017学年 第一学期</td>
+                <td> 2016-2017 学年 第一学期</td>
+                <td>2016年7月29日</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="zy"/></td>
+                <td>浙江省建院监理专业2016-2017学年 第一学期</td>
+                <td> 2016-2017 学年 第一学期</td>
+                <td>2016年7月29日</td>
+            </tr>
+        </table>
+        <div class="act-main-box hidden">
+            <div class="framework-box">
+                <label>名&nbsp;称:</label>
+                <div style="overflow: hidden">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="fl clearfix">
+                    <label>上传行事历附件</label>
+                    <div class="attachment-box" style="padding: 50px 16px;margin: 10px 0 20px;">
+                        <img src="../img/recov.jpg">
+                        <p> 2014-2015春季
+                            教学任务（李老师）</p>
+                    </div>
+                    <a class="a-upload combtn fr">
+                        上传
+                        <input type="file">
+                    </a>
+                </div>
+                <div class="framework-box fr">
+                    <label>学&nbsp;期:</label>
+                    <div class="select-width" style="width: 200px; float: left;">
+                        <select class="select">
+                            <option value="请选择" selected="selected">选择学期</option>
+                            <option value="北京市">2016-2017第一学期</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="time-box" style="margin-top: 20px;">
+                <label>开学起止时间:</label>
+                <div style="text-align: center;margin: 20px 0;">
+                    <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                    <span>至</span>
+                    <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                </div>
+            </div>
+            <ul class="time-box">
+                <li>
+                    <span style="width: 500px;display:inline-block;margin-right: 46px;">实习周起止时间:</span>
+                    <span>设定班级</span>
+                    <i class="iconfont icon-add"></i>
+                </li>
+                <li>
+                    <div class="jedate-box">
+                        <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                        <em>至</em>
+                        <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                    </div>
+
+                    <div class="select-width" >
+                        <select class="select">
+                            <option value="请选择" selected="selected">请选择</option>
+                            <option value="北京市">监理一班</option>
+                        </select>
+                    </div>
+                    <i class="iconfont icon-remove"></i>
+                </li>
+            </ul>
+            <ul class="time-box">
+                <li>
+                    <span style="width: 500px;display:inline-block;margin-right: 46px;">期末考试设定:</span>
+                    <span>设定班级</span>
+                    <i class="iconfont icon-add"></i>
+                </li>
+                <li>
+                    <div class="jedate-box">
+                        <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                        <em>至</em>
+                        <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                    </div>
+
+                    <div class="select-width" >
+                        <select class="select">
+                            <option value="请选择" selected="selected">请选择</option>
+                            <option value="北京市">监理一班</option>
+                        </select>
+                    </div>
+                    <i class="iconfont icon-remove"></i>
+                </li>
+            </ul>
+            <div class="holiday-box clearfix">
+                <div class="fl">
+                    <label><input type="radio" name="hol"/>使用推荐节假日时间:</label>
+                    <table class="hol-table">
+                        <tr>
+                            <th>节日</th>
+                            <th>放假时间</th>
+                        </tr>
+                        <tr>
+                            <td>元旦</td>
+                            <td>1月1日-1月3日</td>
+                        </tr>
+                        <tr>
+                            <td>春节</td>
+                            <td>2月7日(除夕)-2月13日</td>
+                        </tr>
+                        <tr>
+                            <td>元旦</td>
+                            <td>1月1日-1月3日</td>
+                        </tr>
+                        <tr>
+                            <td>元旦</td>
+                            <td>1月1日-1月3日</td>
+                        </tr>
+                        <tr>
+                            <td>元旦</td>
+                            <td>1月1日-1月3日</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="fr">
+                    <label><input type="radio" name="hol"/>使用推荐节假日时间:</label>
+                    <ul class="hol-adjust">
+                        <li>
+                            <div class="jedate-box">
+                                <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                                <em>至</em>
+                                <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="jedate-box">
+                                <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                                <em>至</em>
+                                <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="jedate-box">
+                                <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                                <em>至</em>
+                                <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="jedate-box">
+                                <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                                <em>至</em>
+                                <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="hol-extra">
+                <label><input type="checkbox" name="hol"/>增加特殊节假日:</label>
+                <div class="time-box clearfix">
+                    <input type="text" class="form-control fl" style="width: 200px;" placeholder="请输入特殊节假日名称"/>
+                    <div class="jedate-box fr">
+                        <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                        <em>至</em>
+                        <input class="indate form-control" type="text" placeholder="请选择"  readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="double-btn-box">
+                <a class="combtn">保&nbsp;存</a>
+                <a class="combtn btncolor">返回</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="layer-box" id="confirm-box" style="z-index:20161001;position: relative;">
+    <div class="layer-bg" ></div>
+    <div class="layer-content confirm-size">
+        <div class="confirm-content">
+            <p>确认删除</p>
+            <a class="combtn btncolor confirm-remove" style="margin-right: 80px;">确&nbsp;定</a>
+            <a class="combtn closelayer">取&nbsp;消</a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/jedate/jedate.min.js"></script>
+<script src="../js/jquery.pagination.js"></script>
+<script src="../js/layer/layer.js"></script>
+<script src="../js/Common.js"></script>
+<script>
+    $(function () {
+        $('.header').html(Common.cheader('', '/html/Common-header3.html'));
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
+        $('.admin-fl').html(Common.commonblock('/html/Common-adminside.html'));
+        Common.footerbottom();
+        Common.checkall();
+        $('.act-add').click(function () {
+            layer.open({
+                type: 1,
+                title: ['新增',' text-align: center;'],
+                closeBtn: 1,
+                area: ['990px','80%'],
+                content: $('.act-main-box')
+            });
+        });
+        $('.act-rec').click(function () {
+            if ($("input[type='checkbox']:checked").length == 0) {
+                layer.msg('请勾选要修改的选项');
+            } else if ($("input[type='checkbox']:checked").length > 1) {
+                layer.msg('只能勾选一项');
+            } else {
+                layer.open({
+                    type: 1,
+                    title: ['修改',' text-align: center;'],
+                    closeBtn: 1,
+                    area: ['990px','80%'],
+                    content: $('.act-main-box')
+                })
+            }
+
+        });
+        $('.act-rem').click(function () {
+            var thatp = $("input[name='zy']:checked").parents('tr');
+            $('#confirm-box').show(500);
+            $('.confirm-remove').click(function () {
+                $(this).parents('.layer-box').hide();
+                thatp.fadeTo('fast',0.01, function () {
+                    $(this).slideUp('fast', function () {
+                        $(this).remove();
+                    })
+                })
+            });
+            $('.closelayer').click(function () {
+                $(this).parents('.layer-box').hide();
+            })
+        })
+        $("select").select2();
+        jeDate({
+            dateCell:".indate",
+            format:"YYYY-MM-DD",
+            isTime:false,
+            minDate:"2015-09-19 00:00:00"
+        });
+        $('.icon-add').on('click',function () {
+            var thisp = $(this).parents('ul.time-box');
+            var html = "<li><div class='jedate-box'><input class='indate form-control' type='text' placeholder='请选择'  readonly><em>至</em><input class='indate form-control' type='text' placeholder='请选择'  readonly></div><div class='select-width' ><select class='select'> <option value='请选择' selected='selected'>请选择</option> <option value='北京市'>监理一班</option></select></div><i class='iconfont icon-remove'></i></li>";
+            thisp.append(html)
+            Common.footerbottom();
+            $("select").select2();
+        });
+        $('ul.time-box').on('click','i.icon-remove', function () {
+            var thatp = $(this).parents('li');
+            $('#confirm-box').show(500);
+            $('.confirm-remove').click(function () {
+                $(this).parents('.layer-box').hide();
+                thatp.fadeTo('fast',0.01, function () {
+                    $(this).slideUp('fast', function () {
+                        $(this).remove();
+                    })
+                })
+            });
+            $('.closelayer').click(function () {
+                $(this).parents('.layer-box').hide();
+            })
+        });
+        $('.double-btn-box a').click(function(){
+            layer.closeAll();
+        })
+    })
+</script>
+</body>
+</html>

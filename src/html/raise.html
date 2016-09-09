@@ -13,6 +13,7 @@
     <a class="current">仿&nbsp;真</a>
     <a >课&nbsp;件</a>
     <a >课堂习题</a>
+    <a >随堂测验</a>
     <a >教学资源</a>
 </div>
 <div class="tab-content-box2">
@@ -169,6 +170,34 @@
         </div>
     </div>
     <div class="tab-content2 ification2">
+        <ul class="record-item clearfix">
+            <li>
+                <img src="../img/recov.jpg">
+                <p>12月份交流记录</p>
+            </li>
+            <li>
+                <img src="../img/recov.jpg">
+                <p>12月份交流记录</p>
+            </li>
+            <li>
+                <img src="../img/recov.jpg">
+                <p>12月份交流记录</p>
+            </li>
+            <li>
+                <img src="../img/recov.jpg">
+                <p>12月份交流记录</p>
+            </li>
+            <li>
+                <img src="../img/recov.jpg">
+                <p>12月份交流记录</p>
+            </li>
+            <li>
+                <img src="../img/recov.jpg">
+                <p>12月份交流记录</p>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content2 ification2">
         <ul class="video-item clearfix">
             <li>
                 <img>
@@ -225,6 +254,9 @@
             </li>
         </ul>
     </div>
+    <div class="finish-class">
+        <button class="combtn" style="display: block">下课<span>(<em>300</em>s)</span></button>
+    </div>
 </div>
 <script>
     $(function(){
@@ -232,6 +264,23 @@
             var thisi = $(this).index();
             $(this).addClass('current').siblings().removeClass('current');
             $('.tab-content2').eq(thisi).stop().fadeIn().siblings('.tab-content2').fadeOut();
+        });
+        $('.finish-class button').click(function () {
+            var count = 300;
+            countdown();
+            var timer = setInterval(countdown,1000);
+            function countdown(){
+                $('.finish-class button').attr('disabled',true);
+                $('.finish-class button').addClass('disabledfora');
+                $('.finish-class button span em').text(count);
+                if(count ==0){
+                    $('.finish-class button').removeAttr('disabled');
+                    $('.finish-class button').removeClass('disabledfora');
+                    $('.finish-class button span em').text('300');
+                    clearInterval(timer);
+                }
+                count--;
+            }
         })
     })
 </script>
