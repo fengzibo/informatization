@@ -1,0 +1,112 @@
+
+<ul class="clearfix syjy-tab">
+    <li class="current">其他学习资料</li>
+</ul>
+<div class="syjy-cuttab">
+    <div class="clearfix" style="margin-bottom: 10px;">
+        <input type="button" class="combtn fl syjy-remv" value="删除" style="margin-right: 20px"/>
+        <input type="button" class="combtn fl" value="下载"/>
+        <a class="a-upload combtn fr">
+            上传
+            <input type="file">
+        </a>
+    </div>
+    <table class="comtable comtableshow" >
+        <tr>
+            <td>
+                <label class="checkall3"><input type="checkbox"/>全选</label>
+            </td>
+            <td>序号</td>
+            <td>名称</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="jzzs"/>
+            </td>
+            <td>1</td>
+            <td>资料1</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="jzzs"/>
+            </td>
+            <td>2</td>
+            <td>资料2</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="jzzs"/>
+            </td>
+            <td>3</td>
+            <td>资料3</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="jzzs"/>
+            </td>
+            <td>4</td>
+            <td>资料4</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="jzzs"/>
+            </td>
+            <td>5</td>
+            <td>资料5</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="jzzs"/>
+            </td>
+            <td>6</td>
+            <td>资料6</td>
+        </tr>
+    </table>
+    <div id="Pagination" class="pagination" style="text-align: right;margin-top: 10px;"></div>
+</div>
+<script>
+    $(function () {
+        $("#Pagination").pagination('10', {
+            items_per_page: 3,//每页显示行数
+            num_edge_entries: 3,//省略号前后显示页数
+            num_display_entries: 5,//省略号前默认显示页数
+            current_page: 0,
+            link_to: "javascript:void(0)",//页数链接
+            prev_text: "上一页",
+            next_text: "下一页"
+        });
+        function checkdif(obj,ele){
+            $(obj).find('input').click(function () {
+                $(ele).prop('checked',this.checked);
+            });
+            $(ele).click(function () {
+                var izy = $(ele);
+                $(obj).find('input').prop('checked', izy.length == izy.filter(':checked').length ? true : false);
+            });
+        };
+        checkdif(".checkall3","input[name='jzzs']");
+        $('.syjy-tab li').click(function () {
+            var thisi = $(this).index();
+            $(this).addClass('current').siblings('li').removeClass('current');
+            $('.syjy-cuttab .comtable').eq(thisi).addClass('comtableshow').siblings('.comtable').removeClass('comtableshow');
+
+        })
+        $('.syjy-remv').click(function () {
+            var thatp = $('.syjy-cuttab .comtableshow').find('input:checked').parents('tr');
+            $('#confirm-box').show(500);
+            $('.confirm-remove').click(function () {
+                $(this).parents('.layer-box').hide();
+                thatp.fadeTo('fast',0.01, function () {
+                    $(this).slideUp('fast', function () {
+                        $(this).remove();
+                    })
+                })
+            });
+            $('.closelayer').click(function () {
+                $(this).parents('.layer-box').hide();
+            })
+        })
+    })
+</script>
+
+

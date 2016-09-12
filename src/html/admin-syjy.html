@@ -22,7 +22,7 @@
             <input type="file">
         </a>
     </div>
-    <table class="comtable" style="display: table;">
+    <table class="comtable comtableshow" >
         <tr>
             <td>
                 <label class="checkall3"><input type="checkbox"/>全选</label>
@@ -214,24 +214,24 @@
         $('.syjy-tab li').click(function () {
             var thisi = $(this).index();
             $(this).addClass('current').siblings('li').removeClass('current');
-            $('.syjy-cuttab .comtable').eq(thisi).show().siblings('.comtable').hide();
-            $('.syjy-remv').click(function () {
-                var thatp = $('.syjy-cuttab .comtable').eq(thisi).find('input:checked').parents('tr');
-                $('#confirm-box').show(500);
-                $('.confirm-remove').click(function () {
-                    $(this).parents('.layer-box').hide();
-                    thatp.fadeTo('fast',0.01, function () {
-                        $(this).slideUp('fast', function () {
-                            $(this).remove();
-                        })
+            $('.syjy-cuttab .comtable').eq(thisi).addClass('comtableshow').siblings('.comtable').removeClass('comtableshow');
+
+        })
+        $('.syjy-remv').click(function () {
+            var thatp = $('.syjy-cuttab .comtableshow').find('input:checked').parents('tr');
+            $('#confirm-box').show(500);
+            $('.confirm-remove').click(function () {
+                $(this).parents('.layer-box').hide();
+                thatp.fadeTo('fast',0.01, function () {
+                    $(this).slideUp('fast', function () {
+                        $(this).remove();
                     })
-                });
-                $('.closelayer').click(function () {
-                    $(this).parents('.layer-box').hide();
                 })
+            });
+            $('.closelayer').click(function () {
+                $(this).parents('.layer-box').hide();
             })
         })
-
     })
 </script>
 

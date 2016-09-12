@@ -39,7 +39,7 @@
   li.difside{
     height: 100%;
     .clearfix;
-    padding: 10px 0;
+    padding: 15px 0;
     span{
       display: block;
       line-height: 30px;
@@ -247,6 +247,10 @@ ul.time-box>li{
       color: #ffffff;
     }
   }
+  li.current{
+    background-color: #ff503f;
+    color: #ffffff;
+  }
 }
 .syjy-cuttab{
   padding: 10px 20px;
@@ -254,6 +258,9 @@ ul.time-box>li{
   height: 366px;
   .comtable{
     display: none;
+  }
+  .comtableshow{
+    display: table;
   }
 }
 .syjy-tab{
@@ -278,5 +285,72 @@ ul.time-box>li{
   }
   li.current{
     background-color: #e8e8e8;
+  }
+}
+.bxbg-report{
+  margin: 0;
+  padding: 0;
+  li{
+    list-style: none;
+  }
+}
+.elsedev,.elsdev-add-box,.eldev-bj-box,.sw-list,.sw-drmb,.sw-bjrp{
+  padding: 20px;
+}
+.eldev-bj,.eldev-rem{
+  margin: 0 10px;
+  &:hover{
+    color: #ff503f;
+  }
+}
+.eldev-bj-box ul{
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+  display: inline-block;
+  li{
+    list-style: none;
+    .fl;
+    width: 80px;
+    line-height: 40px;
+    border-bottom: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+    background-color: #e8e8e8;
+    text-align: center;
+    &:hover{
+      background-color: #ffffff;
+    }
+  }
+  li.current{
+    background-color: #FFFFFF;
+  }
+}
+.sw-list .comtable a{
+  margin: 0 10px;
+  &:hover{
+    color: #ff503f;
+  }
+}
+.paiktime{
+  .form-control{
+    width: 100px;
+    display: inline-block;
+  }
+  i{
+    margin: 0 10px;
+  }
+}
+.from-lr{
+  margin: 0;
+  padding: 0;
+  li{
+    list-style: none;
+    .clearfix;
+  }
+}
+.dispute{
+  label{
+    margin-left: 10px;
   }
 }

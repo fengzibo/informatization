@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>教学管控</title>
+    <title>课程设计</title>
     <link rel="stylesheet" type="text/css" href="../js/layer/skin/layer.css">
     <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
 </head>
@@ -20,23 +20,22 @@
         <table class="adm-main comtable">
             <tr>
                 <td>
-                    <label class="checkall"><input type="checkbox"/>全选</label>
                 </td>
                 <td>名称</td>
                 <td>添加时间</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="zy"/></td>
+                <td><input type="radio" name="zy"/></td>
                 <td>专业认知</td>
                 <td>2016年7月29日</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="zy"/></td>
+                <td><input type="radio" name="zy"/></td>
                 <td>理实一体</td>
                 <td>2016年7月29日</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="zy"/></td>
+                <td><input type="radio" name="zy"/></td>
                 <td>实务模拟</td>
                 <td>2016年7月29日</td>
             </tr>
@@ -51,7 +50,7 @@
             <div class="clearfix">
                 <div class="fl">
                     <ul class="cognition">
-                        <li><span>始业教育</span></li>
+                        <li class="current"><span>始业教育</span></li>
                         <li><span>校园寻踪</span></li>
                         <li><span>其他学习资料</span></li>
                         <li><span>编写报告</span></li>
@@ -64,6 +63,309 @@
                 <a class="combtn">保&nbsp;存</a>
                 <a class="combtn btncolor">返回</a>
             </div>
+        </div>
+        <div class="elsedev hidden">
+            <input type="button" value="新增课程" class="combtn elsdev-add" style="margin-bottom: 10px;"/>
+            <table class="comtable">
+                <tr>
+                    <th>序号</th>
+                    <th>名称</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>监理概论与法规</td>
+                    <td>
+                        <a class="eldev-bj">编辑</a>
+                        <a class="eldev-rem">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>质量控制与安全管理</td>
+                    <td>
+                        <a class="eldev-bj">编辑</a>
+                        <a class="eldev-rem">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>施工技术</td>
+                    <td>
+                        <a class="eldev-bj">编辑</a>
+                        <a class="eldev-rem">删除</a>
+                    </td>
+                </tr>
+            </table>
+            <div id="Pagination2" class="pagination" style="text-align: right;margin-top: 10px;"></div>
+            <input type="button" class="combtn elsdev-close" value="关闭" style="margin: 0 auto;display: block;"/>
+        </div>
+        <div class="elsdev-add-box hidden" style="text-align: center;">
+            <div class="framework-box" style="display: inline-block;">
+                <label>课程名称:</label>
+                <div style="overflow: hidden;width: 300px">
+                    <input type="text" class="form-control elseval" placeholder="专业认知">
+                </div>
+            </div>
+            <input type="button" id="elsadd" class="combtn" value="新增" style="display: block;margin: 0 auto;"/>
+        </div>
+        <div class="eldev-bj-box hidden clearfix">
+            <ul class="clearfix">
+                <li class="current">新增</li>
+                <li>修改</li>
+                <li>删除</li>
+            </ul>
+            <div style="height: 300px;width: 100%;border: 1px solid #e8e8e8"></div>
+            <input type="button" value="编辑课程标准" class="combtn fr bjkcbz"/>
+            <div style="margin-top: 40px;text-align: center;">
+                <input type="button" value="保存" class="combtn eld-bc"/>
+            </div>
+        </div>
+        <div class="eldev-introduce hidden">
+            <div class="clearfix task-introduce">
+                <div class="course-item" style="display: block;margin-right: 10px;">
+                    <h4>监理概论与法规</h4>
+                    <ul>
+                        <li>
+                            <a>单元一</a>
+                            <div class="item-child">
+                                <a>子单元一</a>
+                                <a>子单元二</a>
+                                <a>子单元三</a>
+                                <a>子单元四</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a>单元二</a>
+                            <div class="item-child">
+                                <a>子单元一</a>
+                                <a>子单元二</a>
+                                <a>子单元三</a>
+                                <a>子单元四</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="stanfr">
+                    <h4 class="case-tilte stand-title">课程标准</h4>
+                    <div class="tabscroll-box">
+                        <table class="comtable">
+                            <tr>
+                                <td style="width: 100px;">课程编号</td>
+                                <td>130078</td>
+                                <td>课程类别</td>
+                                <td>专业能力核心课</td>
+                            </tr>
+                            <tr>
+                                <td>使用专业</td>
+                                <td colspan="3">工程监理(普高理科)</td>
+                            </tr>
+                            <tr>
+                                <td>学分</td>
+                                <td>4.00</td>
+                                <td>学时</td>
+                                <td>64</td>
+                            </tr>
+                            <tr>
+                                <td>课程定位</td>
+                                <td colspan="3">
+                                    <script id="container" name="content" type="text/plain" style="width:100%; text-align:left;">
+                                    </script>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>课程作用</td>
+                                <td colspan="3">
+                                    <script id="container2" name="content" type="text/plain" style="width:100%; text-align:left;">
+                                    </script>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>与其他课程关系</td>
+                                <td colspan="3">
+                                    <script id="container3" name="content" type="text/plain" style="width:100%; text-align:left;">
+                                    </script>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="double-btn-box">
+                <a class="combtn ">保&nbsp;存</a>
+                <a class="combtn btncolor">返回</a>
+            </div>
+        </div>
+        <div class="sw-list hidden">
+            <input type="button" value="新增课程" class="combtn sw-add" style="margin-bottom: 10px;"/>
+            <table class="comtable">
+                <tr>
+                    <th>序号</th>
+                    <th>名称</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>质量安全</td>
+                    <td>
+                        <a class="sw-bj">编辑任务书</a>
+                        <a class="sw-dr">导入模板</a>
+                        <a class="sw-rem">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>工程资料</td>
+                    <td>
+                        <a class="sw-bj">编辑任务书</a>
+                        <a class="sw-dr">导入模板</a>
+                        <a class="sw-rem">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>施工技术</td>
+                    <td>
+                        <a class="sw-bj">编辑任务书</a>
+                        <a class="sw-dr">导入模板</a>
+                        <a class="sw-rem">删除</a>
+                    </td>
+                </tr>
+            </table>
+            <div id="Pagination3" class="pagination" style="text-align: right;margin-top: 10px;"></div>
+            <input type="button" class="combtn elsdev-close" value="关闭" style="margin: 0 auto;display: block;"/>
+        </div>
+        <div class="sw-drmb hidden">
+            <div class="clearfix" style="margin-bottom: 10px;">
+                <input type="button" class="combtn fl sw-remv" value="删除" style="margin-right: 20px">
+                <input type="button" class="combtn fl" value="下载">
+                <a class="a-upload combtn fr">
+                    上传
+                    <input type="file">
+                </a>
+            </div>
+            <table class="comtable">
+                <tbody>
+                <tr>
+                    <td>
+                        <label class="checkall8"><input type="checkbox">全选</label>
+                    </td>
+                    <td>序号</td>
+                    <td>名称</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="mnxl">
+                    </td>
+                    <td>1</td>
+                    <td>模板</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="mnxl">
+                    </td>
+                    <td>2</td>
+                    <td>模板</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="mnxl">
+                    </td>
+                    <td>3</td>
+                    <td>建筑史</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="mnxl">
+                    </td>
+                    <td>4</td>
+                    <td>建筑史</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="mnxl">
+                    </td>
+                    <td>5</td>
+                    <td>模板</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="mnxl">
+                    </td>
+                    <td>6</td>
+                    <td>建筑史</td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="Pagination4" class="pagination" style="text-align: right;margin-top: 10px;"></div>
+            <input type="button" class="combtn elsdev-close" value="关闭" style="margin: 0 auto;display: block;">
+        </div>
+        <div class="sw-bjrp hidden">
+            <div class="team-discuss" style="display: block;">
+                <ul>
+                    <li>
+                        <label>任务名称:</label>
+                        <div style="overflow: hidden">
+                            <input type="text" class="form-control">
+                        </div>
+                    </li>
+                    <li>
+                        <label>上传附件:
+                            <a class="combtn a-upload" style="margin-top: 20px">
+                                上&nbsp;传
+                                <input type="file">
+                            </a>
+                        </label>
+                        <div style="overflow: hidden">
+                            <div class="x-scroll" style="width: 100%; border: 1px solid #e8e8e8">
+                                <ul class="clearfix annex" style="margin: 0;padding: 0;">
+                                    <li>
+                                        <img src="../img/recov.jpg">
+                                        <p>课件</p>
+                                    </li>
+                                    <li>
+                                        <img src="../img/recov.jpg">
+                                        <p>课件</p>
+                                    </li>
+                                    <li>
+                                        <img src="../img/recov.jpg">
+                                        <p>课件</p>
+                                    </li>
+                                    <li>
+                                        <img src="../img/recov.jpg">
+                                        <p>课件</p>
+                                    </li>
+                                    <li>
+                                        <img src="../img/recov.jpg">
+                                        <p>课件</p>
+                                    </li>
+                                    <li>
+                                        <img src="../img/recov.jpg">
+                                        <p>课件</p>
+                                    </li>
+                                    <li>
+                                        <img src="../img/recov.jpg">
+                                        <p>课件</p>
+                                    </li>
+                                    <li>
+                                        <img src="../img/recov.jpg">
+                                        <p>课件</p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <label>讨论内容:</label>
+                        <div style="overflow: hidden">
+                            <textarea class="form-control"></textarea>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <input type="button" class="combtn elsdev-close" value="关闭" style="margin: 0 auto;display: block;">
         </div>
     </div>
 </div>
@@ -84,6 +386,10 @@
 <script src="../js/jedate/jedate.min.js"></script>
 <script src="../js/jquery.pagination.js"></script>
 <script src="../js/layer/layer.js"></script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="../js/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="../js/ueditor.all.min.js"></script>
 <script src="../js/Common.js"></script>
 <script>
     $(function () {
@@ -92,14 +398,39 @@
         $('.admin-fl').html(Common.commonblock('/html/Common-adminside.html'));
         $('.cognition-main').html(Common.commonblock('/html/admin-syjy.html'));
         Common.footerbottom();
-        Common.checkall();
+        Common.ifiationajaxforsj();
+        $("#Pagination2").pagination('10', {
+            items_per_page: 3,//每页显示行数
+            num_edge_entries: 3,//省略号前后显示页数
+            num_display_entries: 5,//省略号前默认显示页数
+            current_page: 0,
+            link_to: "javascript:void(0)",//页数链接
+            prev_text: "上一页",
+            next_text: "下一页"
+        });
+        $("#Pagination3").pagination('10', {
+            items_per_page: 3,//每页显示行数
+            num_edge_entries: 3,//省略号前后显示页数
+            num_display_entries: 5,//省略号前默认显示页数
+            current_page: 0,
+            link_to: "javascript:void(0)",//页数链接
+            prev_text: "上一页",
+            next_text: "下一页"
+        });
+        $("#Pagination4").pagination('10', {
+            items_per_page: 3,//每页显示行数
+            num_edge_entries: 3,//省略号前后显示页数
+            num_display_entries: 5,//省略号前默认显示页数
+            current_page: 0,
+            link_to: "javascript:void(0)",//页数链接
+            prev_text: "上一页",
+            next_text: "下一页"
+        });
         $('.act-rec').click(function () {
-            if ($("input[type='checkbox']:checked").length == 0) {
+            if ($("input[type='radio']:checked").length == 0) {
                 layer.msg('请勾选要修改的选项');
-            } else if ($("input[type='checkbox']:checked").length > 1) {
-                layer.msg('只能勾选一项');
-            } else {
-                if($("input[type='checkbox']:checked").parents('tr').index() == 1){
+            }  else {
+                if($("input[type='radio']:checked").parents('tr').index() == 1){
                     layer.open({
                         type: 1,
                         title: ['修改',' text-align: center;'],
@@ -107,14 +438,166 @@
                         area: '990px',
                         content: $('.act-main-box')
                     });
+                }else if($("input[type='radio']:checked").parents('tr').index() == 2){
+                    layer.open({
+                        type: 1,
+                        title: ['修改',' text-align: center;'],
+                        closeBtn: 1,
+                        area: '990px',
+                        content: $('.elsedev'),
+                        success: function(layero, index){
+                            layero.find('.elsdev-close').click(function () {
+                                layer.close(index);
+                            });
+                        }
+                    });
+                    $('table').off().on('click','.eldev-bj',function(event){
+                        layer.open({
+                            type: 1,
+                            title: ['修改',' text-align: center;'],
+                            closeBtn: 1,
+                            area: '550px',
+                            content: $('.eldev-bj-box'),
+                            success: function(layero,index){
+                                layero.find('.eld-bc').click(function () {
+                                    layer.close(index);
+                                });
+                            }
+                        });
+                        event.stopPropagation();
+                    });
+                    $('.bjkcbz').unbind().bind('click',function (event) {
+                        layer.open({
+                            type: 1,
+                            title: ['新增课程标准',' text-align: center;'],
+                            closeBtn: 1,
+                            area: '990px',
+                            content: $('.eldev-introduce'),
+                            success:function(layero,index){
+                                var ue = UE.getEditor('container');//实例化编辑器
+                                var ue2 = UE.getEditor('container2');//实例化编辑器
+                                var ue3 = UE.getEditor('container3');//实例化编辑器
+                                layero.find('.double-btn-box a').click(function(){
+                                    layer.close(index);
+                                })
+                            }
+                        });
+                        event.stopPropagation();
+                    })
+                    $('table').on('click','.eldev-rem',function(){
+                        var thatp = $(this).parents('tr');
+                        remamin(thatp);
+                    })
+                    $('.elsdev-add').unbind().bind('click',function (event) {
+                        layer.open({
+                            type: 1,
+                            title: ['添加',' text-align: center;'],
+                            closeBtn: 1,
+                            area: '550px',
+                            content: $('.elsdev-add-box'),
+                            success: function (layero,index) {
+                                $('#elsadd').unbind('click').bind('click',function (event) {
+                                    var elsinput =  layero.find('.elseval').val();
+                                    if(elsinput == ''){
+                                        layer.msg('请输入名称');
+                                    }else{
+                                        var elsedevhtml = "<tr><td>3</td><td>"+elsinput+" </td><td><a class='eldev-bj'>编辑</a><a class='eldev-rem'>删除</a></td></tr>"
+                                        $('.elsedev .comtable').append(elsedevhtml);
+                                        layer.close(index);
+                                    }
+                                    event.stopPropagation();
+                                })
+                            },
+                            end: function () {
+                                $('.elseval').val('');
+                            }
+                        });
+                        event.stopPropagation();
+                    })
                 }else {
-                    alert('1');
+                    layer.open({
+                        type: 1,
+                        title: ['修改',' text-align: center;'],
+                        closeBtn: 1,
+                        area: '990px',
+                        content: $('.sw-list'),
+                        success: function (layero,index) {
+                            layero.find('.elsdev-close').click(function () {
+                                layer.close(index);
+                            });
+                        }
+                    });
+                    $('.sw-add').unbind().bind('click',function (event) {
+                        layer.open({
+                            type: 1,
+                            title: ['添加',' text-align: center;'],
+                            closeBtn: 1,
+                            area: '550px',
+                            content: $('.elsdev-add-box'),
+                            success: function (layero,index) {
+                                $('#elsadd').unbind('click').bind('click',function (event) {
+                                    var elsinput =  layero.find('.elseval').val();
+                                    if(elsinput == ''){
+                                        layer.msg('请输入名称');
+                                    }else{
+                                        var elsedevhtml = "<tr><td>3</td><td>"+elsinput+" </td><td> <a class='sw-bj'>编辑任务书</a><a class='sw-dr'>导入模板</a><a class='sw-rem'>删除</a></td></tr>"
+                                        $('.sw-list .comtable').append(elsedevhtml);
+                                        layer.close(index);
+                                    }
+                                    event.stopPropagation();
+                                })
+                            },
+                            end: function () {
+                                $('.elseval').val('');
+                            }
+                        });
+                        event.stopPropagation();
+                    });
+                    $('table').on('click','.sw-rem',function(){
+                        var thatp = $(this).parents('tr');
+                        remamin(thatp);
+                    });
+                    $('.sw-remv').click(function () {
+                        var thatp = $("input[name='mnxl']:checked").parents('tr');
+                        remamin(thatp);
+                    })
+                    $('.sw-dr').unbind().bind('click', function () {
+                        layer.open({
+                            type: 1,
+                            title: ['修改',' text-align: center;'],
+                            closeBtn: 1,
+                            area: '990px',
+                            content: $('.sw-drmb'),
+                            success: function (layero,index) {
+                                layero.find('.elsdev-close').click(function () {
+                                    layer.close(index);
+                                });
+                            }
+                        });
+                    });
+                    $('.sw-bj').unbind().bind('click', function () {
+                        layer.open({
+                            type: 1,
+                            title: ['修改',' text-align: center;'],
+                            closeBtn: 1,
+                            area: '990px',
+                            content: $('.sw-bjrp'),
+                            success: function (layero,index) {
+                                var ulwidth = 0;
+                                layero.find('.x-scroll ul.annex li').each(function () {
+                                    ulwidth += parseInt($(this).outerWidth(true));
+                                });
+                                layero.find('.x-scroll ul.annex').width(ulwidth);
+                                layero.find('.elsdev-close').click(function () {
+                                    layer.close(index);
+                                });
+                            }
+                        });
+                    })
                 }
-
             }
-
         });
-        function remamin(){
+        function remamin(thatp){
             $('#confirm-box').show(500);
             $('.confirm-remove').click(function () {
                 $(this).parents('.layer-box').hide();
@@ -130,7 +613,7 @@
         }
         $('.act-rem').click(function () {
             var thatp = $("input[name='zy']:checked").parents('tr');
-            remamin();
+            remamin(thatp);
         })
         $("select").select2();
         jeDate({
@@ -139,9 +622,19 @@
             isTime:false,
             minDate:"2015-09-19 00:00:00"
         });
-        $('.double-btn-box a').click(function(){
+        $('.act-main-box .double-btn-box a').click(function(){
             layer.closeAll();
-        })
+        });
+        function checkdif(obj,ele){
+            $(obj).find('input').click(function () {
+                $(ele).prop('checked',this.checked);
+            });
+            $(ele).click(function () {
+                var izy = $(ele);
+                $(obj).find('input').prop('checked', izy.length == izy.filter(':checked').length ? true : false);
+            });
+        };
+        checkdif(".checkall8","input[name='mnxl']");
     })
 </script>
 </body>

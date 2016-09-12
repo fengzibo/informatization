@@ -858,6 +858,7 @@ a:link {
 
 .course-item ul li .item-child {
   padding-left: 20px;
+  display: none;
 }
 
 .getcur {
@@ -1570,6 +1571,7 @@ ul.video-item li {
   float: left;
   margin-right: 20px;
   width: 160px;
+  margin-top: 20px;
 }
 
 ul.video-item li img {
@@ -4537,7 +4539,7 @@ ul.chilunit li {
 .adminside li.difside {
   height: 100%;
   zoom: 1;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
 .adminside li.difside:before {
@@ -4823,6 +4825,11 @@ ul.time-box > li {
   color: #ffffff;
 }
 
+.cognition li.current {
+  background-color: #ff503f;
+  color: #ffffff;
+}
+
 .syjy-cuttab {
   padding: 10px 20px;
   border: 1px solid #e8e8e8;
@@ -4831,6 +4838,10 @@ ul.time-box > li {
 
 .syjy-cuttab .comtable {
   display: none;
+}
+
+.syjy-cuttab .comtableshow {
+  display: table;
 }
 
 .syjy-tab {
@@ -4859,4 +4870,101 @@ ul.time-box > li {
 
 .syjy-tab li.current {
   background-color: #e8e8e8;
+}
+
+.bxbg-report {
+  margin: 0;
+  padding: 0;
+}
+
+.bxbg-report li {
+  list-style: none;
+}
+
+.elsedev,
+.elsdev-add-box,
+.eldev-bj-box,
+.sw-list,
+.sw-drmb,
+.sw-bjrp {
+  padding: 20px;
+}
+
+.eldev-bj,
+.eldev-rem {
+  margin: 0 10px;
+}
+
+.eldev-bj:hover,
+.eldev-rem:hover {
+  color: #ff503f;
+}
+
+.eldev-bj-box ul {
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+  display: inline-block;
+}
+
+.eldev-bj-box ul li {
+  list-style: none;
+  float: left;
+  width: 80px;
+  line-height: 40px;
+  border-bottom: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  background-color: #e8e8e8;
+  text-align: center;
+}
+
+.eldev-bj-box ul li:hover {
+  background-color: #ffffff;
+}
+
+.eldev-bj-box ul li.current {
+  background-color: #FFFFFF;
+}
+
+.sw-list .comtable a {
+  margin: 0 10px;
+}
+
+.sw-list .comtable a:hover {
+  color: #ff503f;
+}
+
+.paiktime .form-control {
+  width: 100px;
+  display: inline-block;
+}
+
+.paiktime i {
+  margin: 0 10px;
+}
+
+.from-lr {
+  margin: 0;
+  padding: 0;
+}
+
+.from-lr li {
+  list-style: none;
+  zoom: 1;
+}
+
+.from-lr li:before {
+  content: '';
+  display: block;
+}
+
+.from-lr li:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.dispute label {
+  margin-left: 10px;
 }

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>课程设计</title>
+    <link rel="stylesheet" type="text/css" href="../js/layer/skin/layer.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="container clearfix">
+    <div class="admin-fl"></div>
+    <div class="admin-fr">
+        <h3>学院行事历</h3>
+        <ul class="com-fucbtn clearfix">
+            <li class="act-rec">修改</li>
+        </ul>
+        <table class="adm-main comtable">
+            <tr>
+                <td>
+                </td>
+                <td>名称</td>
+                <td>添加时间</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="zy"/></td>
+                <td>理实一体</td>
+                <td>2016年7月29日</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="zy"/></td>
+                <td>监理实务</td>
+                <td>2016年7月29日</td>
+            </tr>
+        </table>
+        <div class="act-main-box hidden">
+            <div class="les-list-box">
+                <h4 class="tea-toptitle">选择课件</h4>
+                <div class="select-width" style="width: 400px; margin: 0 auto">
+                    <select class="select" id="select-book">
+                        <option value="选择课件"  selected="selected">选择课件</option>
+                        <option value="1" >建设工程施工技术</option>
+                        <option value="2" >建设工程施工技术</option>
+                    </select>
+                </div>
+            </div>
+            <div class="unit-box" style="display: none; text-align: center">
+                <h4 class="tea-toptitle">选择单元</h4>
+                <label style="vertical-align: top;margin-right: 20px;">课程菜单:</label>
+                <div class="unit-main">
+                    <ul class="parunit">
+                        <li class="parunit-li">单元一</li>
+                        <li class="parunit-li">单元二</li>
+                        <li class="parunit-li">单元三</li>
+                        <li class="parunit-li">单元四</li>
+                        <li class="parunit-li">单元五</li>
+                    </ul>
+                    <ul class="chilunit">
+                        <li class="chilunit-li">子单元一</li>
+                        <li class="chilunit-li">子单元二</li>
+                        <li class="chilunit-li">子单元三</li>
+                        <li class="chilunit-li">子单元四</li>
+                        <li class="chilunit-li">子单元四</li>
+                        <li class="chilunit-li">子单元四</li>
+                        <li class="chilunit-li">子单元四</li>
+                        <li class="chilunit-li">子单元四</li>
+                        <li class="chilunit-li">子单元四</li>
+                        <li class="chilunit-li">子单元四</li>
+                        <li class="chilunit-li">子单元四</li>
+                    </ul>
+                    <ul class="chilunit">
+                        <li class="chilunit-li">子单元一</li>
+                        <li class="chilunit-li">子单元二</li>
+                        <li class="chilunit-li">子单元三</li>
+                        <li class="chilunit-li">子单元四</li>
+                    </ul>
+                    <ul class="chilunit">
+                        <li class="chilunit-li">子单元一</li>
+                        <li class="chilunit-li">子单元二</li>
+                        <li class="chilunit-li">子单元三</li>
+                        <li class="chilunit-li">子单元四</li>
+                        <li class="chilunit-li">子单元四</li>
+                    </ul>
+                    <ul class="chilunit">
+                        <li class="chilunit-li">子单元一</li>
+                        <li class="chilunit-li">子单元二</li>
+                        <li class="chilunit-li">子单元三</li>
+                        <li class="chilunit-li">子单元四</li>
+                    </ul>
+                    <ul class="chilunit">
+                        <li class="chilunit-li">子单元一</li>
+                        <li class="chilunit-li">子单元二</li>
+                        <li class="chilunit-li">子单元三</li>
+                        <li class="chilunit-li">子单元四</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="layer-box" id="confirm-box" style="z-index:20161001;position: relative;">
+    <div class="layer-bg" ></div>
+    <div class="layer-content confirm-size">
+        <div class="confirm-content">
+            <p>确认删除</p>
+            <a class="combtn btncolor confirm-remove" style="margin-right: 80px;">确&nbsp;定</a>
+            <a class="combtn closelayer">取&nbsp;消</a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/jedate/jedate.min.js"></script>
+<script src="../js/jquery.pagination.js"></script>
+<script src="../js/layer/layer.js"></script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="../js/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="../js/ueditor.all.min.js"></script>
+<script src="../js/Common.js"></script>
+<script>
+    $(function () {
+        $('.header').html(Common.cheader('', '/html/Common-header3.html'));
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
+        $('.admin-fl').html(Common.commonblock('/html/Common-adminside.html'));
+        $('.cognition-main').html(Common.commonblock('/html/admin-syjy.html'));
+        Common.footerbottom();
+        Common.ifiationajaxforsj();
+        $('.act-rec').click(function () {
+            if ($("input[type='radio']:checked").length == 0) {
+                layer.msg('请勾选要修改的选项');
+            }  else {
+                if($("input[type='radio']:checked").parents('tr').index() == 1){
+                    layer.open({
+                        type: 1,
+                        title: ['修改',' text-align: center;'],
+                        closeBtn: 1,
+                        area: ['990px','60%'],
+                        content: $('.act-main-box'),
+                        success: function(layero, index){
+                            layero.find('.elsdev-close').click(function () {
+                                layer.close(index);
+                            });
+                        }
+                    });
+                }else if($("input[type='radio']:checked").parents('tr').index() == 2){
+
+                }
+            }
+        });
+
+        $("select").select2();
+        $('#select-book').change(function () {
+            $('.unit-box').show();
+        });
+
+    })
+</script>
+</body>
+</html>

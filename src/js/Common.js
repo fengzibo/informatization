@@ -659,7 +659,14 @@ var Common = {
                 str += "<option value='" + opt.value + "'>" + opt.text + "<option>";
             }
             $("#" + sId).html(str);
-
         });
+    },
+    ifiationajaxforsj: function () {
+        var x =[ '/html/admin-syjy.html','/html/admin-xyxz.html','/html/admin-xxzl.html','/html/admin-bxbg.html'];
+        $('.cognition li').click(function () {
+            var thisi = $(this).index();
+            $(this).addClass('current').siblings().removeClass('current');
+            $('.cognition-main').html(Common.commonblock(x[thisi]));
+        })
     }
 }

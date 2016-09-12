@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>公告管理</title>
+    <link rel="stylesheet" type="text/css" href="../js/layer/skin/layer.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="container clearfix">
+    <div class="admin-fl"></div>
+    <div class="admin-fr">
+        <h3>教学工具</h3>
+        <div class="refer-box">
+            <h4>查询条件</h4>
+            <ul>
+                <li>
+                    <div class="framework-box fl" style="width: 40%;">
+                        <label>标题:</label>
+                        <div style="overflow: hidden">
+                            <input class="form-control" type="text" placeholder="请选择">
+                        </div>
+                    </div>
+                    <div class="framework-box fr" style="width: 40%">
+                        <label>发布时间:</label>
+                        <div style="overflow: hidden">
+                            <input class="indate form-control" type="text" placeholder="请选择"  readonly style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <input type="button" value="搜索" class="combtn fr"/>
+                </li>
+            </ul>
+
+
+        </div>
+        <ul class="com-fucbtn clearfix">
+            <li class="act-add">新增</li>
+            <li class="act-rec">修改</li>
+            <li class="act-rem">删除</li>
+            <li class="pubdate">发布日期
+                <div class="boult-box">
+                    <div class="pub-down"></div>
+                    <div class="pub-up"></div>
+                </div>
+            </li>
+        </ul>
+        <table class="adm-main comtable">
+            <tr>
+                <td>
+                    <label class="checkall"><input type="checkbox"/>全选</label>
+                </td>
+                <td>标题</td>
+                <td>点击次数</td>
+                <td>上传日期</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="zy"/></td>
+                <td>建筑工程概论</td>
+                <td></td>
+                <td>2016年7月29日</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="zy"/></td>
+                <td>建筑工程概论</td>
+                <td></td>
+                <td>2016年7月29日</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="zy"/></td>
+                <td>建筑工程概论</td>
+                <td></td>
+                <td>2016年7月29日</td>
+            </tr>
+        </table>
+        <div class="act-main-box hidden">
+            <div class="clearfix">
+                <div class="framework-box">
+                    <label>标题:</label>
+                    <input type="text" value="张学友" class="form-control fl" style="width: 600px;">
+                    <div class="dispute fr">
+                        <span>是否置顶</span>
+                        <label>是<input type="radio" name="xz"></label>
+                        <label>否<input type="radio" name="xz"></label>
+                    </div>
+                </div>
+                <div class="framework-box">
+                    <label>内容</label>
+                    <div style="overflow: hidden">
+                        <textarea class="form-control" style="height: 300px;"></textarea>
+                    </div>
+                </div>
+
+            </div>
+            <div class="double-btn-box">
+                <a class="combtn">保&nbsp;存</a>
+                <a class="combtn btncolor">返回</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="layer-box" id="confirm-box"  style="z-index:20161001;position: relative;">
+    <div class="layer-bg"  ></div>
+    <div class="layer-content confirm-size">
+        <div class="confirm-content">
+            <p>确认删除</p>
+            <a class="combtn btncolor confirm-remove" style="margin-right: 80px;">确&nbsp;定</a>
+            <a class="combtn closelayer">取&nbsp;消</a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/jedate/jedate.min.js"></script>
+<script src="../js/jquery.pagination.js"></script>
+<script src="../js/layer/layer.js"></script>
+<script src="../js/Common.js"></script>
+<script>
+    $(function () {
+        $('.header').html(Common.cheader('', '/html/Common-header3.html'));
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
+        $('.admin-fl').html(Common.commonblock('/html/Common-adminside.html'));
+        Common.footerbottom();
+        Common.checkall();
+        $('.act-add').click(function () {
+            layer.open({
+                type: 1,
+                title: ['新增',' text-align: center;'],
+                closeBtn: 1,
+                area: '990px',
+                content: $('.act-main-box')
+            });
+        });
+        $('.act-rec').click(function () {
+            if ($("input[type='checkbox']:checked").length == 0) {
+                layer.msg('请勾选要修改的选项');
+            } else if ($("input[type='checkbox']:checked").length > 1) {
+                layer.msg('只能勾选一项');
+            } else {
+                layer.open({
+                    type: 1,
+                    title: ['修改',' text-align: center;'],
+                    closeBtn: 1,
+                    area: '990px',
+                    content: $('.act-main-box')
+                })
+            }
+
+        });
+        $('.act-rem').click(function () {
+            var thatp = $("input[name='zy']:checked").parents('tr');
+            $('#confirm-box').show(500);
+            $('.confirm-remove').click(function () {
+                $(this).parents('.layer-box').hide();
+                thatp.fadeTo('fast',0.01, function () {
+                    $(this).slideUp('fast', function () {
+                        $(this).remove();
+                    })
+                })
+            });
+            $('.closelayer').click(function () {
+                $(this).parents('.layer-box').hide();
+            })
+        })
+        $("select").select2();
+        jeDate({
+            dateCell:".indate",
+            format:"YYYY-MM-DD",
+            isTime:false,
+            minDate:"2015-09-19 00:00:00"
+        });
+        $('.double-btn-box a').click(function(){
+            layer.closeAll();
+        })
+    })
+</script>
+</body>
+</html>
