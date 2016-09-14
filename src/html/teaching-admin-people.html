@@ -13,27 +13,28 @@
 <div class="container clearfix">
     <div class="admin-fl"></div>
     <div class="admin-fr">
-        <h3>个人资源审核</h3>
+        <h3>人员管理</h3>
         <div class="refer-box">
             <h4>查询条件</h4>
             <ul>
                 <li>
-                    <div class="framework-box fl" style="width: 40%">
-                        <label style="width: 65px;text-align: right;">关键字:</label>
+                    <div class="framework-box fl" style="width: 40%;">
+                        <label style="width: 75px; text-align: right">学号/工号:</label>
                         <div style="overflow: hidden">
                             <input class="form-control" type="text" placeholder="请选择">
                         </div>
                     </div>
-                    <div class="framework-box fr" style="width: 40%">
-                        <label>上传者:</label>
+                    <div class="framework-box fr" style="width: 40%;">
+                        <label style="width: 75px; text-align: right">用户姓名:</label>
                         <div style="overflow: hidden">
                             <input class="form-control" type="text" placeholder="请选择">
                         </div>
                     </div>
+
                 </li>
                 <li>
                     <div class="framework-box fl">
-                        <label>资源类别:</label>
+                        <label style="width: 75px; text-align: right">所属机构:</label>
                         <div class="select-width" style="width: 300px; float: left;">
                             <select class="select">
                                 <option value="请选择" selected="selected">请输入关键词</option>
@@ -42,34 +43,15 @@
                         </div>
                     </div>
                     <div class="framework-box fr">
-                        <label>角色:</label>
-                        <div class="select-width" style="width: 300px; float: left;">
+                        <label style="width: 75px; text-align: right">用户状态:</label>
+                        <div class="select-width" style="width: 276px; float: left;">
                             <select class="select">
                                 <option value="请选择" selected="selected">请输入关键词</option>
                                 <option value="北京市">傅敏</option>
                             </select>
                         </div>
                     </div>
-                </li>
-                <li>
-                    <div class="framework-box fl">
-                        <label>资源类型:</label>
-                        <div class="select-width" style="width: 300px; float: left;">
-                            <select class="select">
-                                <option value="请选择" selected="selected">请输入关键词</option>
-                                <option value="北京市">傅敏</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="framework-box fr">
-                        <label>审核情况:</label>
-                        <div class="select-width" style="width: 300px; float: left;">
-                            <select class="select">
-                                <option value="请选择" selected="selected">请输入关键词</option>
-                                <option value="北京市">傅敏</option>
-                            </select>
-                        </div>
-                    </div>
+
                 </li>
                 <li>
                     <input type="button" value="搜索" class="combtn fr"/>
@@ -79,126 +61,102 @@
 
         </div>
         <ul class="com-fucbtn clearfix">
-            <li class="act-rec">审核</li>
+            <li class="act-add">新增</li>
+            <li class="act-rec">修改</li>
             <li class="act-rem">删除</li>
-            <li class="pubdate">发布日期
-                <div class="boult-box">
-                    <div class="pub-down"></div>
-                    <div class="pub-up"></div>
-                </div>
-            </li>
+            <li class="act-jy">禁用</li>
+            <li class="act-pwdcz">密码重置</li>
+            <li class="act-mbxz">模板下载</li>
+            <li class="act-drry">导入人员</li>
         </ul>
         <table class="adm-main comtable">
             <tr>
                 <td>
                     <label class="checkall"><input type="checkbox"/>全选</label>
                 </td>
-                <td>资源名称</td>
-                <td>上传者</td>
-                <td>角色</td>
-                <td>审核情况</td>
-                <td>资源类型</td>
-                <td>资源类别</td>
-                <td>上传日期</td>
+                <td>学号/工号</td>
+                <td>用户姓名</td>
+                <td>联系方式</td>
+                <td>所属机构</td>
+                <td>用户状态</td>
             </tr>
             <tr>
                 <td><input type="checkbox" name="zy"/></td>
-                <td>建筑学资料</td>
-                <td>安庆</td>
                 <td>学生</td>
-                <td>未审核</td>
-                <td>学习指导</td>
-                <td>教材</td>
-                <td>2016年7月29日</td>
+                <td>张学生</td>
+                <td> 13800000000</td>
+                <td>监理15-1</td>
+                <td>激活</td>
             </tr>
             <tr>
                 <td><input type="checkbox" name="zy"/></td>
-                <td>建筑学资料</td>
-                <td>安庆</td>
                 <td>学生</td>
-                <td>未审核</td>
-                <td>学习指导</td>
-                <td>教材</td>
-                <td>2016年7月29日</td>
+                <td>张学生</td>
+                <td> 13800000000</td>
+                <td>监理15-1</td>
+                <td>激活</td>
             </tr>
             <tr>
                 <td><input type="checkbox" name="zy"/></td>
-                <td>建筑学资料</td>
-                <td>安庆</td>
                 <td>学生</td>
-                <td>未审核</td>
-                <td>学习指导</td>
-                <td>教材</td>
-                <td>2016年7月29日</td>
+                <td>张学生</td>
+                <td> 13800000000</td>
+                <td>监理15-1</td>
+                <td>激活</td>
             </tr>
         </table>
         <div class="act-main-box hidden">
-            <div class="framework-box" style="padding: 0 80px;">
-                <label style="width: 65px;">名称:</label>
-                <div style="overflow: hidden">
-                    <input type="text"  class="form-control">
-                </div>
-            </div>
-            <div class="clearfix">
-                <div class="task-int-fl">
-                    <div class="framework-box">
-                        <label style="width: 65px;">名称:</label>
+            <ul class="from-lr">
+                <li>
+                    <div class="framework-box fl" style="width: 40%;">
+                        <label style="width: 75px; text-align: right">学号/工号:</label>
                         <div style="overflow: hidden">
-                            <input type="text" value="张学友" class="form-control">
+                            <input class="form-control" type="text" placeholder="请选择">
                         </div>
-
                     </div>
-                    <div class="framework-box">
-                        <label>适用课程:</label>
-                        <div class="select-width" style="margin-left: 85px;">
+                    <div class="framework-box fr" style="width: 40%;">
+                        <label style="width: 75px; text-align: right">用户姓名:</label>
+                        <div style="overflow: hidden">
+                            <input class="form-control" type="text" placeholder="请选择">
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="framework-box fl" style="width: 40%;">
+                        <label style="width: 75px; text-align: right">联系方式:</label>
+                        <div style="overflow: hidden">
+                            <input class="form-control" type="text" placeholder="请选择">
+                        </div>
+                    </div>
+                    <div class="framework-box fr" style="width: 40%;">
+                        <label style="width: 75px; text-align: right">隶属角色:</label>
+                        <div style="overflow: hidden">
+                            <input class="form-control" type="text" placeholder="请选择">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="framework-box fl" style="width: 40%;">
+                        <label style="width: 75px;text-align: right">性别:</label>
+                        <div class="select-width" style="width: 260px; float: left;">
                             <select class="select">
-                                <option value="请选择" selected="selected">选择时间</option>
-                                <option value="1">2014-2015 春季</option>
-                                <option value="2">2014-2015 春季</option>
+                                <option value="请选择" selected="selected">请输入关键词</option>
+                                <option value="北京市">傅敏</option>
                             </select>
                         </div>
                     </div>
-                    <div class="framework-box">
-                        <label>资源类别:</label>
-                        <div class="select-width" style="margin-left: 85px;">
+                    <div class="framework-box fr" style="width: 40%;">
+                        <label style="width: 75px; text-align: right">所属机构:</label>
+                        <div class="select-width" style="width: 260px; float: left;">
                             <select class="select">
-                                <option value="请选择" selected="selected">选择时间</option>
-                                <option value="1">2014-2015 春季</option>
-                                <option value="2">2014-2015 春季</option>
+                                <option value="请选择" selected="selected">请输入关键词</option>
+                                <option value="北京市">傅敏</option>
                             </select>
                         </div>
                     </div>
-                    <div class="framework-box">
-                        <label style="width: 65px;">附件:</label>
-                        <div style="overflow: hidden" class="clearfix">
-                            <div class="attachment-box">
-                                <img src="../img/recov.jpg">
-                                <p>  2014-2015春季
-                                    教学任务（李老师）</p>
-                            </div>
-                            <a class="a-upload combtn fr" style="margin: 10px 0;">
-                                上传
-                                <input type="file">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="task-int-fr clearfix">
-                    <div class="framework-box">
-                        <label style="width: 65px;">角色:</label>
-                        <div style="overflow: hidden">
-                            <input type="text" value="张学友" class="form-control">
-                        </div>
-
-                    </div>
-                    <div class="framework-box">
-                        <label style="width: 65px;">简介:</label>
-                        <div style="overflow: hidden">
-                            <textarea class="form-control" style="height: 300px;"></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </li>
+            </ul>
             <div class="double-btn-box">
                 <a class="combtn">保&nbsp;存</a>
                 <a class="combtn btncolor">返回</a>
@@ -231,6 +189,15 @@
         $('.admin-fl').html(Common.commonblock('/html/Common-adminside.html'));
         Common.footerbottom();
         Common.checkall();
+        $('.act-add').click(function () {
+            layer.open({
+                type: 1,
+                title: ['新增',' text-align: center;'],
+                closeBtn: 1,
+                area: '990px',
+                content: $('.act-main-box')
+            });
+        });
         $('.act-rec').click(function () {
             if ($("input[name='zy']:checked").length == 0) {
                 layer.msg('请勾选要修改的选项');
@@ -263,8 +230,24 @@
             })
         })
         $("select").select2();
+        jeDate({
+            dateCell:".indate",
+            format:"YYYY-MM-DD",
+            isTime:false,
+            minDate:"2015-09-19 00:00:00"
+        });
         $('.double-btn-box a').click(function(){
             layer.closeAll();
+        });
+        $('.act-jy').click(function () {
+            layer.confirm('确定要禁用用户么?',{
+                btn:['确定','取消']
+            })
+        })
+        $('.act-pwdcz').click(function () {
+            layer.confirm('确定要重置密码么?',{
+                btn:['确定','取消']
+            })
         })
     })
 </script>

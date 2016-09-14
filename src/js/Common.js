@@ -668,5 +668,16 @@ var Common = {
             $(this).addClass('current').siblings().removeClass('current');
             $('.cognition-main').html(Common.commonblock(x[thisi]));
         })
+    },
+    listselect:function(){
+        var id =  '1';
+        var sexmap = "[{value:1,text:'男'},{value:2,text:'女'}]";
+        var lissex = eval("("+sexmap+")");
+        for(var i = 0;i<lissex.length;i++){
+            if(id == lissex[i].value){
+                $('#testtd').html(lissex[i].text);
+            }
+        }
+
     }
 }

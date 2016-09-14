@@ -13,17 +13,35 @@
 <div class="container clearfix">
     <div class="admin-fl"></div>
     <div class="admin-fr">
-        <h3>学院行事历</h3>
+        <h3>机构管理</h3>
         <div class="refer-box">
             <h4>查询条件</h4>
             <ul>
                 <li>
-                    <div class="framework-box fl" style="width: 40%">
-                        <label>关键字:</label>
+                    <div class="framework-box fl" style="width: 40%;">
+                        <label>资源类别:</label>
                         <div style="overflow: hidden">
-                            <input type="text" class="form-control">
+                            <input class="form-control" type="text" placeholder="请选择">
                         </div>
                     </div>
+                    <div class="framework-box fr">
+                        <label>机构类型:</label>
+                        <div class="select-width" style="width: 300px; float: left;">
+                            <select class="select">
+                                <option value="请选择" selected="selected">请输入关键词</option>
+                                <option value="北京市">傅敏</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="framework-box fl" style="width: 40%">
+                        <label>录入时间:</label>
+                        <div style="overflow: hidden">
+                            <input class="form-control indate" type="text" placeholder="请选择" style="width: 100%;">
+                        </div>
+                    </div>
+
                 </li>
                 <li>
                     <input type="button" value="搜索" class="combtn fr"/>
@@ -48,50 +66,82 @@
                 <td>
                     <label class="checkall"><input type="checkbox"/>全选</label>
                 </td>
-                <td>名称</td>
-                <td>大小</td>
+                <td>机构名称</td>
+                <td>机构类别</td>
+                <td>所属机构</td>
+                <td>子机构(个)</td>
                 <td>上传日期</td>
             </tr>
             <tr>
                 <td><input type="checkbox" name="zy"/></td>
-                <td>浙江省建院监理专业2016-2017学年 第一学期</td>
-                <td>103kb</td>
+                <td>监理15-1</td>
+                <td>班级</td>
+                <td> 工程监理(普高理科) </td>
+                <td>0</td>
                 <td>2016年7月29日</td>
             </tr>
             <tr>
                 <td><input type="checkbox" name="zy"/></td>
-                <td>浙江省建院监理专业2016-2017学年 第一学期</td>
-                <td>103kb</td>
+                <td>监理15-1</td>
+                <td>班级</td>
+                <td> 工程监理(普高理科) </td>
+                <td>0</td>
                 <td>2016年7月29日</td>
             </tr>
             <tr>
                 <td><input type="checkbox" name="zy"/></td>
-                <td>浙江省建院监理专业2016-2017学年 第一学期</td>
-                <td>103kb</td>
+                <td>监理15-1</td>
+                <td>班级</td>
+                <td> 工程监理(普高理科) </td>
+                <td>0</td>
                 <td>2016年7月29日</td>
             </tr>
         </table>
-        <div class="admin-case hidden">
-            <div class="framework-box">
-                <label>名称:</label>
-                <div style="overflow: hidden">
-                    <input type="text" class="form-control">
-                </div>
-            </div>
-            <div class="framework-box clearfix">
-                <label>附件:</label>
-                <div style="overflow: hidden" class="clearfix">
-                    <div class="attachment-box">
-                        <img src="../img/recov.jpg">
-                        <p>  2014-2015春季
-                            教学任务（李老师）</p>
+        <div class="act-main-box hidden">
+            <ul class="from-lr">
+                <li>
+                    <div class="framework-box fl" style="width: 40%;">
+                        <label style="width: 75px;">机构名称:</label>
+                        <div style="overflow: hidden">
+                            <input class="form-control" type="text" placeholder="请选择">
+                        </div>
                     </div>
-                    <a class="a-upload combtn fr" style="margin: 10px 0;">
-                        上传
-                        <input type="file">
-                    </a>
-                </div>
-            </div>
+                    <div class="framework-box fr" style="width: 40%;">
+                        <label>机构类别:</label>
+                        <div class="select-width" style="width: 260px; float: left;">
+                            <select class="select">
+                                <option value="请选择" selected="selected">请输入关键词</option>
+                                <option value="北京市">傅敏</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="framework-box fl" style="width: 40%;">
+                        <label>机构负责人:</label>
+                        <div style="overflow: hidden">
+                            <input class="form-control" type="text" placeholder="请选择">
+                        </div>
+                    </div>
+                    <div class="framework-box fr" style="width: 40%;">
+                        <label>负责人联系方式:</label>
+                        <div style="overflow: hidden">
+                            <input class="form-control" type="text" placeholder="请选择">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="framework-box fl" style="width: 40%;">
+                        <label>隶属上级机构:</label>
+                        <div class="select-width" style="width: 260px; float: left;">
+                            <select class="select">
+                                <option value="请选择" selected="selected">请输入关键词</option>
+                                <option value="北京市">傅敏</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+            </ul>
             <div class="double-btn-box">
                 <a class="combtn">保&nbsp;存</a>
                 <a class="combtn btncolor">返回</a>
@@ -129,22 +179,22 @@
                 type: 1,
                 title: ['新增',' text-align: center;'],
                 closeBtn: 1,
-                area: '550px',
-                content: $('.admin-case')
+                area: '990px',
+                content: $('.act-main-box')
             });
         });
         $('.act-rec').click(function () {
-            if ($("input[type='checkbox']:checked").length == 0) {
+            if ($("input[name='zy']:checked").length == 0) {
                 layer.msg('请勾选要修改的选项');
-            } else if ($("input[type='checkbox']:checked").length > 1) {
+            } else if ($("input[name='zy']:checked").length > 1) {
                 layer.msg('只能勾选一项');
             } else {
                 layer.open({
                     type: 1,
                     title: ['修改',' text-align: center;'],
                     closeBtn: 1,
-                    area: '550px',
-                    content: $('.admin-case')
+                    area: '990px',
+                    content: $('.act-main-box')
                 })
             }
 
