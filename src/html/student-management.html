@@ -13,44 +13,10 @@
    <ul class="att-crumbs clearfix">
        <li><a href="index.html">首页</a></li>
        <li><a href="index.html">常用功能</a></li>
-       <li class="current">考勤管理</li>
+       <li class="current">个人考勤</li>
    </ul>
-    <div class="att-seabox clearfix">
-        <input type="text" class="form-control fl" style="width: 170px; margin-left: 30px;"/>
-        <div class="select-width" style="width: 200px;float: left; margin: 0 100px 0 50px;">
-            <select class="select">
-                <option value="请选择"  selected="selected">选择班级</option>
-                <option value="1" >1班</option>
-                <option value="2" >2班</option>
-            </select>
-        </div>
-        <input type="button" class="combtn att-seabtn" value="搜索"/>
-    </div>
-    <div class="searel-area">
-        <div class="sea-hint">
-            可通过条件搜索，查看学生和班级的出勤情况！
-        </div>
-        <table class="comtable getstudent" style="display: none;">
-            <tr>
-                <td>序号</td>
-                <td>姓名</td>
-                <td>学号</td>
-                <td>出勤情况</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>张学生</td>
-                <td>13244</td>
-                <td><a>点击查看</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>张学生</td>
-                <td>13244</td>
-                <td><a>点击查看</a></td>
-            </tr>
-        </table>
-        <div class="getstudent-dal clearfix" style="display: none;">
+    <div class="searel-area" style="margin-top: 20px">
+        <div class="getstudent-dal clearfix">
             <div class="fl gs-dal-fl clearfix">
                 <label>姓名:张学生</label>
                 <label>出勤率:96%</label>
@@ -146,15 +112,6 @@
             prev_text: "上一页",
             next_text: "下一页"
         });
-        $('.att-seabtn').click(function () {
-            $('.sea-hint').hide();
-            $('.getstudent').stop().show(200);
-            $('.getstudent-dal').hide();
-            $('.getstudent').on('click','a', function () {
-                $(this).parents('.getstudent').hide();
-                $('.getstudent-dal').show(200);
-            })
-        })
 
     })
 </script>

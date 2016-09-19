@@ -4,6 +4,7 @@ html文件名
 -----------------
 <h1 align = "center">(学生)</h1>
 *   index.html----------------------------------------主页
+    *   student-management.html-----------------------个人考勤
 *   teaching-course-----------------------------------教学课程
     *   initial-educationi.html-----------------------专业认知>始业教育
         *   campus-pursuit.html-----------------------校园寻踪
@@ -74,6 +75,7 @@ html文件名
 *   teaching-admin-tool.html----------------------------------------教学工具
 *   teaching-admin-audit.html----------------------------------------个人资格审核
 *   teaching-admin-notice.html----------------------------------------公告管理
+*   teaching-admin-integral.html----------------------------------------公告管理
 *   teaching-admin-agency.html----------------------------------------机构管理
 *   teaching-admin-people.html----------------------------------------人员管理
      
