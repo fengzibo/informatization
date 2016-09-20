@@ -23,7 +23,7 @@
                 <option value="2" >2015-2016学年 第一学期监理资料</option>
             </select>
         </div>
-        <input type="button" class="combtn " value="+新增"/>
+        <input type="button" class="combtn teacplanadd" value="+新增"/>
     </div>
     <div class="searel-area">
         <div class="sea-hint">
@@ -94,24 +94,27 @@
                     <textarea class="form-control" style="height: 200px;"></textarea>
                 </div>
             </div>
-            <table class="comtable">
+            <table class="comtable teaplantab">
                 <tr>
                     <td>周次</td>
                     <td>日月</td>
                     <td>主要教学内容</td>
                     <td>教材章节</td>
+                    <td style="width: 80px;">操作</td>
                 </tr>
                 <tr>
                     <td>1</td>
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td><i class="iconfont icon-add"></i><i class="iconfont icon-remove"></i></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td><i class="iconfont icon-add"></i><i class="iconfont icon-remove"></i></td>
                 </tr>
             </table>
             <table class="comtable" style="margin-top: 20px;">
@@ -151,6 +154,131 @@
                 <a class="combtn btncolor">删&nbsp;除</a>
             </div>
         </div>
+        <div class="teaplanboxadd" style="display: none;">
+            <div class="clearfix">
+                <div class="task-int-fl">
+                    <div class="framework-box">
+                        <label>授课教师:</label>
+                        <div style="overflow: hidden">
+                            <input type="text"  class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="framework-box">
+                        <label>课程名称:</label>
+                        <div class="select-width" style="margin-left: 83px;">
+                            <select class="select">
+                                <option value="请选择"  selected="selected">选择课程名称</option>
+                                <option value="1" >工程资料</option>
+                                <option value="2" >质量安全</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="framework-box">
+                        <label>授课班级:</label>
+                        <div style="overflow: hidden;line-height: 30px;">
+                            <label><input type="checkbox"/>监理15-1</label>
+                            <label style="margin-left: 20px;"><input type="checkbox"/>监理15-2</label>
+                            <label style="margin-left: 20px;"><input type="checkbox"/>监理15-3</label>
+                        </div>
+                    </div>
+                    <div class="framework-box">
+                        <label>教材名称:</label>
+                        <div style="overflow: hidden">
+                            <input type="text" value="" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="framework-box">
+                        <label>教材版本:</label>
+                        <div style="overflow: hidden">
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-int-fr clearfix" style="width: 400px;">
+                    <div class="framework-box">
+                        <label>选择学年:</label>
+                        <div class="select-width" style="margin-left: 83px;">
+                            <select class="select">
+                                <option value="请选择"  selected="selected">选择学年</option>
+                                <option value="1" >2016-2017第一学年</option>
+                                <option value="2" >2016-2017第二学年</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="framework-box">
+                        <label>授课计划名称:</label>
+                        <div style="overflow: hidden">
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="framework-box" style="margin-left: 52px;">
+                <label>教学目的要求:</label>
+                <div style="overflow: hidden">
+                    <textarea class="form-control" style="height: 200px;"></textarea>
+                </div>
+            </div>
+            <table class="comtable teaplantab">
+                <tr>
+                    <td>周次</td>
+                    <td>日月</td>
+                    <td>主要教学内容</td>
+                    <td>教材章节</td>
+                    <td style="width: 80px;">操作</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><i class="iconfont icon-add"></i><i class="iconfont icon-remove"></i></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><i class="iconfont icon-add"></i><i class="iconfont icon-remove"></i></td>
+                </tr>
+            </table>
+            <table class="comtable" style="margin-top: 20px;">
+                <tr>
+                    <th colspan="10">本学期计划课时分配</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">教学周时</td>
+                    <td rowspan="2">周课时数</td>
+                    <td rowspan="2">总课时数</td>
+                    <td colspan="7">其中</td>
+                </tr>
+                <tr>
+                    <td>理论</td>
+                    <td>参观</td>
+                    <td>习题</td>
+                    <td>实验</td>
+                    <td>实训</td>
+                    <td>复习</td>
+                    <td>其他</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="double-btn-box">
+                <a class="combtn">保&nbsp;存</a>
+                <a class="combtn btncolor">返&nbsp;回</a>
+            </div>
+        </div>
     </div>
 </div>
 <div class="footer">
@@ -177,9 +305,19 @@
         });
         $("#teaplan-select").on("change", function (e) {
             $('.sea-hint').hide();
+            $('.teaplanboxadd').hide();
             $('.teaplanbox').show(200);
             Common.footerbottom();
         });
+        $('.teacplanadd').on('click', function () {
+            $('.sea-hint').hide();
+            $('.teaplanbox').hide();
+            $('.teaplanboxadd').show(200);
+            Common.footerbottom();
+        })
+        $('.teaplantab').on('click','.icon-add',function(){
+            $(this).parents('tr').after("<tr><td></td><td></td><td></td><td></td> <td><i class='iconfont icon-add'></i><i class='iconfont icon-remove'></i></td> </tr>")
+        })
     })
 </script>
 </body>

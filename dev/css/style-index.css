@@ -4491,6 +4491,32 @@ ul.chilunit li {
   line-height: 34px;
 }
 
+.teaplantab i {
+  margin: 0 10px;
+}
+
+.addop,
+.addckop {
+  display: inline-block;
+  padding: 6px 10px;
+  background-color: #55de9c;
+  color: #ffffff !important;
+}
+
+.addop:hover,
+.addckop:hover {
+  background-color: #4ec98e;
+  text-decoration: none;
+}
+
+ul.addtopic-box li .comtable a {
+  color: #00A1CB;
+}
+
+ul.addtopic-box li .comtable a:hover {
+  color: #2B333F;
+}
+
 .logo-title {
   color: #ffffff;
   font-size: 26px;
