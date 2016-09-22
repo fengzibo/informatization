@@ -39,7 +39,7 @@ var Common = {
         function positionFooter() {
             footerHeight = $(".footer").height();
             footerTop = ($(window).scrollTop() + $(window).height() - footerHeight) + "px";
-            contheight = (($(window).scrollTop() + $(window).height() - footerHeight) - 84) + "px";
+
             //如果页面内容高度小于屏幕高度，div#footer将绝对定位到屏幕底部，否则div#footer保留它的正常静态定位
             if (($(document.body).height() + footerHeight) < $(window).height()) {
                 $(".footer").css({position: "absolute", left: "0"}).stop().css({top: footerTop});
@@ -229,20 +229,22 @@ var Common = {
             }
         }
         process(0,prev,next);
-        next.click(function(){
+        next.unbind().bind('click',function(){
             process(now+1,prev,next);
             now =  parseInt(_Link.index($('.topic-item li span.current')));
+            $('.topic-item li span.current').click();
         });
-        prev.click(function(){
+        prev.unbind().bind('click',function(){
             process(now-1,prev,next);
             now =  parseInt(_Link.index($('.topic-item li span.current')));
+            $('.topic-item li span.current').click();
         })
-        _Link.click(function(){
+        _Link.on("click",function(){
             var that = $(this);
             _Link.removeClass('current');
             that.addClass('current');
             now =  parseInt(_Link.index($('.topic-item li span.current')));
-            process(now,prev,next);
+            process(now,prev,next)
         })
 
     },
@@ -328,12 +330,14 @@ var Common = {
     },
     //侧边栏课程菜单
     sider_menu: function () {
-        $('.course-item ul li>a').on('click', function (event) {
+        $('.course-item ul').on('click','li>a', function (event) {
             if($(this).next('.item-child').is(":hidden")){
-                $('.item-child').stop().slideUp();
-                $('.course-item ul li>a').removeClass('current');
-                $(this).next('.item-child').stop().slideDown();
-                $(this).addClass('current');
+                getStandard($(this).attr('data-parentId'));
+                getItemChild($(this).attr('data-url'),$(this).attr('data-parentId'),$(this),$(this).attr('data-childtmpl'));
+                /* $('.item-child').stop().slideUp();
+                 $('.course-item ul li>a').removeClass('current');
+                 $(this).next('.item-child').stop().slideDown();
+                 $(this).addClass('current');*/
             }else {
                 $('.item-child').stop().slideUp();
                 $('.course-item ul li>a').removeClass('current');
@@ -391,7 +395,7 @@ var Common = {
             $(this).addClass('current').siblings().removeClass('current');
             $('.ification-content').html(Common.commonblock(x[thisi]));
             Common.footerbottom();
-            $("select").select2();
+            Common.control();
         })
     },
     //教师端专业认知js
@@ -406,7 +410,7 @@ var Common = {
                 },400);
             }
             timemsg();
-        });
+        })
         $("select").select2();
         $('.edhca-show').on('click',function(){
             $('.educa-hide').show();
@@ -659,25 +663,7 @@ var Common = {
                 str += "<option value='" + opt.value + "'>" + opt.text + "<option>";
             }
             $("#" + sId).html(str);
-        });
-    },
-    ifiationajaxforsj: function () {
-        var x =[ '/html/admin-syjy.html','/html/admin-xyxz.html','/html/admin-xxzl.html','/html/admin-bxbg.html'];
-        $('.cognition li').click(function () {
-            var thisi = $(this).index();
-            $(this).addClass('current').siblings().removeClass('current');
-            $('.cognition-main').html(Common.commonblock(x[thisi]));
-        })
-    },
-    listselect:function(){
-        var id =  '1';
-        var sexmap = "[{value:1,text:'男'},{value:2,text:'女'}]";
-        var lissex = eval("("+sexmap+")");
-        for(var i = 0;i<lissex.length;i++){
-            if(id == lissex[i].value){
-                $('#testtd').html(lissex[i].text);
-            }
-        }
 
+        });
     }
 }

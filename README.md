@@ -75,7 +75,7 @@ html文件名
 *   teaching-admin-tool.html----------------------------------------教学工具
 *   teaching-admin-audit.html----------------------------------------个人资格审核
 *   teaching-admin-notice.html----------------------------------------公告管理
-*   teaching-admin-integral.html----------------------------------------公告管理
+*   teaching-admin-integral.html----------------------------------------经验积分管理
 *   teaching-admin-agency.html----------------------------------------机构管理
 *   teaching-admin-people.html----------------------------------------人员管理
      

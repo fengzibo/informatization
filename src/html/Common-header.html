@@ -1,5 +1,6 @@
 <div class="container">
     <div class="topfunc">
+        <input type="text" class="test-header" name="th"/>
         <span>枫梓波</span>
         <a><i class="iconfont">&#xe601</i>注销</a>
     </div>
@@ -65,3 +66,31 @@
         </ul>
     </div>
 </div>
+<script>
+    var navherf=[
+        'teaching-course.html',
+        'network-test.html',
+        'resource-center.html',
+        'results-management.html'
+    ]
+    var navherf2 =[
+        'teaching-course-teacher.html',
+        'network-test-teacher.html',
+        'resource-center-teacher.html',
+        'results-management-teacher.html'
+    ]
+    $('.test-header').change(function () {
+        if($('.test-header').val() ==1){
+            $('.nav li>a').each(function () {
+                var thisahref = navherf[$(this).index()];
+                $(this).attr('href',thisahref);
+            })
+        }else if($('.test-header').val() ==2){
+            $('.nav li>a').each(function () {
+                var thisahref = navherf2[$(this).index()];
+                $(this).attr('href',thisahref);
+            })
+        }
+    })
+
+</script>
