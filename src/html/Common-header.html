@@ -82,12 +82,12 @@
     $('.test-header').change(function () {
         if($('.test-header').val() ==1){
             $('.nav li>a').each(function () {
-                var thisahref = navherf[$(this).index()];
+                var thisahref = navherf[$(this).parent().index()];
                 $(this).attr('href',thisahref);
             })
         }else if($('.test-header').val() ==2){
             $('.nav li>a').each(function () {
-                var thisahref = navherf2[$(this).index()];
+                var thisahref = navherf2[$(this).parent().index()];
                 $(this).attr('href',thisahref);
             })
         }

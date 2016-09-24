@@ -31,6 +31,8 @@ html文件名
 *   more-details--------------------------------------更多详情
 <h1 align = "center">(教师)</h1>   
 *   attendance-management.html--------------------------------考勤管理
+*   syllabus.html--------------------------------课程表
+*   compile-syllabus.html--------------------------------课程表编辑
 *   index-teachingtask.html-----------------------------------教学任务
 *   teaching-control.html-------------------------------------教学管控
 *   teaching-course-teacher-----------------------------------教学课程

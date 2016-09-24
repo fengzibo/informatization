@@ -16,9 +16,9 @@
     "use strict";
     /*global document, window, jQuery, console */
 
-    if (window.Select2 !== undefined) {
+   /* if (window.Select2 !== undefined) {
         return;
-    }
+    }*/
 
     var KEY, AbstractSelect2, SingleSelect2, MultiSelect2;
 

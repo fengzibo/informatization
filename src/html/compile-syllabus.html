@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>课程表</title>
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<style>
+    #syll-table td.ui-selecting { background: #ff503f; }
+    #syll-table td.ui-selected  { background: #F39814; color: white; }
+    table .recess{
+        background-color: #e8e8e8;
+    }
+</style>
+<body>
+<div class="header">
+</div>
+<div class="container">
+   <ul class="att-crumbs clearfix">
+       <li><a href="index.html">首页</a></li>
+       <li><a href="index.html">常用功能</a></li>
+       <li><a href="syllabus.html">课程表</a></li>
+       <li class="current">编辑课程</li>
+   </ul>
+    <div class="att-seabox clearfix">
+        <div class="select-width" style="width: 300px;float: left; margin: 0 20px; 20px;">
+            <select class="select" >
+                <option value="请选择" selected="selected">请选择班级</option>
+                <option value="请选择">2016级道桥1班</option>
+                <option value="请选择">2016级道桥2班</option>
+            </select>
+        </div>
+        <div class="select-width" style="width: 300px;float: left; margin: 0 20px 20px;">
+            <select class="select">
+                <option value="请选择" selected="selected">选择课程</option>
+                <option value="请选择">专业认知</option>
+                <option value="请选择">质量控制与安全管理(0/80)</option>
+            </select>
+        </div>
+        <div class="select-width" style="width: 300px;float: left; margin: 0 20px 20px;">
+            <select class="select">
+                <option value="请选择" selected="selected">选择单元</option>
+                <option value="请选择">单元一</option>
+                <option value="请选择">单元二</option>
+            </select>
+        </div>
+        <div class="select-width" style="width: 300px;float: left; margin: 0 20px 20px;">
+            <select class="select">
+                <option value="请选择" selected="selected">选择子单元</option>
+                <option value="请选择">子单元一(2/4)</option>
+                <option value="请选择">子单元二(0/2)</option>
+            </select>
+        </div>
+        <div class="select-width" style="width: 300px;float: left; margin: 0 20px 20px;">
+            <select class="select">
+                <option value="请选择" selected="selected">选择教室</option>
+                <option value="请选择">教室1</option>
+                <option value="请选择">教室2</option>
+            </select>
+        </div>
+    </div>
+    <div class="searel-area">
+        <table class="comtable" style="margin-top: 20px;" id="syll-table">
+            <tr>
+                <th>时段</th>
+                <th>节次</th>
+                <th>9月26日(周一)</th>
+                <th>9月27日(周二)</th>
+                <th>9月28日(周三)</th>
+                <th>9月29日(周四)</th>
+                <th>9月30日(周五)</th>
+                <th>10月1日(周六)</th>
+                <th>10月2日(周日)</th>
+            </tr>
+            <tr>
+                <td rowspan="4">上午</td>
+                <td>第一节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="recess"></td>
+                <td class="recess"></td>
+            </tr>
+            <tr>
+                <td>第二节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="recess"></td>
+                <td class="recess"></td>
+            </tr>
+            <tr>
+                <td>第三节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="recess"></td>
+                <td class="recess"></td>
+            </tr>
+            <tr>
+                <td>第四节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="recess"></td>
+                <td class="recess"></td>
+            </tr>
+            <tr>
+                <td rowspan="4">下午</td>
+                <td>第五节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="recess"></td>
+                <td class="recess"></td>
+            </tr>
+            <tr>
+                <td>第六节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="recess"></td>
+                <td class="recess"></td>
+            </tr>
+            <tr>
+                <td>第七节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="recess"></td>
+                <td class="recess"></td>
+            </tr>
+            <tr>
+                <td>第八节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="recess"></td>
+                <td class="recess"></td>
+            </tr>
+            <tr>
+                <td rowspan="4">晚上</td>
+                <td>第九节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="recess"></td>
+                <td class="recess"></td>
+            </tr>
+            <tr>
+                <td>第十节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="recess"></td>
+                <td class="recess"></td>
+            </tr>
+            <tr>
+                <td>第十一节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="recess"></td>
+                <td class="recess"></td>
+            </tr>
+            <tr>
+                <td>第十二节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="recess"></td>
+                <td class="recess"></td>
+            </tr>
+        </table>
+        <div style="text-align: right;margin-top: 20px;">
+            <p id="feedback" style="display: inline-block;float: left;">
+                你选择的是：<span id="select-result">无</span>。
+            </p>
+            <a class="combtn" id="merge" style="display: inline-block;">合并</a>
+            <a class="combtn" id="split" style="display: inline-block;">拆分</a>
+            <a class="combtn" style="display: inline-block;">排课</a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+</div>
+<script src="../js/jquery1.11.3.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/syll-table.js"></script>
+<script src="../js/video.js"></script>
+<script src="../js/select.js"></script>
+<script src="../js/jquery.pagination.js"></script>
+<script src="../js/Common.js"></script>
+<script>
+    $(function () {
+        $('.header').html(Common.cheader('','/html/Common-header2.html'));
+        $('.footer').html(Common.commonblock('/html/Common-footer.html'));
+        Common.footerbottom();
+        $('select').select2();
+        $("#syll-table").selectable({stop: ShowSelected});
+        $('#merge').on('click', function () {
+            MergeCells();
+        });
+        $('#split').on('click', function () {
+            SplitCells();
+        })
+    })
+</script>
+</body>
+</html>
